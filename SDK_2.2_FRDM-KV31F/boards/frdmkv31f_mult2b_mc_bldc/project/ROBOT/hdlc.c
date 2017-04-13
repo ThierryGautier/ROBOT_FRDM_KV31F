@@ -221,7 +221,7 @@ BOOL HDLC_bGetFrame(UI08 *pu8RxFrame, UI08 *pu8RxSize)
     HDLC_ControlRxCharacter();
 
     if((HDLC_gstContext.bReceivedFrame == TRUE) &&
-       (HDLC_gstContext.u8Size < HDLC_U8_MAX_NB_BYTE_IN_FRAME)
+       (HDLC_gstContext.u8Size <= HDLC_U8_MAX_NB_BYTE_IN_FRAME)
       )
     {
         HDLC_gstContext.bReceivedFrame = FALSE;
