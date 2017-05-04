@@ -136,7 +136,7 @@ int main(void)
 #endif
 
     NVIC_SetPriority(PIT0_IRQn, 5);             //fix the priority of PIT0
-    pit_init(12500, WakeUp);                    //Start PIT timer used to call cyclically the sensor fusion tasks every 12.5 ms
+    pit_init(1000000/FAST_LOOP_HZ, WakeUp);     //Start PIT timer used to call cyclically the sensor fusion tasks every 12.5 ms
 
     sfg.setStatus(&sfg, NORMAL);                // If we got this far, let's set status state to NORMAL
     vTaskStartScheduler();                      // Start the RTOS scheduler
@@ -178,7 +178,6 @@ static void fusion_task(void *pvParameters)
 
         sfg.conditionSensorReadings(&sfg);  // magCal is run as part of this
         sfg.runFusion(&sfg);                // Run the actual fusion algorithms
-        sfg.applyPerturbation(&sfg);        // apply debug perturbation (testing only)
 
         sfg.loopcounter++;                  // The loop counter is used to "serialize" mag cal operations
         i=i+1;

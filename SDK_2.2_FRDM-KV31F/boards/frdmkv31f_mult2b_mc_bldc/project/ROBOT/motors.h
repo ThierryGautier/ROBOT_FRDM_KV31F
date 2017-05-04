@@ -16,6 +16,8 @@ typedef enum
 void MOTORS_Initialization(void);
 
 /** drive FTM to control two DC motors */
-void MOTORS_UpdateCommand(MOTOR_eMotorsOrders eMotorCommand, uint8_t u8PWMLevelLeft, uint8_t u8PWMLevelRight);
+void MOTORS_UpdateCommand(MOTOR_eMotorsOrders eMotorCommand, uint16_t u16PWMLevelLeft, uint16_t u16PWMLevelRight);
+
+uint16_t MOTORS_u16GetMaxPWMLevel(void);
 
 #endif /* MOTORS_H_ */

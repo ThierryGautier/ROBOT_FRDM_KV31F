@@ -373,7 +373,7 @@ status_t FTM_SetupPwm(FTM_Type *base,
     for (i = 0; i < numOfChnls; i++)
     {
         /* Return error if requested dutycycle is greater than the max allowed */
-        if (chnlParams->dutyCyclePercent > 100)
+        if (chnlParams->dutyCycle > mod)
         {
             return kStatus_Fail;
         }
@@ -393,14 +393,14 @@ status_t FTM_SetupPwm(FTM_Type *base,
             /* Update the mode and edge level */
             base->CONTROLS[chnlParams->chnlNumber].CnSC = reg;
 
-            if (chnlParams->dutyCyclePercent == 0)
+            if (chnlParams->dutyCycle == 0)
             {
                 /* Signal stays low */
                 cnv = 0;
             }
             else
             {
-                cnv = (mod * chnlParams->dutyCyclePercent) / 100;
+                cnv = (mod * chnlParams->dutyCycle) / 100;
                 /* For 100% duty cycle */
                 if (cnv >= mod)
                 {
@@ -440,7 +440,7 @@ status_t FTM_SetupPwm(FTM_Type *base,
             }
 
             /* Configure dutycycle */
-            if (chnlParams->dutyCyclePercent == 0)
+            if (chnlParams->dutyCycle == 0)
             {
                 /* Signal stays low */
                 cnv = 0;
@@ -448,7 +448,7 @@ status_t FTM_SetupPwm(FTM_Type *base,
             }
             else
             {
-                cnv = (mod * chnlParams->dutyCyclePercent) / 100;
+                cnv = chnlParams->dutyCycle;
                 /* For 100% duty cycle */
                 if (cnv >= mod)
                 {
@@ -499,15 +499,15 @@ status_t FTM_SetupPwm(FTM_Type *base,
 void FTM_UpdatePwmDutycycle(FTM_Type *base,
                             ftm_chnl_t chnlNumber,
                             ftm_pwm_mode_t currentPwmMode,
-                            uint8_t dutyCyclePercent)
+                            uint16_t DutyCycle)
 {
     uint16_t cnv, cnvFirstEdge = 0, mod;
 
     mod = base->MOD;
     if ((currentPwmMode == kFTM_EdgeAlignedPwm) || (currentPwmMode == kFTM_CenterAlignedPwm))
     {
-        cnv = (mod * dutyCyclePercent) / 100;
-        /* For 100% duty cycle */
+        cnv = DutyCycle;
+        /* For 100% Duty cycle */
         if (cnv >= mod)
         {
             cnv = mod + 1;
@@ -522,7 +522,7 @@ void FTM_UpdatePwmDutycycle(FTM_Type *base,
             return;
         }
 
-        cnv = (mod * dutyCyclePercent) / 100;
+        cnv = DutyCycle;
         cnvFirstEdge = base->CONTROLS[chnlNumber * 2].CnV;
         /* For 100% duty cycle */
         if (cnv >= mod)
@@ -542,6 +542,13 @@ void FTM_UpdateChnlEdgeLevelSelect(FTM_Type *base, ftm_chnl_t chnlNumber, uint8_
     reg |= ((uint32_t)level << FTM_CnSC_ELSA_SHIFT) & (FTM_CnSC_ELSA_MASK | FTM_CnSC_ELSB_MASK);
 
     base->CONTROLS[chnlNumber].CnSC = reg;
+}
+
+uint16_t FTM_u16GetMaxDutyCycle(FTM_Type *base)
+{
+    uint16_t mod;
+    mod = base->MOD;
+    return(mod);
 }
 
 void FTM_SetupInputCapture(FTM_Type *base,

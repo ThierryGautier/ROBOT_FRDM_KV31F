@@ -94,7 +94,7 @@ typedef struct _ftm_chnl_pwm_signal_param
     ftm_chnl_t chnlNumber;         /*!< The channel/channel pair number.
                                         In combined mode, this represents the channel pair number. */
     ftm_pwm_level_select_t level;  /*!< PWM output active level select. */
-    uint8_t dutyCyclePercent;      /*!< PWM pulse width, value should be between 0 to 100
+    uint16_t dutyCycle;            /*!< PWM pulse width, value should be between 0 to mod
                                         0 = inactive signal(0% duty cycle)...
                                         100 = always active signal (100% duty cycle).*/
     uint8_t firstEdgeDelayPercent; /*!< Used only in combined PWM mode to generate an asymmetrical PWM.
@@ -446,14 +446,14 @@ status_t FTM_SetupPwm(FTM_Type *base,
  * @param chnlNumber        The channel/channel pair number. In combined mode, this represents
  *                          the channel pair number
  * @param currentPwmMode    The current PWM mode set during PWM setup
- * @param dutyCyclePercent  New PWM pulse width; The value should be between 0 to 100
+ * @param DutyCycle         New PWM pulse width; The value should be between 0 to Max
  *                          0=inactive signal(0% duty cycle)...
- *                          100=active signal (100% duty cycle)
+ *                          Max=active signal (100% duty cycle)
  */
 void FTM_UpdatePwmDutycycle(FTM_Type *base,
                             ftm_chnl_t chnlNumber,
                             ftm_pwm_mode_t currentPwmMode,
-                            uint8_t dutyCyclePercent);
+                            uint16_t DutyCycle);
 
 /*!
  * @brief Updates the edge level selection for a channel.
@@ -464,6 +464,15 @@ void FTM_UpdatePwmDutycycle(FTM_Type *base,
  *                   See the Kinetis SoC reference manual for details about this field.
  */
 void FTM_UpdateChnlEdgeLevelSelect(FTM_Type *base, ftm_chnl_t chnlNumber, uint8_t level);
+
+
+/*!
+ * @brief get max duty cycle.
+ *
+ * @param base       FTM peripheral base address
+ * @return the max duty cycle
+ */
+uint16_t FTM_u16GetMaxDutyCycle(FTM_Type *base);
 
 /*!
  * @brief Enables capturing an input signal on the channel using the function parameters.

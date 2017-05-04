@@ -47,8 +47,56 @@ uint32_t u32InitIsdone = 0;
 float gfAccGlOutput[3];
 float gfVelGl[3];
 float gfPosition[3];
-
 extern SensorFusionGlobals sfg;
+
+
+static float f32Cap = 0;
+static float f32CapError;
+
+static MOTOR_eMotorsOrders eMotorCommand = MOTOR_eStop;
+static uint16_t u16PWMLevel = 0;
+
+
+/*cap control command */
+static void CalculateNewMotorCommand(MOTOR_eMotorsOrders eMotorCommand,
+		                             uint16_t  u16PWMLevelCmd,
+					  				 float f32CapCmd,
+									 float f32eCompass,
+									 uint16_t* u16NewPWMLevelLeft, uint16_t* u16NewPWMLevelRight)
+{
+	int16_t s16PWMLeft =0;
+	int16_t s16PWMRight=0;
+	uint16_t u16PWMMax = MOTORS_u16GetMaxPWMLevel();
+
+	/* calculate the error between the cap command and the eCompass */
+    f32CapError = f32CapCmd - f32eCompass;
+
+    /* calculate the minus cap error */
+    if(f32CapError >   180.0) f32CapError = -(360.0-f32CapError);
+    if(f32CapError <= -180.0) f32CapError =  (360.0+f32CapError);
+
+    /* calculate the new motor command */
+    s16PWMLeft  = ((int16_t)u16PWMLevelCmd)  + (int16_t)(((float)u16PWMLevelCmd) * f32CapError/10.0);
+	s16PWMRight = ((int16_t)u16PWMLevelCmd)  - (int16_t)(((float)u16PWMLevelCmd) * f32CapError/10.0);
+
+    /* check the range of PWM Right */
+	if(s16PWMLeft <= 0)
+		*u16NewPWMLevelLeft = 0U;
+	else if(s16PWMLeft >= u16PWMMax)
+		*u16NewPWMLevelLeft = u16PWMMax;
+	else
+		*u16NewPWMLevelLeft = s16PWMLeft;
+
+	/* check the range of PWM Right */
+	if(s16PWMRight <= 0)
+		*u16NewPWMLevelRight = 0U;
+	else if(s16PWMRight >= u16PWMMax)
+		*u16NewPWMLevelRight = u16PWMMax;
+	else
+		*u16NewPWMLevelRight = s16PWMRight;
+
+    /**/
+}
 
 /*!
  * @brief Task responsible for controlling com with PC/master board with bluetooth.
@@ -60,14 +108,14 @@ static void com_TxTask(void *pvParameters)
     	float    f32Value;
     	uint32_t u32Value;
     	uint8_t  au8Data[4];
-	}ConvertBytes;
+	}Convert32Bits;
 
-	uint8_t i;
-
-	uint8_t au8TxFrame[HDLC_U8_MAX_NB_BYTE_IN_FRAME] = {0x00,0xAD,0xAA,0x55,00};
+	uint8_t au8TxFrame[HDLC_U8_MAX_NB_BYTE_IN_FRAME];
     uint8_t u8TxFrameSize;
 
-    //periodical communication with the other device Bluetooth
+    uint16_t u16PWMLevelLeft;
+    uint16_t u16PWMLevelRight;
+
     while(1)
     {
         xEventGroupWaitBits(event_COM,      /* The event group handle. */
@@ -76,125 +124,82 @@ static void com_TxTask(void *pvParameters)
                             pdFALSE,        /* Don't wait for both bits, either bit unblock task. */
                             portMAX_DELAY); /* Block indefinitely to wait for the condition to be met. */
 
+
+    	//calculate PWM left and right
+        CalculateNewMotorCommand(MOTOR_eMoveForward,
+        		                 300,
+    							 f32Cap,
+    							 sfg.SV_9DOF_GBY_KALMAN.fRhoPl,
+    							 &u16PWMLevelLeft,&u16PWMLevelRight);
+
+        // update motor control
+        MOTORS_UpdateCommand(MOTOR_eMoveForward,u16PWMLevelLeft,u16PWMLevelRight);
+
+#if 0
+        	//calculate PWM left and right
+            CalculateNewMotorCommand(eMotorCommand,
+            		                 u16PWMLevel,
+									 f32Cap,
+									 sfg.SV_9DOF_GBY_KALMAN.fRhoPl,
+									 &u16PWMLevelLeft,&u16PWMLevelRight);
+
+            // update motor control
+            MOTORS_UpdateCommand(eMotorCommand,u16PWMLevelLeft,u16PWMLevelRight);
+#endif
+
+
+        //periodical communication with the slave device Bluetooth on /dev/rfcommxx
         /*update life byte*/
         au8TxFrame[ 0] = COM_gu8TxLifeByteFrame;
         au8TxFrame[ 1] = COM_gu8RxLifeByteFrame;
         COM_gu8TxLifeByteFrame++;
-#if 0
-        /* */
-        if(u32InitIsdone <= 255)
-        {
-			//filter_filterBlock(&sfg);
-			af32ListOfAcc[u32Index][CHX] = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHX];
-			af32ListOfAcc[u32Index][CHY] = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHY];
-			af32ListOfAcc[u32Index][CHZ] = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHZ];
-
-			af32SumAcc[CHX] += af32ListOfAcc[u32Index][CHX];
-			af32SumAcc[CHY] += af32ListOfAcc[u32Index][CHY];
-			af32SumAcc[CHZ] += af32ListOfAcc[u32Index][CHZ];
-
-			u32Index = (u32Index+1)%256;
-			u32InitIsdone++;
-        }
-        else
-        {
-
-        	af32SumAcc[CHX] -= af32ListOfAcc[u32Index][CHX];
-			af32SumAcc[CHY] -= af32ListOfAcc[u32Index][CHY];
-			af32SumAcc[CHZ] -= af32ListOfAcc[u32Index][CHZ];
-
-        	af32SumAcc[CHX] += sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHX];
-			af32SumAcc[CHY] += sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHY];
-			af32SumAcc[CHZ] += sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHZ];
-
-        	af32ListOfAcc[u32Index][CHX] = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHX];
-			af32ListOfAcc[u32Index][CHY] = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHY];
-			af32ListOfAcc[u32Index][CHZ] = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHZ];
-
-
-	        af32AverageAcc[CHX] = af32SumAcc[CHX]/256;
-	        af32AverageAcc[CHY] = af32SumAcc[CHY]/256;
-	        af32AverageAcc[CHZ] = af32SumAcc[CHZ]/256;
-
-	        u32Index  = (u32Index+1)%256;
-			gfAccGlOutput[CHX] = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHX] - af32AverageAcc[CHX];
-			gfAccGlOutput[CHY] = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHY] - af32AverageAcc[CHY];
-			gfAccGlOutput[CHZ] = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHZ] - af32AverageAcc[CHZ];
-			for (i = CHX; i <= CHZ; i++) {
-				// integrate acceleration (in g) to velocity in m/s
-				gfVelGl[i] += gfAccGlOutput[i] * sfg.SV_9DOF_GBY_KALMAN.fgdeltat;
-				// integrate velocity (in m/s) to displacement (m)
-				gfPosition[i] += gfVelGl[i] * sfg.SV_9DOF_GBY_KALMAN.fdeltat;
-			}
-        }
-#endif
-        af32AverageAcc[CHX] = (sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHX] + af32AverageAcc[CHX])/2;
-        af32AverageAcc[CHY] = (sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHY] + af32AverageAcc[CHY])/2;
-        af32AverageAcc[CHZ] = (sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHZ] + af32AverageAcc[CHZ])/2;
-
-		gfAccGlOutput[CHX] = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHX] - af32AverageAcc[CHX];
-		gfAccGlOutput[CHY] = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHY] - af32AverageAcc[CHY];
-		gfAccGlOutput[CHZ] = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHZ] - af32AverageAcc[CHZ];
-		for (i = CHX; i <= CHZ; i++) {
-			// integrate acceleration (in g) to velocity in m/s
-			gfVelGl[i] += gfAccGlOutput[i] * sfg.SV_9DOF_GBY_KALMAN.fgdeltat;
-			// integrate velocity (in m/s) to displacement (m)
-			gfPosition[i] += gfVelGl[i] * sfg.SV_9DOF_GBY_KALMAN.fdeltat;
-		}
-
-
-        /* update systick */
-        ConvertBytes.u32Value = sfg.SV_9DOF_GBY_KALMAN.systick;
-        au8TxFrame[ 2] = ConvertBytes.au8Data[0];
-        au8TxFrame[ 3] = ConvertBytes.au8Data[1];
-        au8TxFrame[ 4] = ConvertBytes.au8Data[2];
-        au8TxFrame[ 5] = ConvertBytes.au8Data[3];
 
         /* update linear acceleration (g) X */
-        ConvertBytes.f32Value = gfAccGlOutput[CHX];
-        au8TxFrame[ 6] = ConvertBytes.au8Data[0];
-        au8TxFrame[ 7] = ConvertBytes.au8Data[1];
-        au8TxFrame[ 8] = ConvertBytes.au8Data[2];
-        au8TxFrame[ 9] = ConvertBytes.au8Data[3];
+        Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHX];
+        au8TxFrame[ 2] = Convert32Bits.au8Data[0];
+        au8TxFrame[ 3] = Convert32Bits.au8Data[1];
+        au8TxFrame[ 4] = Convert32Bits.au8Data[2];
+        au8TxFrame[ 5] = Convert32Bits.au8Data[3];
 
         /* update linear acceleration (g) Y */
-        ConvertBytes.f32Value = gfAccGlOutput[CHY];
-        au8TxFrame[10] = ConvertBytes.au8Data[0];
-        au8TxFrame[11] = ConvertBytes.au8Data[1];
-        au8TxFrame[12] = ConvertBytes.au8Data[2];
-        au8TxFrame[13] = ConvertBytes.au8Data[3];
+        Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHY];
+        au8TxFrame[ 6] = Convert32Bits.au8Data[0];
+        au8TxFrame[ 7] = Convert32Bits.au8Data[1];
+        au8TxFrame[ 8] = Convert32Bits.au8Data[2];
+        au8TxFrame[ 9] = Convert32Bits.au8Data[3];
 
         /* update linear acceleration (g) Z */
-        ConvertBytes.f32Value = gfAccGlOutput[CHZ];
-        au8TxFrame[14] = ConvertBytes.au8Data[0];
-        au8TxFrame[15] = ConvertBytes.au8Data[1];
-        au8TxFrame[16] = ConvertBytes.au8Data[2];
-        au8TxFrame[17] = ConvertBytes.au8Data[3];
+        Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHZ];
+        au8TxFrame[10] = Convert32Bits.au8Data[0];
+        au8TxFrame[11] = Convert32Bits.au8Data[1];
+        au8TxFrame[12] = Convert32Bits.au8Data[2];
+        au8TxFrame[13] = Convert32Bits.au8Data[3];
 
-        /* update displacement (m) X */
-        ConvertBytes.f32Value = gfAccGlOutput[CHX];
-        au8TxFrame[18] = ConvertBytes.au8Data[0];
-        au8TxFrame[19] = ConvertBytes.au8Data[1];
-        au8TxFrame[20] = ConvertBytes.au8Data[2];
-        au8TxFrame[21] = ConvertBytes.au8Data[3];
+    	/* update roll (deg) */
+        Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fPhiPl;
+        au8TxFrame[14] = Convert32Bits.au8Data[0];
+        au8TxFrame[15] = Convert32Bits.au8Data[1];
+        au8TxFrame[16] = Convert32Bits.au8Data[2];
+        au8TxFrame[17] = Convert32Bits.au8Data[3];
 
-        /* update displacement (m) Y */
-        ConvertBytes.f32Value = gfVelGl[CHX]; //af32AverageAcc[CHY];
-        au8TxFrame[22] = ConvertBytes.au8Data[0];
-        au8TxFrame[23] = ConvertBytes.au8Data[1];
-        au8TxFrame[24] = ConvertBytes.au8Data[2];
-        au8TxFrame[25] = ConvertBytes.au8Data[3];
+        /* update pitch (deg) */
+        Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fThePl;
+        au8TxFrame[18] = Convert32Bits.au8Data[0];
+        au8TxFrame[19] = Convert32Bits.au8Data[1];
+        au8TxFrame[20] = Convert32Bits.au8Data[2];
+        au8TxFrame[21] = Convert32Bits.au8Data[3];
 
-        /* update displacement (m) Z */
-        ConvertBytes.f32Value = gfPosition[CHX]; //af32AverageAcc[CHZ];
-        au8TxFrame[26] = ConvertBytes.au8Data[0];
-        au8TxFrame[27] = ConvertBytes.au8Data[1];
-        au8TxFrame[28] = ConvertBytes.au8Data[2];
-        au8TxFrame[29] = ConvertBytes.au8Data[3];
+        /* update compass (deg) */
+        Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fRhoPl;
+        au8TxFrame[22] = Convert32Bits.au8Data[0];
+        au8TxFrame[23] = Convert32Bits.au8Data[1];
+        au8TxFrame[24] = Convert32Bits.au8Data[2];
+        au8TxFrame[25] = Convert32Bits.au8Data[3];
 
         /* Send frame data */
-    	u8TxFrameSize = 30;
+    	u8TxFrameSize = 26;
     	HDLC_bPutFrame(&au8TxFrame[0],&u8TxFrameSize);
+
     }
 }
 
@@ -203,20 +208,49 @@ static void com_TxTask(void *pvParameters)
  */
 static void com_RxTask(void *pvParameters)
 {
-    BOOL bFrameReceived= FALSE;
+	union
+	{
+    	    int16_t  s16Value;
+    	    uint16_t u16Value;
+	    	uint8_t  au8Data[2];
+	}Convert16Bits;
+
+	union
+	{
+	   	float    f32Value;
+	   	uint32_t u32Value;
+	   	uint8_t  au8Data[4];
+	}Convert32Bits;
+
+	BOOL bFrameReceived= FALSE;
     uint8_t au8RxFrame[HDLC_U8_MAX_NB_BYTE_IN_FRAME];
     uint8_t u8RxFrameSize;
+
     while(1)
     {
     	bFrameReceived = HDLC_bGetFrame(&au8RxFrame[0],&u8RxFrameSize);
         if((bFrameReceived == TRUE) &&
-           (u8RxFrameSize!=0))
+           (u8RxFrameSize==7))
         {
         	COM_gu8RxLifeByteFrame++;
-         	MOTORS_UpdateCommand(au8RxFrame[0],au8RxFrame[1],au8RxFrame[2]); // update motor control
+        	/* read motor order */
+        	eMotorCommand           = (MOTOR_eMotorsOrders)au8RxFrame[0];
+
+        	/* read the PWM level */
+        	Convert16Bits.au8Data[0] = au8RxFrame[1];
+        	Convert16Bits.au8Data[1] = au8RxFrame[2];
+        	u16PWMLevel = Convert16Bits.u16Value;
+
+        	/* read cap command  in degree */
+        	Convert32Bits.au8Data[0] = au8RxFrame[3];
+        	Convert32Bits.au8Data[1] = au8RxFrame[4];
+        	Convert32Bits.au8Data[2] = au8RxFrame[5];
+        	Convert32Bits.au8Data[3] = au8RxFrame[6];
+         	f32Cap = Convert32Bits.f32Value;
         }
     }
 }
+
 /*******************************************************************************
  * Code
  ******************************************************************************/
@@ -251,3 +285,22 @@ void COM_WakeUp(void)
 {
 	xEventGroupSetBits(event_COM, COM_FLAG1);
 }
+
+
+#if 0 // code to check validity of eCompass
+
+static int8_t s8CapIsInitialized = false;
+
+if((sCompass = sfg.SV_9DOF_GBY_KALMAN.iFirstAccelMagLock == true) &&
+   (s8CapIsInitialized == false))
+{
+    /* init first value of the s16Cap = eCompass at the startup of the system */
+	s16Cap = sfg.SV_9DOF_GBY_KALMAN.fRhoPl;
+	s16CapError = 0;
+	s8CapIsInitialized = true;
+}
+else if((sCompass = sfg.SV_9DOF_GBY_KALMAN.iFirstAccelMagLock == true) &&
+        (s8CapIsInitialized == true))
+{
+
+#endif

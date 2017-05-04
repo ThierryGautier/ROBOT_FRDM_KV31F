@@ -93,8 +93,8 @@
 #define ACCEL_ODR_HZ 200   ///< (int) requested accelerometer ODR Hz (over-rides MAG_ODR_HZ for FXOS8700)
 #define MAG_ODR_HZ 200     ///< (int) requested magnetometer ODR Hz (over-ridden by ACCEL_ODR_HZ for FXOS8700)
 #define GYRO_ODR_HZ 400    ///< (int) requested gyroscope ODR Hz
-#define FUSION_HZ 40       ///< (int) actual rate of fusion algorithm execution and sensor FIFO reads
-#define FAST_LOOP_HZ 80    ///< Over Sample Ratio * FUSION_HZ when using no FIFO
+#define FUSION_HZ 50       ///< (int) actual rate of fusion algorithm execution and sensor FIFO reads
+#define FAST_LOOP_HZ 100   ///< Over Sample Ratio * FUSION_HZ when using no FIFO
 #define OVERSAMPLE_RATE FAST_LOOP_HZ / FUSION_HZ
 ///@}
 
