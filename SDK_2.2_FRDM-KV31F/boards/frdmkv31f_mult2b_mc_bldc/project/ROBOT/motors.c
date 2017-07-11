@@ -110,7 +110,9 @@ void MOTORS_UpdateCommand(MOTOR_eMotorsOrders eMotorCommand, uint16_t u16PWMLeve
 	/**    Tr1      Tr3     TR5                  **/
 	/**     |--------|--------|                  **/
 	/**     -= - batt                            **/
+	/** rmk Tr0 Tr2 and Tr4 can not be drive to 100 % due to bootstrap capacitor */
 	uint16_t u16MaxPWMLevel = FTM_u16GetMaxDutyCycle(BOARD_FTM_BASEADDR);
+	uint16_t u16MaxPWMLevelTr0Tr2Tr4 = FTM_u16GetMaxDutyCycle(BOARD_FTM_BASEADDR)-5;
 
 	switch(eMotorCommand)
 	{
@@ -153,7 +155,7 @@ void MOTORS_UpdateCommand(MOTOR_eMotorsOrders eMotorCommand, uint16_t u16PWMLeve
 	    	/**     |--------|--------|                  **/
 	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL0,kFTM_EdgeAlignedPwm,0);
 	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL1,kFTM_EdgeAlignedPwm,u16PWMLevelLeft);
-	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL2,kFTM_EdgeAlignedPwm,u16MaxPWMLevel);
+	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL2,kFTM_EdgeAlignedPwm,u16MaxPWMLevelTr0Tr2Tr4);
 	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL3,kFTM_EdgeAlignedPwm,0);
 	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL4,kFTM_EdgeAlignedPwm,0);
 	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL5,kFTM_EdgeAlignedPwm,u16PWMLevelRight);
@@ -168,7 +170,7 @@ void MOTORS_UpdateCommand(MOTOR_eMotorsOrders eMotorCommand, uint16_t u16PWMLeve
 	    	/**     |--------|--------|                  **/
 	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL0,kFTM_EdgeAlignedPwm,u16PWMLevelLeft);
 	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL1,kFTM_EdgeAlignedPwm,0);
-	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL2,kFTM_EdgeAlignedPwm,u16MaxPWMLevel);
+	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL2,kFTM_EdgeAlignedPwm,u16MaxPWMLevelTr0Tr2Tr4);
 	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL3,kFTM_EdgeAlignedPwm,0);
 	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL4,kFTM_EdgeAlignedPwm,u16PWMLevelRight);
 	        FTM_UpdatePwmDutycycle(BOARD_FTM_BASEADDR,BOARD_FTM_CHANNEL5,kFTM_EdgeAlignedPwm,0);
