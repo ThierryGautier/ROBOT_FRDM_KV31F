@@ -1,0 +1,4 @@
+hdlc.c:38:13:UpdateDLLRxFrameErrorCounter	0	static
+hdlc.c:194:6:HDLC_bInitialize	8	static
+hdlc.c:216:6:HDLC_bGetFrame	32	static
+hdlc.c:248:6:HDLC_bPutFrame	24	static

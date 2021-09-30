@@ -1,0 +1,11 @@
+hdlc.c:38:13:UpdateDLLRxFrameErrorCounter	4	static
+hdlc.c:46:13:UpdateDLLRxFrameOKCounter	4	static
+hdlc.c:54:13:HDLC_StateWaitFirstDLE	16	static
+hdlc.c:66:13:HDLC_StateWaitSTX	16	static
+hdlc.c:81:13:HDLC_StateWaitFrame	16	static
+hdlc.c:103:13:HDLC_StateAlgoDLE	16	static
+hdlc.c:138:13:HDLC_StateWaitChecksum	16	static
+hdlc.c:160:13:HDLC_ControlRxCharacter	16	static
+hdlc.c:194:6:HDLC_bInitialize	24	static
+hdlc.c:216:6:HDLC_bGetFrame	24	static
+hdlc.c:249:6:HDLC_bPutFrame	24	static

@@ -1,0 +1,12 @@
+fxas21002_drv.c:30:6:FXAS21002_SPI_ReadPreprocess	40	static
+fxas21002_drv.c:46:6:FXAS21002_SPI_WritePreprocess	40	static
+fxas21002_drv.c:65:9:FXAS21002_SPI_Initialize	56	static
+fxas21002_drv.c:117:6:FXAS21002_SPI_SetIdleTask	24	static
+fxas21002_drv.c:125:9:FXAS21002_SPI_Configure	32	static
+fxas21002_drv.c:168:9:FXAS21002_SPI_ReadData	40	static
+fxas21002_drv.c:197:9:FXAS21002_SPI_Deinit	32	static
+fxas21002_drv.c:228:9:FXAS21002_I2C_Initialize	40	static
+fxas21002_drv.c:259:6:FXAS21002_I2C_SetIdleTask	24	static
+fxas21002_drv.c:267:9:FXAS21002_I2C_Configure	40	static
+fxas21002_drv.c:312:9:FXAS21002_I2C_ReadData	40	static
+fxas21002_drv.c:341:9:FXAS21002_I2C_Deinit	40	static

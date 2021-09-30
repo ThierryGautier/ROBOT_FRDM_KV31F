@@ -1,0 +1,6 @@
+register_io_spi.c:41:6:SPI0_SignalEvent_t	16	static
+register_io_spi.c:53:6:SPI1_SignalEvent_t	16	static
+register_io_spi.c:136:6:register_spi_control	16	static
+register_io_spi.c:149:9:Register_SPI_BlockWrite	72	static
+register_io_spi.c:203:9:Register_SPI_Write	88	static
+register_io_spi.c:300:9:Register_SPI_Read	64	static

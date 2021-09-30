@@ -1,0 +1,6 @@
+calibration_storage.c:21:6:SaveMagCalibrationToNVM	288	static
+calibration_storage.c:55:6:SaveGyroCalibrationToNVM	288	static
+calibration_storage.c:94:6:SaveAccelCalibrationToNVM	288	static
+calibration_storage.c:128:6:EraseMagCalibrationFromNVM	280	static
+calibration_storage.c:149:6:EraseGyroCalibrationFromNVM	280	static
+calibration_storage.c:170:6:EraseAccelCalibrationFromNVM	280	static

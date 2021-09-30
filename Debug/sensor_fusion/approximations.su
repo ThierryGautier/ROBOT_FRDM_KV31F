@@ -1,0 +1,5 @@
+approximations.c:28:7:fasin_deg	16	static
+approximations.c:43:7:facos_deg	16	static
+approximations.c:59:7:fatan_deg	24	static
+approximations.c:109:7:fatan2_deg	16	static
+approximations.c:139:7:fatan_15deg	24	static

@@ -1,0 +1,5 @@
+output_stream.c:37:6:sBufAppendItem	32	static
+output_stream.c:70:6:sBufAppendZeros	32	static
+output_stream.c:78:6:readCommon	24	static
+output_stream.c:97:10:throttle	16	static
+output_stream.c:122:6:CreateAndSendPackets	112	static

@@ -1,0 +1,6 @@
+core_cm4.h:1807:22:__NVIC_SetPriority	16	static
+uart.c:18:6:UART_bOpenDevice	48	static
+uart.c:48:6:UART_bGetRxChar	32	static
+uart.c:69:6:UART_bPutTxBuffer	24	static
+uart.c:90:6:UART_BlueRadiosInit	64	static
+uart.c:131:6:UART_bCloseDevice	8	static

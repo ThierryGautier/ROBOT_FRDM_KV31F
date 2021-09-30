@@ -1,0 +1,14 @@
+matrix.c:27:6:f3x3matrixAeqI	24	static
+matrix.c:48:6:f3x3matrixAeqB	32	static
+matrix.c:69:6:fmatrixAeqI	24	static
+matrix.c:91:6:f3x3matrixAeqScalar	24	static
+matrix.c:110:6:f3x3matrixAeqAxScalar	24	static
+matrix.c:129:6:f3x3matrixAeqMinusA	24	static
+matrix.c:150:6:f3x3matrixAeqInvSymB	32	static
+matrix.c:191:7:f3x3matrixDetA	16	static
+matrix.c:216:6:fEigenCompute10	64	static
+matrix.c:389:6:fEigenCompute4	64	static
+matrix.c:554:6:fComputeEigSlice	64	static
+matrix.c:648:6:fmatrixAeqInvA	48	static
+matrix.c:802:6:fveqRu	24	static
+matrix.c:853:6:fVeq3x3AxV	32	static

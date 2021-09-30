@@ -1,0 +1,10 @@
+magnetic.c:24:6:fInitializeMagCalibration	32	static
+magnetic.c:91:6:iUpdateMagBuffer	56	static
+magnetic.c:285:6:fInvertMagCal	32	static
+magnetic.c:313:6:fRunMagCalibration	40	static
+magnetic.c:443:6:fUpdateMagCalibration4Slice	104	static
+magnetic.c:674:6:fUpdateMagCalibration7Slice	72	static
+magnetic.c:961:6:fUpdateMagCalibration10Slice	72	static
+magnetic.c:1394:6:fComputeMagCalibration4	104	static
+magnetic.c:1589:6:fComputeMagCalibration7	72	static
+magnetic.c:1752:6:fComputeMagCalibration10	64	static

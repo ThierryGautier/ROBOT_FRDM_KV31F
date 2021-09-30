@@ -1,0 +1,5 @@
+frdm_kv31f.c:279:10:UART0_GetFreq	8	static
+frdm_kv31f.c:291:10:UART1_GetFreq	8	static
+frdm_kv31f.c:303:10:I2C0_GetFreq	8	static
+frdm_kv31f.c:315:10:I2C1_GetFreq	8	static
+frdm_kv31f.c:327:10:DSPI0_GetFreq	8	static

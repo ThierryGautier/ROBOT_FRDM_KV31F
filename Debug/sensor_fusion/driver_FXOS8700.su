@@ -1,0 +1,5 @@
+driver_FXOS8700.c:130:8:FXOS8700_Init	32	static
+driver_FXOS8700.c:173:8:FXOS8700_ReadAccData	240	static
+driver_FXOS8700.c:220:8:FXOS8700_ReadMagData	48	static
+driver_FXOS8700.c:249:8:FXOS8700_Read	24	static
+driver_FXOS8700.c:280:8:FXOS8700_Idle	24	static

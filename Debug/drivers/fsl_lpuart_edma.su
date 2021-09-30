@@ -1,0 +1,12 @@
+fsl_lpuart.h:476:24:LPUART_GetDataRegisterAddress	16	static
+fsl_lpuart.h:489:20:LPUART_EnableTxDMA	16	static
+fsl_lpuart.h:509:20:LPUART_EnableRxDMA	16	static
+fsl_lpuart_edma.c:112:13:LPUART_SendEDMACallback	40	static
+fsl_lpuart_edma.c:139:13:LPUART_ReceiveEDMACallback	40	static
+fsl_lpuart_edma.c:171:6:LPUART_TransferCreateHandleEDMA	32	static
+fsl_lpuart_edma.c:237:10:LPUART_SendEDMA	80	static
+fsl_lpuart_edma.c:296:10:LPUART_ReceiveEDMA	80	static
+fsl_lpuart_edma.c:349:6:LPUART_TransferAbortSendEDMA	16	static
+fsl_lpuart_edma.c:371:6:LPUART_TransferAbortReceiveEDMA	16	static
+fsl_lpuart_edma.c:397:10:LPUART_TransferGetReceiveCountEDMA	32	static
+fsl_lpuart_edma.c:428:10:LPUART_TransferGetSendCountEDMA	32	static

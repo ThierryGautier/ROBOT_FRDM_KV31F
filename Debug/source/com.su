@@ -1,0 +1,5 @@
+com.c:65:13:CalculateNewMotorCommand	40	static
+com.c:109:13:com_TxTask	72	static
+com.c:205:13:com_RxTask	64	static
+com.c:270:6:COM_InitializeTask	24	static
+com.c:294:6:COM_WakeUp	8	static

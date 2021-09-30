@@ -1,0 +1,12 @@
+fxos8700_drv.c:30:6:FXOS8700_SPI_ReadPreprocess	40	static
+fxos8700_drv.c:47:6:FXOS8700_SPI_WritePreprocess	40	static
+fxos8700_drv.c:67:9:FXOS8700_SPI_Initialize	56	static
+fxos8700_drv.c:116:6:FXOS8700_SPI_SetIdleTask	24	static
+fxos8700_drv.c:124:9:FXOS8700_SPI_Configure	32	static
+fxos8700_drv.c:169:9:FXOS8700_SPI_ReadData	40	static
+fxos8700_drv.c:198:9:FXOS8700_SPI_Deinit	24	static
+fxos8700_drv.c:222:9:FXOS8700_I2C_Initialize	40	static
+fxos8700_drv.c:252:6:FXOS8700_I2C_SetIdleTask	24	static
+fxos8700_drv.c:260:9:FXOS8700_I2C_Configure	40	static
+fxos8700_drv.c:305:9:FXOS8700_I2C_ReadData	40	static
+fxos8700_drv.c:334:9:FXOS8700_I2C_Deinit	32	static

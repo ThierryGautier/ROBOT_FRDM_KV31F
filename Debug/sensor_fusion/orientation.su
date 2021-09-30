@@ -1,0 +1,15 @@
+orientation.c:42:6:f3DOFTiltNED	40	static
+orientation.c:199:6:f3DOFMagnetometerMatrixNED	24	static
+orientation.c:270:6:feCompassNED	48	static
+orientation.c:492:6:fNEDAnglesDegFromRotationMatrix	24	static
+orientation.c:697:6:fQuaternionFromRotationVectorDeg	56	static
+orientation.c:765:6:fQuaternionFromRotationMatrix	24	static
+orientation.c:806:6:fRotationMatrixFromQuaternion	64	static
+orientation.c:846:6:fRotationVectorDegFromQuaternion	32	static
+orientation.c:896:6:fLPFOrientationQuaternion	72	static
+orientation.c:942:6:qAeqBxC	24	static
+orientation.c:953:6:qAeqAxB	32	static
+orientation.c:970:12:qconjgAxB	64	static
+orientation.c:983:6:fqAeqNormqA	24	static
+orientation.c:1018:6:fqAeq1	16	static
+orientation.c:1028:6:fveqconjgquq	48	static
