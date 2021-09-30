@@ -13,7 +13,7 @@
     command interpreter and streaming functions are contained in two separate
     files.  So you can easily swap those out with only minor changes here.
 */
-#ifndef COM_HDLC_ENABLE 
+#ifdef COM_NXP_SENSOR_FUSION_TOOLBOX
 #include "fsl_debug_console.h"
 #include "board.h"
 #include "pin_mux.h"
@@ -217,4 +217,4 @@ int8_t initializeControlPort(
         return (1);
     }
 }
-#endif   //COM_HDLC_ENABLE
+#endif   /* COM_NXP_SENSOR_FUSION_TOOLBOX */

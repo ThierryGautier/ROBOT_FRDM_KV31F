@@ -1,5 +1,0 @@
-fsl_ftm.h:692:20:FTM_StartTimer	24	static
-fsl_ftm.h:984:20:FTM_SetSoftwareTrigger	16	static
-motors.c:49:6:MOTORS_Initialization	80	static
-motors.c:102:6:MOTORS_UpdateCommand	24	static
-motors.c:193:10:MOTORS_u16GetMaxPWMLevel	16	static

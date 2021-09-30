@@ -22,7 +22,6 @@
 
 void pit_init(uint32_t microseconds);
 void pit_init1(void);
-extern volatile bool pitIsrFlag;
-
+uint32_t pit_GetChannel1(void);
 
 #endif /* SENSOR_FUSION_INCLUDES_DRIVER_PIT_H_ */

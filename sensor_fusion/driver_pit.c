@@ -34,6 +34,9 @@
 
 volatile bool   pitIsrFlag = false;
 
+static pit_config_t    pitConfig;                  // Declare KSDK PIT configuration structure
+
+
 void PIT_LED_HANDLER(void)
 {
     /* Clear interrupt flag.*/
@@ -44,7 +47,6 @@ void PIT_LED_HANDLER(void)
 void pit_init(uint32_t microseconds)
 {
     /* initialize PIT */
-    pit_config_t    pitConfig;                  // Declare KSDK PIT configuration structure
     PIT_GetDefaultConfig(&pitConfig);           // Fill out that structure with defaults
     PIT_Init(PIT, &pitConfig);                  // PIT is declared by the KSDK
     // We choose to use Channel 0 of the PIT.  That can obviously be changed
@@ -57,9 +59,13 @@ void pit_init(uint32_t microseconds)
 void pit_init1(void)
 {
     /* initialize PIT */
-    pit_config_t    pitConfig;                  // Declare KSDK PIT configuration structure
     PIT_GetDefaultConfig(&pitConfig);           // Fill out that structure with defaults
     PIT_Init(PIT, &pitConfig);                  // PIT is declared by the KSDK
-    PIT_SetTimerPeriod(PIT, kPIT_Chnl_0,  USEC_TO_COUNT(0xFFFFFFFF, PIT_SOURCE_CLOCK)); //set pit to max value; clock source = bus clock = 60 MHz => 1 tick = 1/60 us
-    PIT_StartTimer(PIT, kPIT_Chnl_0);
+    PIT_SetTimerPeriod(PIT, kPIT_Chnl_1,  USEC_TO_COUNT(0xFFFFFFFF, PIT_SOURCE_CLOCK)); //set pit to max value; clock source = bus clock = 60 MHz => 1 tick = 1/60 us
+    PIT_StartTimer(PIT, kPIT_Chnl_1);
+}
+
+uint32_t pit_GetChannel1(void)
+{
+	return(PIT_GetCurrentTimerCount(PIT,kPIT_Chnl_1));
 }

@@ -46,7 +46,7 @@
 #include "driver_pit.h"    //used to timestamp uart caracter
 #endif
 
-#ifdef COM_HDLC_ENABLE
+#ifdef COM_REAL_TIME_ROBOT
 #include "com.h" // com headers
 #endif
 #include "motors.h"
@@ -74,6 +74,8 @@ registerDeviceInfo_t i2cBusInfo_frdm_kv31f = {
 static void read_task(void *pvParameters);   // FreeRTOS Task definition
 static void fusion_task(void *pvParameters); // FreeRTOS Task definition
 
+extern void lpuart_test(void);
+
 /// This is a FreeRTOS (dual task) implementation of the NXP sensor fusion demo build.
 int main(void)
 {
@@ -100,10 +102,11 @@ int main(void)
     pit_init1();
 #endif
 
-#ifndef COM_HDLC_ENABLE
+#ifdef COM_NXP_SENSOR_FUSION_TOOLBOX
     initializeControlPort(&controlSubsystem);    // configure pins and ports for the control sub-system
 #endif
 
+    /* init motor control */
     MOTORS_Initialization();
 
     initializeStatusSubsystem(&statusSubsystem); // configure pins and ports for the status sub-system
@@ -119,11 +122,12 @@ int main(void)
     xTaskCreate(read_task, "READ", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 3, NULL);
     xTaskCreate(fusion_task, "FUSION", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 2, NULL);
 
-#ifdef COM_HDLC_ENABLE
+#ifdef COM_REAL_TIME_ROBOT
     COM_InitializeTask();
 #endif
 
     sfg.setStatus(&sfg, NORMAL);     // If we got this far, let's set status state to NORMAL
+
     vTaskStartScheduler();           // Start the RTOS scheduler
     sfg.setStatus(&sfg, HARD_FAULT); // If we got this far, FreeRTOS does not have enough memory allocated
     for (;;) ;
@@ -149,7 +153,6 @@ static void read_task(void *pvParameters)
 static void fusion_task(void *pvParameters)
 {
     uint16_t i = 0; // general counter variable
-    uint16_t j = 0; // general counter variable
 
     while (1)
     {
@@ -171,16 +174,12 @@ static void fusion_task(void *pvParameters)
             sfg.updateStatus(&sfg); // This is where pending status updates are made visible
         }
         sfg.queueStatus(&sfg, NORMAL);      // assume NORMAL status for next pass through the loop
-#ifdef COM_HDLC_ENABLE
-        j++;
-        if(j>=5)
-        {
-        	j=0;
-        	COM_WakeUp();                   // wake-up task COM
-        }
+
+#ifdef COM_REAL_TIME_ROBOT
+      	COM_WakeUp();                   // wake-up task COM
 #endif
 
-#ifndef COM_HDLC_ENABLE
+#ifdef COM_NXP_SENSOR_FUSION_TOOLBOX
         sfg.pControlSubsystem->stream(&sfg, sUARTOutputBuffer); // Send stream data to the Sensor Fusion Toolbox
 #endif
     }

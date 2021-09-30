@@ -1,5 +1,0 @@
-register_io_i2c.c:40:6:I2C0_SignalEvent_t	16	static
-register_io_i2c.c:52:6:I2C1_SignalEvent_t	16	static
-register_io_i2c.c:135:9:Register_I2C_BlockWrite	168	static
-register_io_i2c.c:179:9:Register_I2C_Write	40	static
-register_io_i2c.c:296:9:Register_I2C_Read	40	static

@@ -1,4 +1,0 @@
-driver_systick.c:26:6:ARM_systick_enable	4	static
-driver_systick.c:34:6:ARM_systick_start_ticks	16	static
-driver_systick.c:43:7:ARM_systick_elapsed_ticks	24	static
-driver_systick.c:54:6:ARM_systick_delay_ms	32	static

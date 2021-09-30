@@ -1,4 +1,0 @@
-lpuart.c:17:6:LPUART_bOpenDevice	40	static
-lpuart.c:47:6:LPUART_bGetRxChar	16	static
-lpuart.c:68:6:LPUART_bPutTxBuffer	8	static
-lpuart.c:87:6:LPUART_bCloseDevice	8	static

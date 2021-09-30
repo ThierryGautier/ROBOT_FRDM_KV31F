@@ -1,3 +1,0 @@
-driver_MPL3115.c:68:8:MPL3115_Init	32	static
-driver_MPL3115.c:98:8:MPL3115_Read	224	static
-driver_MPL3115.c:136:8:MPL3115_Idle	24	static

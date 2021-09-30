@@ -1,5 +1,0 @@
-mpl3115_drv.c:22:9:MPL3115_I2C_Initialize	40	static
-mpl3115_drv.c:53:6:MPL3115_I2C_SetIdleTask	24	static
-mpl3115_drv.c:61:9:MPL3115_I2C_Configure	40	static
-mpl3115_drv.c:104:9:MPL3115_I2C_ReadData	40	static
-mpl3115_drv.c:133:9:MPL3115_I2C_DeInit	40	static

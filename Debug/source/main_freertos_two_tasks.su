@@ -1,3 +1,0 @@
-main_freertos_two_tasks.c:78:5:main	40	static
-main_freertos_two_tasks.c:132:13:read_task	32	static
-main_freertos_two_tasks.c:149:13:fusion_task	32	static

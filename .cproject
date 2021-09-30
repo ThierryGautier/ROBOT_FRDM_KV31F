@@ -80,7 +80,8 @@
 									<listOptionValue builtIn="false" value="__USE_CMSIS"/>
 									<listOptionValue builtIn="false" value="DEBUG"/>
 									<listOptionValue builtIn="false" value="PATCH_DRIVER_FSL_FTM"/>
-									<listOptionValue builtIn="false" value="COM_HDLC_ENABLE"/>
+									<listOptionValue builtIn="false" value="COM_REAL_TIME_ROBOT"/>
+									<listOptionValue builtIn="false" value="COM_NXP_SENSOR_FUSION_TOOLBOX_"/>
 									<listOptionValue builtIn="false" value="UART_TIME_LOG"/>
 								</option>
 								<option id="com.crt.advproject.gcc.fpu.1861014169" name="Floating point" superClass="com.crt.advproject.gcc.fpu" useByScannerDiscovery="true" value="com.crt.advproject.gcc.fpu.fpv4.hard" valueType="enumerated"/>
@@ -299,7 +300,7 @@
 								<option id="com.crt.advproject.link.gcc.lto.optmization.level.1443046437" name="Link-time optimization level" superClass="com.crt.advproject.link.gcc.lto.optmization.level" useByScannerDiscovery="false"/>
 								<option id="com.crt.advproject.link.manage.139480307" name="Manage linker script" superClass="com.crt.advproject.link.manage" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option id="com.crt.advproject.link.script.1883258827" name="Linker script" superClass="com.crt.advproject.link.script" useByScannerDiscovery="false" value="&quot;ROBOT_FRDM_KV31F_Debug.ld&quot;" valueType="string"/>
-								<option id="com.crt.advproject.link.scriptdir.1269365664" name="Script path" superClass="com.crt.advproject.link.scriptdir" useByScannerDiscovery="false"/>
+								<option id="com.crt.advproject.link.scriptdir.1269365664" name="Script path" superClass="com.crt.advproject.link.scriptdir" useByScannerDiscovery="false" value="" valueType="string"/>
 								<option id="com.crt.advproject.link.crpenable.111898633" name="Enable automatic placement of Code Read Protection field in image" superClass="com.crt.advproject.link.crpenable" useByScannerDiscovery="false"/>
 								<option id="com.crt.advproject.link.flashconfigenable.1363720272" name="Enable automatic placement of Flash Configuration field in image" superClass="com.crt.advproject.link.flashconfigenable" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option id="com.crt.advproject.link.ecrp.1688278870" name="Enhanced CRP" superClass="com.crt.advproject.link.ecrp" useByScannerDiscovery="false"/>
@@ -336,7 +337,7 @@
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="CMSIS"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="CMSIS_driver"/>
 						<entry excluding="freertos_kernel/portable/MemMang/heap_1.c|freertos_kernel/portable/MemMang/heap_2.c|freertos_kernel/portable/MemMang/heap_3.c|freertos_kernel/portable/MemMang/heap_5.c|freertos_kernel/portable/MemMang/heap_useNewlib.c" flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="amazon-freertos"/>
-						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="board"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="board"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="component"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="device"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="drivers"/>
@@ -676,17 +677,17 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="component"/>
-						<entry excluding="freertos_kernel/portable/MemMang/heap_1.c|freertos_kernel/portable/MemMang/heap_2.c|freertos_kernel/portable/MemMang/heap_3.c|freertos_kernel/portable/MemMang/heap_5.c|freertos_kernel/portable/MemMang/heap_useNewlib.c" flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="amazon-freertos"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="CMSIS"/>
-						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="source"/>
-						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="utilities"/>
-						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="libs"/>
-						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="drivers"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="CMSIS_driver"/>
+						<entry excluding="freertos_kernel/portable/MemMang/heap_1.c|freertos_kernel/portable/MemMang/heap_2.c|freertos_kernel/portable/MemMang/heap_3.c|freertos_kernel/portable/MemMang/heap_5.c|freertos_kernel/portable/MemMang/heap_useNewlib.c" flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="amazon-freertos"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="board"/>
+						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="component"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="device"/>
-						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="board"/>
+						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="drivers"/>
+						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="libs"/>
+						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="source"/>
 						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="startup"/>
+						<entry flags="LOCAL|VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="utilities"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -714,7 +715,7 @@
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="com.nxp.mcuxpresso.core.datamodels">
 		<sdkName>SDK_2.x_FRDM-KV31F</sdkName>
-		<sdkVersion>2.6.0</sdkVersion>
+		<sdkVersion>2.10.0</sdkVersion>
 		<sdkComponents>middleware.amazon_freertos-kernel.MKV31F51212;middleware.amazon_freertos-kernel.extension.MKV31F51212;middleware.amazon_freertos-kernel.template.MKV31F51212;platform.drivers.adc16.MKV31F51212;platform.drivers.common.MKV31F51212;platform.drivers.clock.MKV31F51212;device.MKV31F51212_CMSIS.MKV31F51212;platform.Include_core_cm4.MKV31F51212;platform.Include_common.MKV31F51212;platform.Include_dsp.MKV31F51212;platform.drivers.cmp.MKV31F51212;platform.drivers.crc.MKV31F51212;platform.drivers.dac.MKV31F51212;platform.drivers.dmamux.MKV31F51212;platform.drivers.dspi.MKV31F51212;platform.drivers.dspi_edma.MKV31F51212;platform.drivers.edma.MKV31F51212;platform.drivers.dspi_freertos.MKV31F51212;platform.drivers.ewm.MKV31F51212;platform.drivers.flash.MKV31F51212;platform.drivers.flexbus.MKV31F51212;platform.drivers.ftm.MKV31F51212;platform.drivers.gpio.MKV31F51212;platform.drivers.i2c.MKV31F51212;platform.drivers.i2c_edma.MKV31F51212;platform.drivers.i2c_freertos.MKV31F51212;platform.drivers.llwu.MKV31F51212;platform.drivers.lptmr.MKV31F51212;platform.drivers.lpuart.MKV31F51212;platform.drivers.lpuart_edma.MKV31F51212;platform.drivers.lpuart_freertos.MKV31F51212;platform.drivers.pdb.MKV31F51212;platform.drivers.pit.MKV31F51212;platform.drivers.pmc.MKV31F51212;platform.drivers.port.MKV31F51212;platform.drivers.rcm.MKV31F51212;platform.drivers.rnga.MKV31F51212;platform.drivers.sim.MKV31F51212;platform.drivers.smc.MKV31F51212;platform.drivers.uart.MKV31F51212;platform.drivers.uart_edma.MKV31F51212;platform.drivers.uart_freertos.MKV31F51212;platform.drivers.vref.MKV31F51212;platform.drivers.wdog.MKV31F51212;platform.CMSIS_DSP_Lib.arm_cortexM4bf_math.MKV31F51212;platform.CMSIS_DSP_Lib.arm_cortexM4lf_math.MKV31F51212;platform.drivers.dspi_cmsis.MKV31F51212;platform.CMSIS_Driver_Include.SPI_CMSISInclude.MKV31F51212;platform.CMSIS_Driver_Include.Common_CMSISInclude.MKV31F51212;RTE_Device.MKV31F51212;platform.drivers.i2c_cmsis_edma.MKV31F51212;platform.CMSIS_Driver_Include.I2C_CMSISInclude.MKV31F51212;platform.drivers.uart_cmsis_edma.MKV31F51212;platform.CMSIS_Driver_Include.USART_CMSISInclude.MKV31F51212;utility.debug_console.MKV31F51212;component.serial_manager.MKV31F51212;component.lists.MKV31F51212;component.serial_manager_uart.MKV31F51212;middleware.amazon_freertos-kernel.cm33_nonsecure_port_no_trustzone.MKV31F51212;device.MKV31F51212_startup.MKV31F51212;component.uart_adapter.MKV31F51212;</sdkComponents>
 		<package>MKV31F512VLL12</package>
 		<core>cm4</core>

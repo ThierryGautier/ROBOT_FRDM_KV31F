@@ -14,21 +14,25 @@ static lpuart_rtos_handle_t handle;
 static struct _lpuart_handle t_handle;
 static uint8_t lpuartbackground_buffer[256];
 
+lpuart_rtos_config_t lpuart_config = {
+//    .baudrate    = 115200,
+//    .baudrate    = 230400,
+	.baudrate    = 500000,
+	.parity      = kLPUART_ParityDisabled,
+    .stopbits    = kLPUART_OneStopBit,
+    .buffer      = lpuartbackground_buffer,
+    .buffer_size = sizeof(lpuartbackground_buffer),
+};
+
 BOOL LPUART_bOpenDevice (char pcDeviceName[])
 {
     int error;
-    lpuart_rtos_config_t lpuart_config;
 
-	/* Init board hardware. */
-    NVIC_SetPriority(UART1_RX_TX_IRQn, 5);
+    CLOCK_SetLpuartClock(0x1U);
 
-    lpuart_config.baudrate = 115200;
-    lpuart_config.parity = kLPUART_ParityDisabled;
-    lpuart_config.stopbits = kLPUART_OneStopBit;
-    lpuart_config.buffer = lpuartbackground_buffer;
-    lpuart_config.buffer_size = sizeof(lpuartbackground_buffer);
-    lpuart_config.srcclk = CLOCK_GetFreq(kCLOCK_CoreSysClk);
-    lpuart_config.base = LPUART0;
+    NVIC_SetPriority(LPUART0_IRQn, 5);
+    lpuart_config.srcclk = CLOCK_GetFreq(kCLOCK_PllFllSelClk);
+    lpuart_config.base   = LPUART0;
 
     /* init device */
     error = LPUART_RTOS_Init(&handle, &t_handle, &lpuart_config);
@@ -49,7 +53,8 @@ BOOL LPUART_bGetRxChar(UI08 *pu8RxChar)
 	BOOL bCharIsRecieved;
 	size_t NbReceived;
     int error;
-	/** read one byte */
+
+    /** read one byte */
 	error = LPUART_RTOS_Receive(&handle, pu8RxChar, (uint32_t)1, &NbReceived);
     if((error == kStatus_Success ) &&
        (NbReceived == 1))

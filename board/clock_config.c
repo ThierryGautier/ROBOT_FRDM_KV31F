@@ -33,11 +33,11 @@
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!GlobalInfo
-product: Clocks v7.0
+product: Clocks v8.0
 processor: MKV31F512xxx12
 package_id: MKV31F512VLL12
 mcu_data: ksdk2_0
-processor_version: 7.0.1
+processor_version: 10.0.0
 board: FRDM-KV31F
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
@@ -51,7 +51,6 @@ board: FRDM-KV31F
 #define MCG_PLL_DISABLE                                   0U  /*!< MCGPLLCLK disabled */
 #define OSC_ER_CLK_DISABLE                                0U  /*!< Disable external reference clock */
 #define SIM_CLKOUT_SEL_FLEXBUS_CLK                        0U  /*!< CLKOUT pin clock select: FlexBus clock */
-#define SIM_LPUART_CLK_SEL_OSCERCLK_CLK                   2U  /*!< LPUART clock select: OSCERCLK clock */
 #define SIM_OSC32KSEL_LPO_CLK                             3U  /*!< OSC32KSEL select: LPO clock */
 #define SIM_OSC32KSEL_OSC32KCLK_CLK                       0U  /*!< OSC32KSEL select: OSC32KCLK clock */
 #define SIM_PLLFLLSEL_IRC48MCLK_CLK                       3U  /*!< PLLFLL select: IRC48MCLK clock */
@@ -212,8 +211,7 @@ void BOARD_BootClockHSRUN(void)
     CLOCK_SetSimConfig(&simConfig_BOARD_BootClockHSRUN);
     /* Set SystemCoreClock variable. */
     SystemCoreClock = BOARD_BOOTCLOCKHSRUN_CORE_CLOCK;
-    /* Set LPUART clock source. */
-    CLOCK_SetLpuartClock(SIM_LPUART_CLK_SEL_OSCERCLK_CLK);
+
     /* Set CLKOUT source. */
     CLOCK_SetClkOutClock(SIM_CLKOUT_SEL_FLEXBUS_CLK);
     /* Set debug trace clock source. */

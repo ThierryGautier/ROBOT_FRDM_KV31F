@@ -244,7 +244,6 @@ BOOL HDLC_bGetFrame(UI08 *pu8RxFrame, UI08 *pu8RxSize)
 }
 
 UI08 au8HDLCFrame[128];
-UI08 au8HDLCFrame1[64] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 BOOL HDLC_bPutFrame(UI08 *pu8TxFrame, UI08 *pu8TxSize)
 {
@@ -275,8 +274,7 @@ BOOL HDLC_bPutFrame(UI08 *pu8TxFrame, UI08 *pu8TxSize)
     au8HDLCFrame[u8index++]=(U8_DLE);
     au8HDLCFrame[u8index++]=(U8_ETX);
     au8HDLCFrame[u8index++]=(u8Checksum);
-    //   HDLC_gstContext.bPutTxBuffer(au8HDLCFrame,u8index);
-    HDLC_gstContext.bPutTxBuffer(au8HDLCFrame1,27);
+    HDLC_gstContext.bPutTxBuffer(au8HDLCFrame,u8index);
 
     return( TRUE );
 }

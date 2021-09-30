@@ -1,5 +1,0 @@
-core_cm4.h:1807:22:__NVIC_SetPriority	16	static
-lpuart.c:17:6:LPUART_bOpenDevice	48	static
-lpuart.c:47:6:LPUART_bGetRxChar	32	static
-lpuart.c:68:6:LPUART_bPutTxBuffer	24	static
-lpuart.c:87:6:LPUART_bCloseDevice	8	static

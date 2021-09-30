@@ -1,3 +1,0 @@
-driver_FXAS21002.c:181:8:FXAS21002_Init	32	static
-driver_FXAS21002.c:225:8:FXAS21002_Read	240	static
-driver_FXAS21002.c:309:8:FXAS21002_Idle	24	static

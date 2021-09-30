@@ -1,4 +1,0 @@
-fsl_dspi_freertos.c:16:13:DSPI_RTOS_Callback	32	static
-fsl_dspi_freertos.c:36:10:DSPI_RTOS_Init	24	static
-fsl_dspi_freertos.c:88:10:DSPI_RTOS_Deinit	16	static
-fsl_dspi_freertos.c:106:10:DSPI_RTOS_Transfer	24	static

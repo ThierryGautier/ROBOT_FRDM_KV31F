@@ -27,21 +27,30 @@ void BOARD_InitBootPins(void);
 
 /*! @name PORTA2 (number 36), J9[6]/TRACE_SWO
   @{ */
-#define BOARD_TRACE_SWO_PORT PORTA /*!<@brief PORT device name: PORTA */
-#define BOARD_TRACE_SWO_PIN 2U     /*!<@brief PORTA pin index: 2 */
-                                   /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_TRACE_SWO_PORT PORTA               /*!<@brief PORT peripheral base pointer */
+#define BOARD_TRACE_SWO_PIN 2U                   /*!<@brief PORT pin number */
+#define BOARD_TRACE_SWO_PIN_MASK (1U << 2U)      /*!<@brief PORT pin mask */
+                                                 /* @} */
 
 /*! @name PORTC16 (number 90), J1[7]/LPUART0_RX
   @{ */
-#define BOARD_LPUART0_RX_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_LPUART0_RX_PIN 16U    /*!<@brief PORTC pin index: 16 */
-                                    /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_LPUART0_RX_PORT PORTC                /*!<@brief PORT peripheral base pointer */
+#define BOARD_LPUART0_RX_PIN 16U                   /*!<@brief PORT pin number */
+#define BOARD_LPUART0_RX_PIN_MASK (1U << 16U)      /*!<@brief PORT pin mask */
+                                                   /* @} */
 
 /*! @name PORTC17 (number 91), J1[9]/LPUART0_TX
   @{ */
-#define BOARD_LPUART0_TX_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_LPUART0_TX_PIN 17U    /*!<@brief PORTC pin index: 17 */
-                                    /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_LPUART0_TX_PORT PORTC                /*!<@brief PORT peripheral base pointer */
+#define BOARD_LPUART0_TX_PIN 17U                   /*!<@brief PORT pin number */
+#define BOARD_LPUART0_TX_PIN_MASK (1U << 17U)      /*!<@brief PORT pin mask */
+                                                   /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -51,17 +60,29 @@ void BOARD_InitPins(void);
 
 /*! @name PORTE4 (number 5), SW3
   @{ */
-#define BOARD_SW3_GPIO GPIOE /*!<@brief GPIO device name: GPIOE */
-#define BOARD_SW3_PORT PORTE /*!<@brief PORT device name: PORTE */
-#define BOARD_SW3_PIN 4U     /*!<@brief PORTE pin index: 4 */
-                             /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_SW3_GPIO GPIOE               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_SW3_GPIO_PIN_MASK (1U << 4U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_SW3_PORT PORTE               /*!<@brief PORT peripheral base pointer */
+#define BOARD_SW3_PIN 4U                   /*!<@brief PORT pin number */
+#define BOARD_SW3_PIN_MASK (1U << 4U)      /*!<@brief PORT pin mask */
+                                           /* @} */
 
 /*! @name PORTA4 (number 38), SW2/NMI_b
   @{ */
-#define BOARD_SW2_GPIO GPIOA /*!<@brief GPIO device name: GPIOA */
-#define BOARD_SW2_PORT PORTA /*!<@brief PORT device name: PORTA */
-#define BOARD_SW2_PIN 4U     /*!<@brief PORTA pin index: 4 */
-                             /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_SW2_GPIO GPIOA               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_SW2_GPIO_PIN_MASK (1U << 4U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_SW2_PORT PORTA               /*!<@brief PORT peripheral base pointer */
+#define BOARD_SW2_PIN 4U                   /*!<@brief PORT pin number */
+#define BOARD_SW2_PIN_MASK (1U << 4U)      /*!<@brief PORT pin mask */
+                                           /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -74,24 +95,42 @@ void BOARD_InitBUTTONsPins(void);
 
 /*! @name PORTE25 (number 32), D4[3]/LEDRGB_BLUE
   @{ */
-#define BOARD_LED_BLUE_GPIO GPIOE /*!<@brief GPIO device name: GPIOE */
-#define BOARD_LED_BLUE_PORT PORTE /*!<@brief PORT device name: PORTE */
-#define BOARD_LED_BLUE_PIN 25U    /*!<@brief PORTE pin index: 25 */
-                                  /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_LED_BLUE_GPIO GPIOE                /*!<@brief GPIO peripheral base pointer */
+#define BOARD_LED_BLUE_GPIO_PIN_MASK (1U << 25U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_LED_BLUE_PORT PORTE                /*!<@brief PORT peripheral base pointer */
+#define BOARD_LED_BLUE_PIN 25U                   /*!<@brief PORT pin number */
+#define BOARD_LED_BLUE_PIN_MASK (1U << 25U)      /*!<@brief PORT pin mask */
+                                                 /* @} */
 
 /*! @name PORTD1 (number 94), D4[1]/LEDRGB_RED
   @{ */
-#define BOARD_LED_RED_GPIO GPIOD /*!<@brief GPIO device name: GPIOD */
-#define BOARD_LED_RED_PORT PORTD /*!<@brief PORT device name: PORTD */
-#define BOARD_LED_RED_PIN 1U     /*!<@brief PORTD pin index: 1 */
-                                 /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_LED_RED_GPIO GPIOD               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_LED_RED_GPIO_PIN_MASK (1U << 1U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_LED_RED_PORT PORTD               /*!<@brief PORT peripheral base pointer */
+#define BOARD_LED_RED_PIN 1U                   /*!<@brief PORT pin number */
+#define BOARD_LED_RED_PIN_MASK (1U << 1U)      /*!<@brief PORT pin mask */
+                                               /* @} */
 
 /*! @name PORTD7 (number 100), D4[4]/LEDRGB_GREEN
   @{ */
-#define BOARD_LED_GREEN_GPIO GPIOD /*!<@brief GPIO device name: GPIOD */
-#define BOARD_LED_GREEN_PORT PORTD /*!<@brief PORT device name: PORTD */
-#define BOARD_LED_GREEN_PIN 7U     /*!<@brief PORTD pin index: 7 */
-                                   /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_LED_GREEN_GPIO GPIOD               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_LED_GREEN_GPIO_PIN_MASK (1U << 7U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_LED_GREEN_PORT PORTD               /*!<@brief PORT peripheral base pointer */
+#define BOARD_LED_GREEN_PIN 7U                   /*!<@brief PORT pin number */
+#define BOARD_LED_GREEN_PIN_MASK (1U << 7U)      /*!<@brief PORT pin mask */
+                                                 /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -103,15 +142,21 @@ void BOARD_InitLEDsPins(void);
 
 /*! @name PORTB16 (number 62), U7[4]/UART0_RX_TGTMCU
   @{ */
-#define BOARD_DEBUG_UART_RX_PORT PORTB /*!<@brief PORT device name: PORTB */
-#define BOARD_DEBUG_UART_RX_PIN 16U    /*!<@brief PORTB pin index: 16 */
-                                       /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_DEBUG_UART_RX_PORT PORTB                /*!<@brief PORT peripheral base pointer */
+#define BOARD_DEBUG_UART_RX_PIN 16U                   /*!<@brief PORT pin number */
+#define BOARD_DEBUG_UART_RX_PIN_MASK (1U << 16U)      /*!<@brief PORT pin mask */
+                                                      /* @} */
 
 /*! @name PORTB17 (number 63), U10[1]/UART0_TX_TGTMCU
   @{ */
-#define BOARD_DEBUG_UART_TX_PORT PORTB /*!<@brief PORT device name: PORTB */
-#define BOARD_DEBUG_UART_TX_PIN 17U    /*!<@brief PORTB pin index: 17 */
-                                       /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_DEBUG_UART_TX_PORT PORTB                /*!<@brief PORT peripheral base pointer */
+#define BOARD_DEBUG_UART_TX_PIN 17U                   /*!<@brief PORT pin number */
+#define BOARD_DEBUG_UART_TX_PIN_MASK (1U << 17U)      /*!<@brief PORT pin mask */
+                                                      /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -135,15 +180,21 @@ void BOARD_InitTHERPins(void);
 
 /*! @name PORTA18 (number 50), X501[1]/EXTAL0
   @{ */
-#define BOARD_EXTAL0_PORT PORTA /*!<@brief PORT device name: PORTA */
-#define BOARD_EXTAL0_PIN 18U    /*!<@brief PORTA pin index: 18 */
-                                /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_EXTAL0_PORT PORTA                /*!<@brief PORT peripheral base pointer */
+#define BOARD_EXTAL0_PIN 18U                   /*!<@brief PORT pin number */
+#define BOARD_EXTAL0_PIN_MASK (1U << 18U)      /*!<@brief PORT pin mask */
+                                               /* @} */
 
 /*! @name PORTA19 (number 51), X501[3]/XTAL0
   @{ */
-#define BOARD_XTAL0_PORT PORTA /*!<@brief PORT device name: PORTA */
-#define BOARD_XTAL0_PIN 19U    /*!<@brief PORTA pin index: 19 */
-                               /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_XTAL0_PORT PORTA                /*!<@brief PORT peripheral base pointer */
+#define BOARD_XTAL0_PIN 19U                   /*!<@brief PORT pin number */
+#define BOARD_XTAL0_PIN_MASK (1U << 19U)      /*!<@brief PORT pin mask */
+                                              /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -153,15 +204,21 @@ void BOARD_InitOSCPins(void);
 
 /*! @name PORTD2 (number 95), U8[4]/I2C0_SCL
   @{ */
-#define I2C0_INITPINS_ACCEL_SCL_PORT PORTD /*!<@brief PORT device name: PORTD */
-#define I2C0_INITPINS_ACCEL_SCL_PIN 2U     /*!<@brief PORTD pin index: 2 */
-                                           /* @} */
+
+/* Symbols to be used with PORT driver */
+#define I2C0_INITPINS_ACCEL_SCL_PORT PORTD               /*!<@brief PORT peripheral base pointer */
+#define I2C0_INITPINS_ACCEL_SCL_PIN 2U                   /*!<@brief PORT pin number */
+#define I2C0_INITPINS_ACCEL_SCL_PIN_MASK (1U << 2U)      /*!<@brief PORT pin mask */
+                                                         /* @} */
 
 /*! @name PORTD3 (number 96), U8[6]/I2C0_SDA
   @{ */
-#define I2C0_INITPINS_ACCEL_SDA_PORT PORTD /*!<@brief PORT device name: PORTD */
-#define I2C0_INITPINS_ACCEL_SDA_PIN 3U     /*!<@brief PORTD pin index: 3 */
-                                           /* @} */
+
+/* Symbols to be used with PORT driver */
+#define I2C0_INITPINS_ACCEL_SDA_PORT PORTD               /*!<@brief PORT peripheral base pointer */
+#define I2C0_INITPINS_ACCEL_SDA_PIN 3U                   /*!<@brief PORT pin number */
+#define I2C0_INITPINS_ACCEL_SDA_PIN_MASK (1U << 3U)      /*!<@brief PORT pin mask */
+                                                         /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -191,17 +248,29 @@ void I2C1_DeinitPins(void);
 
 /*! @name PORTC9 (number 81), J4[4]/ADC1_SE5b/CMP0_IN3
   @{ */
-#define BOARD_INITBLUETOOTH_BT_MONITOR_GPIO GPIOC /*!<@brief GPIO device name: GPIOC */
-#define BOARD_INITBLUETOOTH_BT_MONITOR_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_INITBLUETOOTH_BT_MONITOR_PIN 9U     /*!<@brief PORTC pin index: 9 */
-                                                  /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITBLUETOOTH_BT_MONITOR_GPIO GPIOC               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITBLUETOOTH_BT_MONITOR_GPIO_PIN_MASK (1U << 9U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITBLUETOOTH_BT_MONITOR_PORT PORTC               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITBLUETOOTH_BT_MONITOR_PIN 9U                   /*!<@brief PORT pin number */
+#define BOARD_INITBLUETOOTH_BT_MONITOR_PIN_MASK (1U << 9U)      /*!<@brief PORT pin mask */
+                                                                /* @} */
 
 /*! @name PORTC8 (number 80), J4[2]/ADC1_SE4b/CMP0_IN2
   @{ */
-#define BOARD_INITBLUETOOTH_BT_WACKUP_GPIO GPIOC /*!<@brief GPIO device name: GPIOC */
-#define BOARD_INITBLUETOOTH_BT_WACKUP_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_INITBLUETOOTH_BT_WACKUP_PIN 8U     /*!<@brief PORTC pin index: 8 */
-                                                 /* @} */
+
+/* Symbols to be used with GPIO driver */
+#define BOARD_INITBLUETOOTH_BT_WACKUP_GPIO GPIOC               /*!<@brief GPIO peripheral base pointer */
+#define BOARD_INITBLUETOOTH_BT_WACKUP_GPIO_PIN_MASK (1U << 8U) /*!<@brief GPIO pin mask */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITBLUETOOTH_BT_WACKUP_PORT PORTC               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITBLUETOOTH_BT_WACKUP_PIN 8U                   /*!<@brief PORT pin number */
+#define BOARD_INITBLUETOOTH_BT_WACKUP_PIN_MASK (1U << 8U)      /*!<@brief PORT pin mask */
+                                                               /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -214,39 +283,57 @@ void BOARD_InitBluetooth(void);
 
 /*! @name PORTC1 (number 71), J3[15]/FTM0_CH0
   @{ */
-#define BOARD_INITMOTORDRIVERSHIELD_PWM_AT_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_INITMOTORDRIVERSHIELD_PWM_AT_PIN 1U     /*!<@brief PORTC pin index: 1 */
-                                                      /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_AT_PORT PORTC               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_AT_PIN 1U                   /*!<@brief PORT pin number */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_AT_PIN_MASK (1U << 1U)      /*!<@brief PORT pin mask */
+                                                                    /* @} */
 
 /*! @name PORTC2 (number 72), J3[13]/FTM0_CH1
   @{ */
-#define BOARD_INITMOTORDRIVERSHIELD_PWM_AB_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_INITMOTORDRIVERSHIELD_PWM_AB_PIN 2U     /*!<@brief PORTC pin index: 2 */
-                                                      /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_AB_PORT PORTC               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_AB_PIN 2U                   /*!<@brief PORT pin number */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_AB_PIN_MASK (1U << 2U)      /*!<@brief PORT pin mask */
+                                                                    /* @} */
 
 /*! @name PORTC5 (number 77), J3[11]/FTM0_CH2
   @{ */
-#define BOARD_INITMOTORDRIVERSHIELD_PWM_BT_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_INITMOTORDRIVERSHIELD_PWM_BT_PIN 5U     /*!<@brief PORTC pin index: 5 */
-                                                      /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_BT_PORT PORTC               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_BT_PIN 5U                   /*!<@brief PORT pin number */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_BT_PIN_MASK (1U << 5U)      /*!<@brief PORT pin mask */
+                                                                    /* @} */
 
 /*! @name PORTC4 (number 76), J3[9]/FTM0_CH3
   @{ */
-#define BOARD_INITMOTORDRIVERSHIELD_PWM_BB_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_INITMOTORDRIVERSHIELD_PWM_BB_PIN 4U     /*!<@brief PORTC pin index: 4 */
-                                                      /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_BB_PORT PORTC               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_BB_PIN 4U                   /*!<@brief PORT pin number */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_BB_PIN_MASK (1U << 4U)      /*!<@brief PORT pin mask */
+                                                                    /* @} */
 
 /*! @name PORTD4 (number 97), J3[7]/FTM0_CH4
   @{ */
-#define BOARD_INITMOTORDRIVERSHIELD_PWM_CT_PORT PORTD /*!<@brief PORT device name: PORTD */
-#define BOARD_INITMOTORDRIVERSHIELD_PWM_CT_PIN 4U     /*!<@brief PORTD pin index: 4 */
-                                                      /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_CT_PORT PORTD               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_CT_PIN 4U                   /*!<@brief PORT pin number */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_CT_PIN_MASK (1U << 4U)      /*!<@brief PORT pin mask */
+                                                                    /* @} */
 
 /*! @name PORTD5 (number 98), J3[5]/FTM0_CH5
   @{ */
-#define BOARD_INITMOTORDRIVERSHIELD_PWM_CB_PORT PORTD /*!<@brief PORT device name: PORTD */
-#define BOARD_INITMOTORDRIVERSHIELD_PWM_CB_PIN 5U     /*!<@brief PORTD pin index: 5 */
-                                                      /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_CB_PORT PORTD               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_CB_PIN 5U                   /*!<@brief PORT pin number */
+#define BOARD_INITMOTORDRIVERSHIELD_PWM_CB_PIN_MASK (1U << 5U)      /*!<@brief PORT pin mask */
+                                                                    /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.
@@ -256,9 +343,12 @@ void BOARD_InitMotorDriverShield(void);
 
 /*! @name PORTC0 (number 70), J4[8]/ADC0_SE14
   @{ */
-#define BOARD_INITSPI0_ADC0_SE14_PORT PORTC /*!<@brief PORT device name: PORTC */
-#define BOARD_INITSPI0_ADC0_SE14_PIN 0U     /*!<@brief PORTC pin index: 0 */
-                                            /* @} */
+
+/* Symbols to be used with PORT driver */
+#define BOARD_INITSPI0_ADC0_SE14_PORT PORTC               /*!<@brief PORT peripheral base pointer */
+#define BOARD_INITSPI0_ADC0_SE14_PIN 0U                   /*!<@brief PORT pin number */
+#define BOARD_INITSPI0_ADC0_SE14_PIN_MASK (1U << 0U)      /*!<@brief PORT pin mask */
+                                                          /* @} */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.

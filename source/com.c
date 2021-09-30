@@ -9,7 +9,19 @@
 
 /* Freescale includes. */
 #include "stdtype.h"
+
+#ifdef COM_REAL_TIME_ROBOT
+#ifdef COM_BLUETOOTH
 #include "uart.h"
+#else
+#include "lpuart.h"
+#endif
+#endif
+
+#ifdef UART_TIME_LOG
+#include "driver_pit.h"    //used to timestamp uart caracter
+#endif
+
 #include "hdlc.h"
 
 /* sensor fusion */
@@ -44,9 +56,14 @@ float af32AverageAcc[3];
 float af32SumAcc[3];
 uint32_t u32InitIsdone = 0;
 
-/* command reveived from the master:
- * - 's' send Gx, Gy, Gz, roll, pitch , eCompass */
-UI08 u8CmdReceived = 0;
+/* command received from the master:
+ * - 't' connect TX and RX lpuart to test hard in loop mode
+ * - 's' send Gx, Gy, Gz, roll, pitch , eCompass periodically
+ **/
+UI08 gu8CmdReceived = 0;
+
+UI32 gu32CmdPattern = 0; /*used to test com when Rx is connected to Tx */
+
 
 float gfAccGlOutput[3];
 float gfVelGl[3];
@@ -60,6 +77,9 @@ static float f32CapError;
 static MOTOR_eMotorsOrders eMotorCommand = MOTOR_eStop;
 static uint16_t u16PWMLevel = 0;
 
+static UI32 gu32PIT1TxValue = 0;
+static UI32 gu32PIT1RxValue = 0;
+static UI32 gu32LatencyInus = 0;
 
 /*cap control command */
 static void CalculateNewMotorCommand(MOTOR_eMotorsOrders eMotorCommand,
@@ -102,7 +122,6 @@ static void CalculateNewMotorCommand(MOTOR_eMotorsOrders eMotorCommand,
     /**/
 }
 
-extern void UART_BlueRadiosInit(void);
 /*!
  * @brief Task responsible for controlling com with PC/master board with bluetooth.
  */
@@ -121,9 +140,6 @@ static void com_TxTask(void *pvParameters)
     uint16_t u16PWMLevelLeft;
     uint16_t u16PWMLevelRight;
 
-    /* bluetooth init */
-   // UART_BlueRadiosInit();
-
     while(1)
     {
         xEventGroupWaitBits(event_COM,      /* The event group handle. */
@@ -132,7 +148,18 @@ static void com_TxTask(void *pvParameters)
                             pdFALSE,        /* Don't wait for both bits, either bit unblock task. */
                             portMAX_DELAY); /* Block indefinitely to wait for the condition to be met. */
 
-        if(u8CmdReceived == 's')
+        /* test loopback TX et RX */
+        if(gu8CmdReceived == 't')
+        {
+            /* Send frame data */
+        	au8TxFrame[0] = 'C';
+        	au8TxFrame[1] = 'A';
+        	au8TxFrame[2] = 'F';
+        	au8TxFrame[3] = 'E';
+    	    u8TxFrameSize = 4;
+    	    HDLC_bPutFrame(&au8TxFrame[0],&u8TxFrameSize);
+        }
+        else if(gu8CmdReceived == 's')
         {
         	//calculate new PWM left and right
 			CalculateNewMotorCommand(eMotorCommand,
@@ -144,56 +171,64 @@ static void com_TxTask(void *pvParameters)
 			// update new motor command
 			MOTORS_UpdateCommand(eMotorCommand,u16PWMLevelLeft,u16PWMLevelRight);
 
-			//periodical communication with the slave device Bluetooth on /dev/rfcommxx
+			//periodical communication with the slave device
 			/*update life byte*/
 			au8TxFrame[ 0] = COM_gu8TxLifeByteFrame;
 			au8TxFrame[ 1] = COM_gu8RxLifeByteFrame;
 			COM_gu8TxLifeByteFrame++;
 
-			/* update linear acceleration (g) X */
-			Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHX];
+			/* update pit channel 1 */
+			gu32PIT1TxValue = pit_GetChannel1();
+			Convert32Bits.f32Value = gu32LatencyInus;
 			au8TxFrame[ 2] = Convert32Bits.au8Data[0];
 			au8TxFrame[ 3] = Convert32Bits.au8Data[1];
 			au8TxFrame[ 4] = Convert32Bits.au8Data[2];
 			au8TxFrame[ 5] = Convert32Bits.au8Data[3];
 
-			/* update linear acceleration (g) Y */
-			Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHY];
+			/* update linear acceleration (g) X */
+			Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHX];
 			au8TxFrame[ 6] = Convert32Bits.au8Data[0];
 			au8TxFrame[ 7] = Convert32Bits.au8Data[1];
 			au8TxFrame[ 8] = Convert32Bits.au8Data[2];
 			au8TxFrame[ 9] = Convert32Bits.au8Data[3];
 
-			/* update linear acceleration (g) Z */
-			Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHZ];
+			/* update linear acceleration (g) Y */
+			Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHY];
 			au8TxFrame[10] = Convert32Bits.au8Data[0];
 			au8TxFrame[11] = Convert32Bits.au8Data[1];
 			au8TxFrame[12] = Convert32Bits.au8Data[2];
 			au8TxFrame[13] = Convert32Bits.au8Data[3];
 
-			/* update roll (deg) */
-			Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fPhiPl;
+			/* update linear acceleration (g) Z */
+			Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fAccGl[CHZ];
 			au8TxFrame[14] = Convert32Bits.au8Data[0];
 			au8TxFrame[15] = Convert32Bits.au8Data[1];
 			au8TxFrame[16] = Convert32Bits.au8Data[2];
 			au8TxFrame[17] = Convert32Bits.au8Data[3];
 
-			/* update pitch (deg) */
-			Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fThePl;
+			/* update roll (deg) */
+			Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fPhiPl;
 			au8TxFrame[18] = Convert32Bits.au8Data[0];
 			au8TxFrame[19] = Convert32Bits.au8Data[1];
 			au8TxFrame[20] = Convert32Bits.au8Data[2];
 			au8TxFrame[21] = Convert32Bits.au8Data[3];
 
-			/* update compass (deg) */
-			Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fRhoPl;
+			/* update pitch (deg) */
+			Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fThePl;
 			au8TxFrame[22] = Convert32Bits.au8Data[0];
 			au8TxFrame[23] = Convert32Bits.au8Data[1];
 			au8TxFrame[24] = Convert32Bits.au8Data[2];
 			au8TxFrame[25] = Convert32Bits.au8Data[3];
 
+			/* update compass (deg) */
+			Convert32Bits.f32Value = sfg.SV_9DOF_GBY_KALMAN.fRhoPl;
+			au8TxFrame[26] = Convert32Bits.au8Data[0];
+			au8TxFrame[27] = Convert32Bits.au8Data[1];
+			au8TxFrame[28] = Convert32Bits.au8Data[2];
+			au8TxFrame[29] = Convert32Bits.au8Data[3];
+
             /* Send frame data */
-    	    u8TxFrameSize = 26;
+    	    u8TxFrameSize = 30;
     	    HDLC_bPutFrame(&au8TxFrame[0],&u8TxFrameSize);
          }
     }
@@ -225,58 +260,93 @@ static void com_RxTask(void *pvParameters)
     while(1)
     {
     	bFrameReceived = HDLC_bGetFrame(&au8RxFrame[0],&u8RxFrameSize);
-        /* received a start command */
-        if((bFrameReceived == TRUE) &&
-           (u8RxFrameSize==1))
+        /* received a test command */
+        if(bFrameReceived == TRUE)
         {
-        	u8CmdReceived = au8RxFrame[0];
-           	COM_gu8RxLifeByteFrame++;
-        }
-        /* received a motor command */
-        else if((bFrameReceived == TRUE) &&
-                (u8RxFrameSize==7))
-        {
-        	COM_gu8RxLifeByteFrame++;
+			/* received a command ('s':start, 'e':stop...) */
+			if(u8RxFrameSize==1)
+			{
+				gu8CmdReceived = au8RxFrame[0];
+				COM_gu8RxLifeByteFrame++;
+			}
+        	/* frame test loopback mode (RX connected to TX)*/
+			else if(u8RxFrameSize==4)
+			{
+				/* read the PWM level */
+				Convert32Bits.au8Data[0] = au8RxFrame[0];
+				Convert32Bits.au8Data[1] = au8RxFrame[1];
+				Convert32Bits.au8Data[2] = au8RxFrame[2];
+				Convert32Bits.au8Data[3] = au8RxFrame[3];
+				gu32CmdPattern = Convert32Bits.u32Value;
+				COM_gu8RxLifeByteFrame++;
+			}
+			/* received cyclic motor command , response of request */
+			else if(u8RxFrameSize==7)
+			{
+				COM_gu8RxLifeByteFrame++;
 
-        	/* read motor order */
-        	eMotorCommand           = (MOTOR_eMotorsOrders)au8RxFrame[0];
+				/* get PIT1 value and measure latency */
+				gu32PIT1RxValue = pit_GetChannel1();
+				if(gu32PIT1RxValue > gu32PIT1TxValue)
+				{
+					gu32LatencyInus = gu32PIT1RxValue-gu32PIT1TxValue;
+				}
+				else
+				{
+					gu32LatencyInus = 0xFFFFFFFF-gu32PIT1TxValue+gu32PIT1RxValue;
+				}
 
-        	/* read the PWM level */
-        	Convert16Bits.au8Data[0] = au8RxFrame[1];
-        	Convert16Bits.au8Data[1] = au8RxFrame[2];
-        	u16PWMLevel = Convert16Bits.u16Value;
+				/* read motor order */
+				eMotorCommand           = (MOTOR_eMotorsOrders)au8RxFrame[0];
 
-        	/* read cap command  in degree */
-        	Convert32Bits.au8Data[0] = au8RxFrame[3];
-        	Convert32Bits.au8Data[1] = au8RxFrame[4];
-        	Convert32Bits.au8Data[2] = au8RxFrame[5];
-        	Convert32Bits.au8Data[3] = au8RxFrame[6];
-         	f32Cap = Convert32Bits.f32Value;
-        }
-        else
-        {
-        	/* do nothing */
+				/* read the PWM level */
+				Convert16Bits.au8Data[0] = au8RxFrame[1];
+				Convert16Bits.au8Data[1] = au8RxFrame[2];
+				u16PWMLevel = Convert16Bits.u16Value;
+
+				/* read cap command  in degree */
+				Convert32Bits.au8Data[0] = au8RxFrame[3];
+				Convert32Bits.au8Data[1] = au8RxFrame[4];
+				Convert32Bits.au8Data[2] = au8RxFrame[5];
+				Convert32Bits.au8Data[3] = au8RxFrame[6];
+				f32Cap = Convert32Bits.f32Value;
+
+			}
+			else
+			{
+				/* do nothing */
+			}
         }
     }
 }
 
+
 /*******************************************************************************
  * Code
  ******************************************************************************/
-/*!
- * @brief Application entry point.
- */
-extern void BlueRadios_Init(void);
+
 void COM_InitializeTask(void)
 {
 	BOOL bIsInitialized;
-     /* init device */
+
+#ifdef COM_REAL_TIME_ROBOT
+#ifdef COM_BLUETOOTH
+	/* init device UART connected to bluetooth device communicate with the robot though bluetooth communication */
 	bIsInitialized = HDLC_bInitialize(0,
     						    	  UART_bOpenDevice,
 									  UART_bGetRxChar,
 									  UART_bPutTxBuffer,
 									  UART_bCloseDevice);
-    if (bIsInitialized == TRUE )
+#else
+	/* init device LPUART connected to the robot */
+	bIsInitialized = HDLC_bInitialize(0,
+    						    	  LPUART_bOpenDevice,
+									  LPUART_bGetRxChar,
+									  LPUART_bPutTxBuffer,
+									  LPUART_bCloseDevice);
+#endif
+#endif
+	if (bIsInitialized == TRUE )
     {
         /* create the Tx/Rx Task */
         xTaskCreate(com_TxTask, "ComTxtask", configMINIMAL_STACK_SIZE, NULL, uart_task_PRIORITY+1, NULL);
