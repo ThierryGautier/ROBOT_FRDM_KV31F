@@ -23,3 +23,5 @@ This part is developped in C with MCUXpresso IDE with merge of FRDM-KV31 package
 
 The Software development kit SDK_2.6.0_FRDM-KV31F is used to develop embedded software with RTOS with add RTOS drivers required for this project.
 The Software development kit SDK_2.9.0_FRDM-K64F-MULT2B.zip is used to get Sensor fusion librairy and bluetooth functionnality
+
+Migration in progress to SDK_2.10 for both
