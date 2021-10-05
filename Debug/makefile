@@ -15,6 +15,9 @@ RM := rm -rf
 -include sensor_fusion/subdir.mk
 -include interfaces/subdir.mk
 -include gpio_driver/subdir.mk
+-include freertos/freertos_kernel/portable/MemMang/subdir.mk
+-include freertos/freertos_kernel/portable/GCC/ARM_CM4F/subdir.mk
+-include freertos/freertos_kernel/subdir.mk
 -include drivers/freertos/subdir.mk
 -include drivers/subdir.mk
 -include device/subdir.mk
@@ -22,9 +25,6 @@ RM := rm -rf
 -include component/serial_manager/subdir.mk
 -include component/lists/subdir.mk
 -include board/subdir.mk
--include amazon-freertos/freertos_kernel/portable/MemMang/subdir.mk
--include amazon-freertos/freertos_kernel/portable/GCC/ARM_CM4F/subdir.mk
--include amazon-freertos/freertos_kernel/subdir.mk
 -include subdir.mk
 -include objects.mk
 

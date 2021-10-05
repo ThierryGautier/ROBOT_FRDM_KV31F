@@ -1,0 +1,12 @@
+/board/
+/component/
+/device/
+/drivers/
+/freertos/
+/gpio_driver/
+/interfaces/
+/sensor_fusion/
+/sensors/
+/source/
+/startup/
+/utilities/
