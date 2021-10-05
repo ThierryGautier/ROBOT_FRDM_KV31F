@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2015, Freescale Semiconductor, Inc.
- * Copyright 2016-2019 NXP
+ * Copyright 2016-2020 NXP
  * All rights reserved.
  *
  * SPDX-License-Identifier: BSD-3-Clause
@@ -22,8 +22,9 @@
 
 /*! @name Driver version */
 /*@{*/
-/*! @brief ADC16 driver version 2.0.3. */
-#define FSL_ADC16_DRIVER_VERSION (MAKE_VERSION(2, 0, 3))
+/*! @brief ADC16 driver version 2.2.0. */
+#define FSL_ADC16_DRIVER_VERSION (MAKE_VERSION(2, 2, 0))
+
 /*@}*/
 
 /*!
@@ -133,6 +134,9 @@ typedef enum _adc16_reference_voltage_source
 {
     kADC16_ReferenceVoltageSourceVref = 0U, /*!< For external pins pair of VrefH and VrefL. */
     kADC16_ReferenceVoltageSourceValt = 1U, /*!< For alternate reference pair of ValtH and ValtL. */
+#if defined(FSL_FEATURE_ADC16_HAS_VREF_BANDGAP) && FSL_FEATURE_ADC16_HAS_VREF_BANDGAP
+    kADC16_ReferenceVoltageSourceBandgap = 2U, /*!< For bandgap voltage from PMC. */
+#endif                                         /* FSL_FEATURE_ADC16_HAS_VREF_BANDGAP */
 } adc16_reference_voltage_source_t;
 
 #if defined(FSL_FEATURE_ADC16_HAS_HW_AVERAGE) && FSL_FEATURE_ADC16_HAS_HW_AVERAGE
@@ -192,6 +196,9 @@ typedef struct _adc16_config
     bool enableHighSpeed;                                    /*!< Enable the high-speed mode. */
     bool enableLowPower;                                     /*!< Enable low power. */
     bool enableContinuousConversion;                         /*!< Enable continuous conversion mode. */
+#if defined(FSL_FEATURE_ADC16_HAS_HW_AVERAGE) && FSL_FEATURE_ADC16_HAS_HW_AVERAGE
+    adc16_hardware_average_mode_t hardwareAverageMode; /*!< Set hardware average mode. */
+#endif                                                 /* FSL_FEATURE_ADC16_HAS_HW_AVERAGE */
 } adc16_config_t;
 
 /*!

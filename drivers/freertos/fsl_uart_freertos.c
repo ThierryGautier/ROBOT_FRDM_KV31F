@@ -28,20 +28,24 @@ static void UART_RTOS_Callback(UART_Type *base, uart_handle_t *state, status_t s
     {
         xResult = xEventGroupSetBitsFromISR(handle->rxEvent, RTOS_UART_COMPLETE, &xHigherPriorityTaskWoken);
     }
-    else if (status == kStatus_UART_TxIdle)
+    if (status == kStatus_UART_TxIdle)
     {
         xResult = xEventGroupSetBitsFromISR(handle->txEvent, RTOS_UART_COMPLETE, &xHigherPriorityTaskWoken);
     }
-    else if (status == kStatus_UART_RxRingBufferOverrun)
+    if (status == kStatus_UART_RxRingBufferOverrun)
     {
         xResult = xEventGroupSetBitsFromISR(handle->rxEvent, RTOS_UART_RING_BUFFER_OVERRUN, &xHigherPriorityTaskWoken);
     }
-    else if (status == kStatus_UART_RxHardwareOverrun)
+    if (status == kStatus_UART_RxHardwareOverrun)
     {
         /* Clear Overrun flag (OR) in UART S1 register */
-        UART_ClearStatusFlags(base, kUART_RxOverrunFlag);
+        (void)UART_ClearStatusFlags(base, kUART_RxOverrunFlag);
         xResult =
             xEventGroupSetBitsFromISR(handle->rxEvent, RTOS_UART_HARDWARE_BUFFER_OVERRUN, &xHigherPriorityTaskWoken);
+    }
+    else
+    {
+        xResult = pdFAIL;
     }
 
     if (xResult != pdFAIL)
@@ -62,13 +66,12 @@ static void UART_RTOS_Callback(UART_Type *base, uart_handle_t *state, status_t s
  * param handle The RTOS UART handle, the pointer to an allocated space for RTOS context.
  * param t_handle The pointer to the allocated space to store the transactional layer internal state.
  * param cfg The pointer to the parameters required to configure the UART after initialization.
- * return 0 succeed; otherwise fail.
+ * return kStatus_Success, otherwise fail.
  */
 int UART_RTOS_Init(uart_rtos_handle_t *handle, uart_handle_t *t_handle, const uart_rtos_config_t *cfg)
 {
+    status_t status;
     uart_config_t defcfg;
-
-    UART_GetDefaultConfig(&defcfg);
 
     if (NULL == handle)
     {
@@ -86,11 +89,11 @@ int UART_RTOS_Init(uart_rtos_handle_t *handle, uart_handle_t *t_handle, const ua
     {
         return kStatus_InvalidArgument;
     }
-    if (0 == cfg->srcclk)
+    if (0U == cfg->srcclk)
     {
         return kStatus_InvalidArgument;
     }
-    if (0 == cfg->baudrate)
+    if (0U == cfg->baudrate)
     {
         return kStatus_InvalidArgument;
     }
@@ -147,19 +150,22 @@ int UART_RTOS_Init(uart_rtos_handle_t *handle, uart_handle_t *t_handle, const ua
     defcfg.stopBitCount = cfg->stopbits;
 #endif
 
-#if defined(FSL_FEATURE_UART_HAS_FIFO) && FSL_FEATURE_UART_HAS_FIFO
-    defcfg.rxFifoWatermark =1;
-	defcfg.txFifoWatermark =0;
-#endif
-
-    UART_Init(handle->base, &defcfg, cfg->srcclk);
+    status = UART_Init(handle->base, &defcfg, cfg->srcclk);
+    if (status != kStatus_Success)
+    {
+        vEventGroupDelete(handle->rxEvent);
+        vEventGroupDelete(handle->txEvent);
+        vSemaphoreDelete(handle->rxSemaphore);
+        vSemaphoreDelete(handle->txSemaphore);
+        return kStatus_Fail;
+    }
     UART_TransferCreateHandle(handle->base, handle->t_state, UART_RTOS_Callback, handle);
     UART_TransferStartRingBuffer(handle->base, handle->t_state, cfg->buffer, cfg->buffer_size);
 
     UART_EnableTx(handle->base, true);
     UART_EnableRx(handle->base, true);
 
-    return 0;
+    return kStatus_Success;
 }
 
 /*FUNCTION**********************************************************************
@@ -184,8 +190,8 @@ int UART_RTOS_Deinit(uart_rtos_handle_t *handle)
     vEventGroupDelete(handle->rxEvent);
 
     /* Give the semaphore. This is for functional safety */
-    xSemaphoreGive(handle->txSemaphore);
-    xSemaphoreGive(handle->rxSemaphore);
+    (void)xSemaphoreGive(handle->txSemaphore);
+    (void)xSemaphoreGive(handle->rxSemaphore);
 
     vSemaphoreDelete(handle->txSemaphore);
     vSemaphoreDelete(handle->rxSemaphore);
@@ -194,7 +200,7 @@ int UART_RTOS_Deinit(uart_rtos_handle_t *handle)
     handle->base    = NULL;
     handle->t_state = NULL;
 
-    return 0;
+    return kStatus_Success;
 }
 
 /*FUNCTION**********************************************************************
@@ -213,19 +219,20 @@ int UART_RTOS_Deinit(uart_rtos_handle_t *handle)
  * param buffer The pointer to the buffer to send.
  * param length The number of bytes to send.
  */
-int UART_RTOS_Send(uart_rtos_handle_t *handle, const uint8_t *buffer, uint32_t length)
+int UART_RTOS_Send(uart_rtos_handle_t *handle, uint8_t *buffer, uint32_t length)
 {
     EventBits_t ev;
     int retval = kStatus_Success;
+    status_t status;
 
     if (NULL == handle->base)
     {
         /* Invalid handle. */
         return kStatus_Fail;
     }
-    if (0 == length)
+    if (0U == length)
     {
-        return 0;
+        return kStatus_Success;
     }
     if (NULL == buffer)
     {
@@ -242,10 +249,15 @@ int UART_RTOS_Send(uart_rtos_handle_t *handle, const uint8_t *buffer, uint32_t l
     handle->txTransfer.dataSize = (uint32_t)length;
 
     /* Non-blocking call */
-    UART_TransferSendNonBlocking(handle->base, handle->t_state, &handle->txTransfer);
+    status = UART_TransferSendNonBlocking(handle->base, handle->t_state, &handle->txTransfer);
+    if (status != kStatus_Success)
+    {
+        (void)xSemaphoreGive(handle->txSemaphore);
+        return kStatus_Fail;
+    }
 
     ev = xEventGroupWaitBits(handle->txEvent, RTOS_UART_COMPLETE, pdTRUE, pdFALSE, portMAX_DELAY);
-    if (!(ev & RTOS_UART_COMPLETE))
+    if ((ev & RTOS_UART_COMPLETE) == 0U)
     {
         retval = kStatus_Fail;
     }
@@ -282,19 +294,20 @@ int UART_RTOS_Receive(uart_rtos_handle_t *handle, uint8_t *buffer, uint32_t leng
     size_t n              = 0;
     int retval            = kStatus_Fail;
     size_t local_received = 0;
+    status_t status;
 
     if (NULL == handle->base)
     {
         /* Invalid handle. */
         return kStatus_Fail;
     }
-    if (0 == length)
+    if (0U == length)
     {
         if (received != NULL)
         {
             *received = n;
         }
-        return 0;
+        return kStatus_Success;
     }
     if (NULL == buffer)
     {
@@ -312,35 +325,45 @@ int UART_RTOS_Receive(uart_rtos_handle_t *handle, uint8_t *buffer, uint32_t leng
     handle->rxTransfer.dataSize = (uint32_t)length;
 
     /* Non-blocking call */
-    UART_TransferReceiveNonBlocking(handle->base, handle->t_state, &handle->rxTransfer, &n);
+    status = UART_TransferReceiveNonBlocking(handle->base, handle->t_state, &handle->rxTransfer, &n);
+    if (status != kStatus_Success)
+    {
+        (void)xSemaphoreGive(handle->rxSemaphore);
+        return kStatus_Fail;
+    }
 
     ev = xEventGroupWaitBits(handle->rxEvent,
                              RTOS_UART_COMPLETE | RTOS_UART_RING_BUFFER_OVERRUN | RTOS_UART_HARDWARE_BUFFER_OVERRUN,
                              pdTRUE, pdFALSE, portMAX_DELAY);
-    if (ev & RTOS_UART_HARDWARE_BUFFER_OVERRUN)
+    if ((ev & RTOS_UART_HARDWARE_BUFFER_OVERRUN) != 0U)
     {
         /* Stop data transfer to application buffer, ring buffer is still active */
         UART_TransferAbortReceive(handle->base, handle->t_state);
         /* Prevent false indication of successful transfer in next call of UART_RTOS_Receive.
            RTOS_UART_COMPLETE flag could be set meanwhile overrun is handled */
-        xEventGroupClearBits(handle->rxEvent, RTOS_UART_COMPLETE);
+        (void)xEventGroupClearBits(handle->rxEvent, RTOS_UART_COMPLETE);
         retval         = kStatus_UART_RxHardwareOverrun;
         local_received = 0;
     }
-    else if (ev & RTOS_UART_RING_BUFFER_OVERRUN)
+    else if ((ev & RTOS_UART_RING_BUFFER_OVERRUN) != 0U)
     {
         /* Stop data transfer to application buffer, ring buffer is still active */
         UART_TransferAbortReceive(handle->base, handle->t_state);
         /* Prevent false indication of successful transfer in next call of UART_RTOS_Receive.
            RTOS_UART_COMPLETE flag could be set meanwhile overrun is handled */
-        xEventGroupClearBits(handle->rxEvent, RTOS_UART_COMPLETE);
+        (void)xEventGroupClearBits(handle->rxEvent, RTOS_UART_COMPLETE);
         retval         = kStatus_UART_RxRingBufferOverrun;
         local_received = 0;
     }
-    else if (ev & RTOS_UART_COMPLETE)
+    else if ((ev & RTOS_UART_COMPLETE) != 0U)
     {
         retval         = kStatus_Success;
         local_received = length;
+    }
+    else
+    {
+        retval         = kStatus_UART_Error;
+        local_received = 0;
     }
 
     /* Prevent repetitive NULL check */
