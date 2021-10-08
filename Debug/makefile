@@ -44,7 +44,7 @@ all: ROBOT_FRDM_KV31F.axf
 ROBOT_FRDM_KV31F.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"D:\THIERRY\workspace\ROBOT_FRDM_KV31F\libs" -Xlinker -Map="ROBOT_FRDM_KV31F.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T "ROBOT_FRDM_KV31F_Debug.ld" -o "ROBOT_FRDM_KV31F.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"D:\THIERRY\workspace\ROBOT_FRDM_KV31F\CMSIS\DSP" -Xlinker -Map="ROBOT_FRDM_KV31F.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T "ROBOT_FRDM_KV31F_Debug.ld" -o "ROBOT_FRDM_KV31F.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build

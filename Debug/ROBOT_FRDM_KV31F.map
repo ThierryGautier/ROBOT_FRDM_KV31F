@@ -227,7 +227,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./utilities/fsl_debug_console.o
  .debug_macro   0x00000000       0x1c ./utilities/fsl_debug_console.o
  .debug_macro   0x00000000       0x22 ./utilities/fsl_debug_console.o
- .debug_macro   0x00000000       0xd2 ./utilities/fsl_debug_console.o
+ .debug_macro   0x00000000       0xfb ./utilities/fsl_debug_console.o
  .debug_macro   0x00000000      0xeeb ./utilities/fsl_debug_console.o
  .debug_macro   0x00000000       0x3a ./utilities/fsl_debug_console.o
  .debug_macro   0x00000000     0x797a ./utilities/fsl_debug_console.o
@@ -244,7 +244,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xd2 ./utilities/fsl_debug_console.o
  .debug_macro   0x00000000       0x1c ./utilities/fsl_debug_console.o
  .debug_line    0x00000000      0x586 ./utilities/fsl_debug_console.o
- .debug_str     0x00000000    0x4a7f3 ./utilities/fsl_debug_console.o
+ .debug_str     0x00000000    0x4a8d2 ./utilities/fsl_debug_console.o
  .comment       0x00000000       0x4e ./utilities/fsl_debug_console.o
  .debug_frame   0x00000000       0xc4 ./utilities/fsl_debug_console.o
  .ARM.attributes
@@ -339,7 +339,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./utilities/fsl_str.o
  .debug_macro   0x00000000       0x1c ./utilities/fsl_str.o
  .debug_macro   0x00000000       0x22 ./utilities/fsl_str.o
- .debug_macro   0x00000000       0xd2 ./utilities/fsl_str.o
+ .debug_macro   0x00000000       0xfb ./utilities/fsl_str.o
  .debug_macro   0x00000000      0xeeb ./utilities/fsl_str.o
  .debug_macro   0x00000000       0x3a ./utilities/fsl_str.o
  .debug_macro   0x00000000     0x797a ./utilities/fsl_str.o
@@ -349,7 +349,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x12e ./utilities/fsl_str.o
  .debug_macro   0x00000000       0x4f ./utilities/fsl_str.o
  .debug_line    0x00000000      0xcef ./utilities/fsl_str.o
- .debug_str     0x00000000    0x4997f ./utilities/fsl_str.o
+ .debug_str     0x00000000    0x49a5e ./utilities/fsl_str.o
  .comment       0x00000000       0x4e ./utilities/fsl_str.o
  .debug_frame   0x00000000      0x394 ./utilities/fsl_str.o
  .ARM.attributes
@@ -421,7 +421,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./utilities/systick_utils.o
  .debug_macro   0x00000000       0x1c ./utilities/systick_utils.o
  .debug_macro   0x00000000       0x22 ./utilities/systick_utils.o
- .debug_macro   0x00000000       0xd2 ./utilities/systick_utils.o
+ .debug_macro   0x00000000       0xfb ./utilities/systick_utils.o
  .debug_macro   0x00000000      0xeeb ./utilities/systick_utils.o
  .debug_macro   0x00000000       0x3a ./utilities/systick_utils.o
  .debug_macro   0x00000000     0x797a ./utilities/systick_utils.o
@@ -444,7 +444,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x9a ./utilities/systick_utils.o
  .debug_macro   0x00000000       0x40 ./utilities/systick_utils.o
  .debug_line    0x00000000      0x57d ./utilities/systick_utils.o
- .debug_str     0x00000000    0x4c2a4 ./utilities/systick_utils.o
+ .debug_str     0x00000000    0x4c383 ./utilities/systick_utils.o
  .comment       0x00000000       0x4e ./utilities/systick_utils.o
  .debug_frame   0x00000000       0xe0 ./utilities/systick_utils.o
  .ARM.attributes
@@ -566,7 +566,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./source/com.o
  .debug_macro   0x00000000       0x1c ./source/com.o
  .debug_macro   0x00000000       0x22 ./source/com.o
- .debug_macro   0x00000000       0xd2 ./source/com.o
+ .debug_macro   0x00000000       0xfb ./source/com.o
  .debug_macro   0x00000000      0xeeb ./source/com.o
  .debug_macro   0x00000000       0x3a ./source/com.o
  .debug_macro   0x00000000     0x797a ./source/com.o
@@ -665,7 +665,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x5b3 ./source/lpuart.o
  .debug_macro   0x00000000       0x1c ./source/lpuart.o
  .debug_macro   0x00000000       0x22 ./source/lpuart.o
- .debug_macro   0x00000000       0xd2 ./source/lpuart.o
+ .debug_macro   0x00000000       0xfb ./source/lpuart.o
  .debug_macro   0x00000000      0xeeb ./source/lpuart.o
  .debug_macro   0x00000000       0x3a ./source/lpuart.o
  .debug_macro   0x00000000     0x797a ./source/lpuart.o
@@ -783,7 +783,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./source/main_freertos_two_tasks.o
  .debug_macro   0x00000000       0x1c ./source/main_freertos_two_tasks.o
  .debug_macro   0x00000000       0x22 ./source/main_freertos_two_tasks.o
- .debug_macro   0x00000000       0xd2 ./source/main_freertos_two_tasks.o
+ .debug_macro   0x00000000       0xfb ./source/main_freertos_two_tasks.o
  .debug_macro   0x00000000      0xeeb ./source/main_freertos_two_tasks.o
  .debug_macro   0x00000000       0x3a ./source/main_freertos_two_tasks.o
  .debug_macro   0x00000000     0x797a ./source/main_freertos_two_tasks.o
@@ -854,7 +854,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./source/motors.o
  .debug_macro   0x00000000       0x1c ./source/motors.o
  .debug_macro   0x00000000       0x22 ./source/motors.o
- .debug_macro   0x00000000       0xd2 ./source/motors.o
+ .debug_macro   0x00000000       0xfb ./source/motors.o
  .debug_macro   0x00000000      0xeeb ./source/motors.o
  .debug_macro   0x00000000       0x3a ./source/motors.o
  .debug_macro   0x00000000     0x797a ./source/motors.o
@@ -944,7 +944,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x5b3 ./source/uart.o
  .debug_macro   0x00000000       0x1c ./source/uart.o
  .debug_macro   0x00000000       0x22 ./source/uart.o
- .debug_macro   0x00000000       0xd2 ./source/uart.o
+ .debug_macro   0x00000000       0xfb ./source/uart.o
  .debug_macro   0x00000000      0xeeb ./source/uart.o
  .debug_macro   0x00000000       0x3a ./source/uart.o
  .debug_macro   0x00000000     0x797a ./source/uart.o
@@ -977,7 +977,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x1c ./source/uart.o
  .debug_macro   0x00000000       0x1c ./source/uart.o
  .debug_line    0x00000000      0x77a ./source/uart.o
- .debug_str     0x00000000    0x5100e ./source/uart.o
+ .debug_str     0x00000000    0x510ed ./source/uart.o
  .comment       0x00000000       0x4e ./source/uart.o
  .debug_frame   0x00000000       0xe4 ./source/uart.o
  .ARM.attributes
@@ -1067,7 +1067,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensors/fxas21002_drv.o
  .debug_macro   0x00000000       0x1c ./sensors/fxas21002_drv.o
  .debug_macro   0x00000000       0x22 ./sensors/fxas21002_drv.o
- .debug_macro   0x00000000       0xd2 ./sensors/fxas21002_drv.o
+ .debug_macro   0x00000000       0xfb ./sensors/fxas21002_drv.o
  .debug_macro   0x00000000      0xeeb ./sensors/fxas21002_drv.o
  .debug_macro   0x00000000       0x3a ./sensors/fxas21002_drv.o
  .debug_macro   0x00000000     0x797a ./sensors/fxas21002_drv.o
@@ -1086,7 +1086,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x22 ./sensors/fxas21002_drv.o
  .debug_macro   0x00000000       0x1c ./sensors/fxas21002_drv.o
  .debug_line    0x00000000      0x7ab ./sensors/fxas21002_drv.o
- .debug_str     0x00000000    0x4d3ab ./sensors/fxas21002_drv.o
+ .debug_str     0x00000000    0x4d48a ./sensors/fxas21002_drv.o
  .comment       0x00000000       0x4e ./sensors/fxas21002_drv.o
  .debug_frame   0x00000000      0x1d8 ./sensors/fxas21002_drv.o
  .ARM.attributes
@@ -1176,7 +1176,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensors/fxos8700_drv.o
  .debug_macro   0x00000000       0x1c ./sensors/fxos8700_drv.o
  .debug_macro   0x00000000       0x22 ./sensors/fxos8700_drv.o
- .debug_macro   0x00000000       0xd2 ./sensors/fxos8700_drv.o
+ .debug_macro   0x00000000       0xfb ./sensors/fxos8700_drv.o
  .debug_macro   0x00000000      0xeeb ./sensors/fxos8700_drv.o
  .debug_macro   0x00000000       0x3a ./sensors/fxos8700_drv.o
  .debug_macro   0x00000000     0x797a ./sensors/fxos8700_drv.o
@@ -1195,7 +1195,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x22 ./sensors/fxos8700_drv.o
  .debug_macro   0x00000000       0x16 ./sensors/fxos8700_drv.o
  .debug_line    0x00000000      0x7b2 ./sensors/fxos8700_drv.o
- .debug_str     0x00000000    0x53ad7 ./sensors/fxos8700_drv.o
+ .debug_str     0x00000000    0x53bb6 ./sensors/fxos8700_drv.o
  .comment       0x00000000       0x4e ./sensors/fxos8700_drv.o
  .debug_frame   0x00000000      0x1d8 ./sensors/fxos8700_drv.o
  .ARM.attributes
@@ -1314,7 +1314,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/DecodeCommandBytes.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/DecodeCommandBytes.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/DecodeCommandBytes.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/DecodeCommandBytes.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/DecodeCommandBytes.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/DecodeCommandBytes.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/DecodeCommandBytes.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/DecodeCommandBytes.o
@@ -1345,7 +1345,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x9b ./sensor_fusion/DecodeCommandBytes.o
  .debug_macro   0x00000000       0x64 ./sensor_fusion/DecodeCommandBytes.o
  .debug_line    0x00000000      0x932 ./sensor_fusion/DecodeCommandBytes.o
- .debug_str     0x00000000    0x4e412 ./sensor_fusion/DecodeCommandBytes.o
+ .debug_str     0x00000000    0x4e4f1 ./sensor_fusion/DecodeCommandBytes.o
  .comment       0x00000000       0x4e ./sensor_fusion/DecodeCommandBytes.o
  .debug_frame   0x00000000       0x38 ./sensor_fusion/DecodeCommandBytes.o
  .ARM.attributes
@@ -1441,7 +1441,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/calibration_storage.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/calibration_storage.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/calibration_storage.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/calibration_storage.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/calibration_storage.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/calibration_storage.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/calibration_storage.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/calibration_storage.o
@@ -1471,7 +1471,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x1c ./sensor_fusion/calibration_storage.o
  .debug_macro   0x00000000       0x9b ./sensor_fusion/calibration_storage.o
  .debug_line    0x00000000      0x970 ./sensor_fusion/calibration_storage.o
- .debug_str     0x00000000    0x4d7cf ./sensor_fusion/calibration_storage.o
+ .debug_str     0x00000000    0x4d8ae ./sensor_fusion/calibration_storage.o
  .comment       0x00000000       0x4e ./sensor_fusion/calibration_storage.o
  .debug_frame   0x00000000      0x100 ./sensor_fusion/calibration_storage.o
  .ARM.attributes
@@ -1549,7 +1549,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/debug.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/debug.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/debug.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/debug.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/debug.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/debug.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/debug.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/debug.o
@@ -1644,7 +1644,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/driver_FXAS21002.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/driver_FXAS21002.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/driver_FXAS21002.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/driver_FXAS21002.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/driver_FXAS21002.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/driver_FXAS21002.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/driver_FXAS21002.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/driver_FXAS21002.o
@@ -1745,7 +1745,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/driver_FXOS8700.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/driver_FXOS8700.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/driver_FXOS8700.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/driver_FXOS8700.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/driver_FXOS8700.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/driver_FXOS8700.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/driver_FXOS8700.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/driver_FXOS8700.o
@@ -1852,7 +1852,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/driver_KSDK_NVM.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/driver_KSDK_NVM.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/driver_KSDK_NVM.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/driver_KSDK_NVM.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/driver_KSDK_NVM.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/driver_KSDK_NVM.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/driver_KSDK_NVM.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/driver_KSDK_NVM.o
@@ -1887,7 +1887,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./sensor_fusion/driver_KSDK_NVM.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/driver_KSDK_NVM.o
  .debug_line    0x00000000      0x69c ./sensor_fusion/driver_KSDK_NVM.o
- .debug_str     0x00000000    0x4eb2d ./sensor_fusion/driver_KSDK_NVM.o
+ .debug_str     0x00000000    0x4ec0c ./sensor_fusion/driver_KSDK_NVM.o
  .comment       0x00000000       0x4e ./sensor_fusion/driver_KSDK_NVM.o
  .debug_frame   0x00000000       0x34 ./sensor_fusion/driver_KSDK_NVM.o
  .ARM.attributes
@@ -1961,7 +1961,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/driver_MPL3115.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/driver_MPL3115.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/driver_MPL3115.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/driver_MPL3115.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/driver_MPL3115.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/driver_MPL3115.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/driver_MPL3115.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/driver_MPL3115.o
@@ -2055,7 +2055,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/driver_pit.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/driver_pit.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/driver_pit.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/driver_pit.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/driver_pit.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/driver_pit.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/driver_pit.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/driver_pit.o
@@ -2136,7 +2136,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/driver_systick.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/driver_systick.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/driver_systick.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/driver_systick.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/driver_systick.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/driver_systick.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/driver_systick.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/driver_systick.o
@@ -2224,7 +2224,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/fusion.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/fusion.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/fusion.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/fusion.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/fusion.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/fusion.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/fusion.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/fusion.o
@@ -2312,7 +2312,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/hal_frdm_fxs_mult2_b.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/hal_frdm_fxs_mult2_b.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/hal_frdm_fxs_mult2_b.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/hal_frdm_fxs_mult2_b.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/hal_frdm_fxs_mult2_b.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/hal_frdm_fxs_mult2_b.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/hal_frdm_fxs_mult2_b.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/hal_frdm_fxs_mult2_b.o
@@ -2406,7 +2406,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/magnetic.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/magnetic.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/magnetic.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/magnetic.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/magnetic.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/magnetic.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/magnetic.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/magnetic.o
@@ -2497,7 +2497,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/matrix.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/matrix.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/matrix.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/matrix.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/matrix.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/matrix.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/matrix.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/matrix.o
@@ -2587,7 +2587,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/orientation.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/orientation.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/orientation.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/orientation.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/orientation.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/orientation.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/orientation.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/orientation.o
@@ -2699,7 +2699,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/output_stream.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/output_stream.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/output_stream.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/output_stream.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/output_stream.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/output_stream.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/output_stream.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/output_stream.o
@@ -2729,7 +2729,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x1c ./sensor_fusion/output_stream.o
  .debug_macro   0x00000000       0x9b ./sensor_fusion/output_stream.o
  .debug_line    0x00000000     0x10bc ./sensor_fusion/output_stream.o
- .debug_str     0x00000000    0x4d981 ./sensor_fusion/output_stream.o
+ .debug_str     0x00000000    0x4da60 ./sensor_fusion/output_stream.o
  .comment       0x00000000       0x4e ./sensor_fusion/output_stream.o
  .debug_frame   0x00000000       0xd8 ./sensor_fusion/output_stream.o
  .ARM.attributes
@@ -2793,7 +2793,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/precisionAccelerometer.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/precisionAccelerometer.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/precisionAccelerometer.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/precisionAccelerometer.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/precisionAccelerometer.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/precisionAccelerometer.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/precisionAccelerometer.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/precisionAccelerometer.o
@@ -2884,7 +2884,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/sensor_fusion.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/sensor_fusion.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/sensor_fusion.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/sensor_fusion.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/sensor_fusion.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/sensor_fusion.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/sensor_fusion.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/sensor_fusion.o
@@ -2972,7 +2972,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./sensor_fusion/status.o
  .debug_macro   0x00000000       0x1c ./sensor_fusion/status.o
  .debug_macro   0x00000000       0x22 ./sensor_fusion/status.o
- .debug_macro   0x00000000       0xd2 ./sensor_fusion/status.o
+ .debug_macro   0x00000000       0xfb ./sensor_fusion/status.o
  .debug_macro   0x00000000      0xeeb ./sensor_fusion/status.o
  .debug_macro   0x00000000       0x3a ./sensor_fusion/status.o
  .debug_macro   0x00000000     0x797a ./sensor_fusion/status.o
@@ -3058,7 +3058,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./interfaces/register_io_i2c.o
  .debug_macro   0x00000000       0x1c ./interfaces/register_io_i2c.o
  .debug_macro   0x00000000       0x22 ./interfaces/register_io_i2c.o
- .debug_macro   0x00000000       0xd2 ./interfaces/register_io_i2c.o
+ .debug_macro   0x00000000       0xfb ./interfaces/register_io_i2c.o
  .debug_macro   0x00000000      0xeeb ./interfaces/register_io_i2c.o
  .debug_macro   0x00000000       0x3a ./interfaces/register_io_i2c.o
  .debug_macro   0x00000000     0x797a ./interfaces/register_io_i2c.o
@@ -3158,7 +3158,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./interfaces/register_io_spi.o
  .debug_macro   0x00000000       0x1c ./interfaces/register_io_spi.o
  .debug_macro   0x00000000       0x22 ./interfaces/register_io_spi.o
- .debug_macro   0x00000000       0xd2 ./interfaces/register_io_spi.o
+ .debug_macro   0x00000000       0xfb ./interfaces/register_io_spi.o
  .debug_macro   0x00000000      0xeeb ./interfaces/register_io_spi.o
  .debug_macro   0x00000000       0x3a ./interfaces/register_io_spi.o
  .debug_macro   0x00000000     0x797a ./interfaces/register_io_spi.o
@@ -3184,7 +3184,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x22 ./interfaces/register_io_spi.o
  .debug_macro   0x00000000       0x1c ./interfaces/register_io_spi.o
  .debug_line    0x00000000      0x763 ./interfaces/register_io_spi.o
- .debug_str     0x00000000    0x4d0b1 ./interfaces/register_io_spi.o
+ .debug_str     0x00000000    0x4d190 ./interfaces/register_io_spi.o
  .comment       0x00000000       0x4e ./interfaces/register_io_spi.o
  .debug_frame   0x00000000       0xf8 ./interfaces/register_io_spi.o
  .ARM.attributes
@@ -3337,7 +3337,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./gpio_driver/gpio_driver.o
  .debug_macro   0x00000000       0x1c ./gpio_driver/gpio_driver.o
  .debug_macro   0x00000000       0x22 ./gpio_driver/gpio_driver.o
- .debug_macro   0x00000000       0xd2 ./gpio_driver/gpio_driver.o
+ .debug_macro   0x00000000       0xfb ./gpio_driver/gpio_driver.o
  .debug_macro   0x00000000      0xeeb ./gpio_driver/gpio_driver.o
  .debug_macro   0x00000000       0x3a ./gpio_driver/gpio_driver.o
  .debug_macro   0x00000000     0x797a ./gpio_driver/gpio_driver.o
@@ -3386,7 +3386,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./gpio_driver/gpio_driver_irq.o
  .debug_macro   0x00000000       0x1c ./gpio_driver/gpio_driver_irq.o
  .debug_macro   0x00000000       0x22 ./gpio_driver/gpio_driver_irq.o
- .debug_macro   0x00000000       0xd2 ./gpio_driver/gpio_driver_irq.o
+ .debug_macro   0x00000000       0xfb ./gpio_driver/gpio_driver_irq.o
  .debug_macro   0x00000000      0xeeb ./gpio_driver/gpio_driver_irq.o
  .debug_macro   0x00000000       0x3a ./gpio_driver/gpio_driver_irq.o
  .debug_macro   0x00000000     0x797a ./gpio_driver/gpio_driver_irq.o
@@ -3962,7 +3962,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/freertos/fsl_dspi_freertos.o
  .debug_macro   0x00000000       0x1c ./drivers/freertos/fsl_dspi_freertos.o
  .debug_macro   0x00000000       0x22 ./drivers/freertos/fsl_dspi_freertos.o
- .debug_macro   0x00000000       0xd2 ./drivers/freertos/fsl_dspi_freertos.o
+ .debug_macro   0x00000000       0xfb ./drivers/freertos/fsl_dspi_freertos.o
  .debug_macro   0x00000000      0xeeb ./drivers/freertos/fsl_dspi_freertos.o
  .debug_macro   0x00000000       0x3a ./drivers/freertos/fsl_dspi_freertos.o
  .debug_macro   0x00000000     0x797a ./drivers/freertos/fsl_dspi_freertos.o
@@ -3972,7 +3972,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x12e ./drivers/freertos/fsl_dspi_freertos.o
  .debug_macro   0x00000000       0x3a ./drivers/freertos/fsl_dspi_freertos.o
  .debug_line    0x00000000      0x573 ./drivers/freertos/fsl_dspi_freertos.o
- .debug_str     0x00000000    0x4ee36 ./drivers/freertos/fsl_dspi_freertos.o
+ .debug_str     0x00000000    0x4ef15 ./drivers/freertos/fsl_dspi_freertos.o
  .comment       0x00000000       0x4e ./drivers/freertos/fsl_dspi_freertos.o
  .debug_frame   0x00000000       0xa0 ./drivers/freertos/fsl_dspi_freertos.o
  .ARM.attributes
@@ -4047,7 +4047,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/freertos/fsl_i2c_freertos.o
  .debug_macro   0x00000000       0x1c ./drivers/freertos/fsl_i2c_freertos.o
  .debug_macro   0x00000000       0x22 ./drivers/freertos/fsl_i2c_freertos.o
- .debug_macro   0x00000000       0xd2 ./drivers/freertos/fsl_i2c_freertos.o
+ .debug_macro   0x00000000       0xfb ./drivers/freertos/fsl_i2c_freertos.o
  .debug_macro   0x00000000      0xeeb ./drivers/freertos/fsl_i2c_freertos.o
  .debug_macro   0x00000000       0x3a ./drivers/freertos/fsl_i2c_freertos.o
  .debug_macro   0x00000000     0x797a ./drivers/freertos/fsl_i2c_freertos.o
@@ -4057,7 +4057,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x12e ./drivers/freertos/fsl_i2c_freertos.o
  .debug_macro   0x00000000       0x1c ./drivers/freertos/fsl_i2c_freertos.o
  .debug_line    0x00000000      0x568 ./drivers/freertos/fsl_i2c_freertos.o
- .debug_str     0x00000000    0x4e98d ./drivers/freertos/fsl_i2c_freertos.o
+ .debug_str     0x00000000    0x4ea6c ./drivers/freertos/fsl_i2c_freertos.o
  .comment       0x00000000       0x4e ./drivers/freertos/fsl_i2c_freertos.o
  .debug_frame   0x00000000       0xa0 ./drivers/freertos/fsl_i2c_freertos.o
  .ARM.attributes
@@ -4108,7 +4108,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/freertos/fsl_lpuart_freertos.o
  .debug_macro   0x00000000       0x1c ./drivers/freertos/fsl_lpuart_freertos.o
  .debug_macro   0x00000000       0x22 ./drivers/freertos/fsl_lpuart_freertos.o
- .debug_macro   0x00000000       0xd2 ./drivers/freertos/fsl_lpuart_freertos.o
+ .debug_macro   0x00000000       0xfb ./drivers/freertos/fsl_lpuart_freertos.o
  .debug_macro   0x00000000      0xeeb ./drivers/freertos/fsl_lpuart_freertos.o
  .debug_macro   0x00000000       0x3a ./drivers/freertos/fsl_lpuart_freertos.o
  .debug_macro   0x00000000     0x797a ./drivers/freertos/fsl_lpuart_freertos.o
@@ -4194,7 +4194,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/freertos/fsl_uart_freertos.o
  .debug_macro   0x00000000       0x1c ./drivers/freertos/fsl_uart_freertos.o
  .debug_macro   0x00000000       0x22 ./drivers/freertos/fsl_uart_freertos.o
- .debug_macro   0x00000000       0xd2 ./drivers/freertos/fsl_uart_freertos.o
+ .debug_macro   0x00000000       0xfb ./drivers/freertos/fsl_uart_freertos.o
  .debug_macro   0x00000000      0xeeb ./drivers/freertos/fsl_uart_freertos.o
  .debug_macro   0x00000000       0x3a ./drivers/freertos/fsl_uart_freertos.o
  .debug_macro   0x00000000     0x797a ./drivers/freertos/fsl_uart_freertos.o
@@ -4216,7 +4216,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x7e ./drivers/freertos/fsl_uart_freertos.o
  .debug_macro   0x00000000       0x1c ./drivers/freertos/fsl_uart_freertos.o
  .debug_line    0x00000000      0x756 ./drivers/freertos/fsl_uart_freertos.o
- .debug_str     0x00000000    0x4f7bd ./drivers/freertos/fsl_uart_freertos.o
+ .debug_str     0x00000000    0x4f89c ./drivers/freertos/fsl_uart_freertos.o
  .comment       0x00000000       0x4e ./drivers/freertos/fsl_uart_freertos.o
  .debug_frame   0x00000000      0x11c ./drivers/freertos/fsl_uart_freertos.o
  .ARM.attributes
@@ -4304,7 +4304,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_adc16.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_adc16.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_adc16.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_adc16.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_adc16.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_adc16.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_adc16.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_adc16.o
@@ -4313,7 +4313,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_adc16.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_adc16.o
  .debug_line    0x00000000      0x672 ./drivers/fsl_adc16.o
- .debug_str     0x00000000    0x49fc5 ./drivers/fsl_adc16.o
+ .debug_str     0x00000000    0x4a0a4 ./drivers/fsl_adc16.o
  .comment       0x00000000       0x4e ./drivers/fsl_adc16.o
  .debug_frame   0x00000000      0x220 ./drivers/fsl_adc16.o
  .ARM.attributes
@@ -4417,7 +4417,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_clock.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_clock.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_clock.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_clock.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_clock.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_clock.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_clock.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_clock.o
@@ -4506,7 +4506,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_cmp.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_cmp.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_cmp.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_cmp.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_cmp.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_cmp.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_cmp.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_cmp.o
@@ -4515,7 +4515,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_cmp.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_cmp.o
  .debug_line    0x00000000      0x5f6 ./drivers/fsl_cmp.o
- .debug_str     0x00000000    0x499b1 ./drivers/fsl_cmp.o
+ .debug_str     0x00000000    0x49a90 ./drivers/fsl_cmp.o
  .comment       0x00000000       0x4e ./drivers/fsl_cmp.o
  .debug_frame   0x00000000      0x254 ./drivers/fsl_cmp.o
  .ARM.attributes
@@ -4563,7 +4563,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_common.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_common.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_common.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_common.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_common.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_common.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_common.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_common.o
@@ -4572,7 +4572,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_common.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_common.o
  .debug_line    0x00000000      0x373 ./drivers/fsl_common.o
- .debug_str     0x00000000    0x48b85 ./drivers/fsl_common.o
+ .debug_str     0x00000000    0x48c64 ./drivers/fsl_common.o
  .comment       0x00000000       0x4e ./drivers/fsl_common.o
  .debug_frame   0x00000000       0x58 ./drivers/fsl_common.o
  .ARM.attributes
@@ -4622,7 +4622,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_common_arm.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_common_arm.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_common_arm.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_common_arm.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_common_arm.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_common_arm.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_common_arm.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_common_arm.o
@@ -4631,7 +4631,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_common_arm.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_common_arm.o
  .debug_line    0x00000000      0x326 ./drivers/fsl_common_arm.o
- .debug_str     0x00000000    0x48b00 ./drivers/fsl_common_arm.o
+ .debug_str     0x00000000    0x48bdf ./drivers/fsl_common_arm.o
  .comment       0x00000000       0x4e ./drivers/fsl_common_arm.o
  .debug_frame   0x00000000       0x64 ./drivers/fsl_common_arm.o
  .ARM.attributes
@@ -4700,7 +4700,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_crc.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_crc.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_crc.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_crc.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_crc.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_crc.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_crc.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_crc.o
@@ -4710,7 +4710,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x12e ./drivers/fsl_crc.o
  .debug_macro   0x00000000       0x10 ./drivers/fsl_crc.o
  .debug_line    0x00000000      0x50a ./drivers/fsl_crc.o
- .debug_str     0x00000000    0x491df ./drivers/fsl_crc.o
+ .debug_str     0x00000000    0x492be ./drivers/fsl_crc.o
  .comment       0x00000000       0x4e ./drivers/fsl_crc.o
  .debug_frame   0x00000000      0x1bc ./drivers/fsl_crc.o
  .ARM.attributes
@@ -4802,7 +4802,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_dac.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_dac.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_dac.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_dac.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_dac.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_dac.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_dac.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_dac.o
@@ -4811,7 +4811,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_dac.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_dac.o
  .debug_line    0x00000000      0x58f ./drivers/fsl_dac.o
- .debug_str     0x00000000    0x499ca ./drivers/fsl_dac.o
+ .debug_str     0x00000000    0x49aa9 ./drivers/fsl_dac.o
  .comment       0x00000000       0x4e ./drivers/fsl_dac.o
  .debug_frame   0x00000000      0x248 ./drivers/fsl_dac.o
  .ARM.attributes
@@ -4871,7 +4871,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_dmamux.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_dmamux.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_dmamux.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_dmamux.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_dmamux.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_dmamux.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_dmamux.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_dmamux.o
@@ -4880,7 +4880,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_dmamux.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_dmamux.o
  .debug_line    0x00000000      0x3b1 ./drivers/fsl_dmamux.o
- .debug_str     0x00000000    0x49612 ./drivers/fsl_dmamux.o
+ .debug_str     0x00000000    0x496f1 ./drivers/fsl_dmamux.o
  .comment       0x00000000       0x4e ./drivers/fsl_dmamux.o
  .debug_frame   0x00000000       0xcc ./drivers/fsl_dmamux.o
  .ARM.attributes
@@ -5089,7 +5089,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_dspi.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_dspi.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_dspi.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_dspi.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_dspi.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_dspi.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_dspi.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_dspi.o
@@ -5145,7 +5145,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_dspi_cmsis.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_dspi_cmsis.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_dspi_cmsis.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_dspi_cmsis.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_dspi_cmsis.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_dspi_cmsis.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_dspi_cmsis.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_dspi_cmsis.o
@@ -5163,7 +5163,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./drivers/fsl_dspi_cmsis.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_dspi_cmsis.o
  .debug_line    0x00000000      0x3cc ./drivers/fsl_dspi_cmsis.o
- .debug_str     0x00000000    0x4b187 ./drivers/fsl_dspi_cmsis.o
+ .debug_str     0x00000000    0x4b266 ./drivers/fsl_dspi_cmsis.o
  .comment       0x00000000       0x4e ./drivers/fsl_dspi_cmsis.o
  .ARM.attributes
                 0x00000000       0x39 ./drivers/fsl_dspi_cmsis.o
@@ -5283,7 +5283,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_dspi_edma.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_dspi_edma.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_dspi_edma.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_dspi_edma.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_dspi_edma.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_dspi_edma.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_dspi_edma.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_dspi_edma.o
@@ -5295,7 +5295,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 ./drivers/fsl_dspi_edma.o
  .debug_macro   0x00000000       0x10 ./drivers/fsl_dspi_edma.o
  .debug_line    0x00000000     0x11d0 ./drivers/fsl_dspi_edma.o
- .debug_str     0x00000000    0x4a687 ./drivers/fsl_dspi_edma.o
+ .debug_str     0x00000000    0x4a766 ./drivers/fsl_dspi_edma.o
  .comment       0x00000000       0x4e ./drivers/fsl_dspi_edma.o
  .debug_frame   0x00000000      0x390 ./drivers/fsl_dspi_edma.o
  .ARM.attributes
@@ -5498,7 +5498,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_edma.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_edma.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_edma.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_edma.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_edma.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_edma.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_edma.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_edma.o
@@ -5567,7 +5567,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_ewm.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_ewm.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_ewm.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_ewm.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_ewm.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_ewm.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_ewm.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_ewm.o
@@ -5576,7 +5576,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_ewm.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_ewm.o
  .debug_line    0x00000000      0x46f ./drivers/fsl_ewm.o
- .debug_str     0x00000000    0x48ec5 ./drivers/fsl_ewm.o
+ .debug_str     0x00000000    0x48fa4 ./drivers/fsl_ewm.o
  .comment       0x00000000       0x4e ./drivers/fsl_ewm.o
  .debug_frame   0x00000000      0x168 ./drivers/fsl_ewm.o
  .ARM.attributes
@@ -5640,7 +5640,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_flexbus.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_flexbus.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_flexbus.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_flexbus.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_flexbus.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_flexbus.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_flexbus.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_flexbus.o
@@ -5649,7 +5649,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_flexbus.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_flexbus.o
  .debug_line    0x00000000      0x4dd ./drivers/fsl_flexbus.o
- .debug_str     0x00000000    0x49d73 ./drivers/fsl_flexbus.o
+ .debug_str     0x00000000    0x49e52 ./drivers/fsl_flexbus.o
  .comment       0x00000000       0x4e ./drivers/fsl_flexbus.o
  .debug_frame   0x00000000       0xf0 ./drivers/fsl_flexbus.o
  .ARM.attributes
@@ -5717,7 +5717,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_ftfx_cache.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_ftfx_cache.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_ftfx_cache.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_ftfx_cache.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_ftfx_cache.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_ftfx_cache.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_ftfx_cache.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_ftfx_cache.o
@@ -5730,7 +5730,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x7c ./drivers/fsl_ftfx_cache.o
  .debug_macro   0x00000000       0x10 ./drivers/fsl_ftfx_cache.o
  .debug_line    0x00000000      0x486 ./drivers/fsl_ftfx_cache.o
- .debug_str     0x00000000    0x4adf6 ./drivers/fsl_ftfx_cache.o
+ .debug_str     0x00000000    0x4aed5 ./drivers/fsl_ftfx_cache.o
  .comment       0x00000000       0x4e ./drivers/fsl_ftfx_cache.o
  .debug_frame   0x00000000      0x138 ./drivers/fsl_ftfx_cache.o
  .ARM.attributes
@@ -5832,7 +5832,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_ftfx_controller.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_ftfx_controller.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_ftfx_controller.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_ftfx_controller.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_ftfx_controller.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_ftfx_controller.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_ftfx_controller.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_ftfx_controller.o
@@ -5845,7 +5845,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x7c ./drivers/fsl_ftfx_controller.o
  .debug_macro   0x00000000       0x10 ./drivers/fsl_ftfx_controller.o
  .debug_line    0x00000000      0xafd ./drivers/fsl_ftfx_controller.o
- .debug_str     0x00000000    0x4b648 ./drivers/fsl_ftfx_controller.o
+ .debug_str     0x00000000    0x4b727 ./drivers/fsl_ftfx_controller.o
  .comment       0x00000000       0x4e ./drivers/fsl_ftfx_controller.o
  .debug_frame   0x00000000      0x39c ./drivers/fsl_ftfx_controller.o
  .ARM.attributes
@@ -5954,7 +5954,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_ftfx_flash.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_ftfx_flash.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_ftfx_flash.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_ftfx_flash.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_ftfx_flash.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_ftfx_flash.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_ftfx_flash.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_ftfx_flash.o
@@ -5968,7 +5968,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./drivers/fsl_ftfx_flash.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_ftfx_flash.o
  .debug_line    0x00000000      0xa12 ./drivers/fsl_ftfx_flash.o
- .debug_str     0x00000000    0x4ba42 ./drivers/fsl_ftfx_flash.o
+ .debug_str     0x00000000    0x4bb21 ./drivers/fsl_ftfx_flash.o
  .comment       0x00000000       0x4e ./drivers/fsl_ftfx_flash.o
  .debug_frame   0x00000000      0x410 ./drivers/fsl_ftfx_flash.o
  .ARM.attributes
@@ -6015,7 +6015,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_ftfx_flexnvm.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_ftfx_flexnvm.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_ftfx_flexnvm.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_ftfx_flexnvm.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_ftfx_flexnvm.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_ftfx_flexnvm.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_ftfx_flexnvm.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_ftfx_flexnvm.o
@@ -6028,7 +6028,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x7c ./drivers/fsl_ftfx_flexnvm.o
  .debug_macro   0x00000000       0x10 ./drivers/fsl_ftfx_flexnvm.o
  .debug_line    0x00000000      0x350 ./drivers/fsl_ftfx_flexnvm.o
- .debug_str     0x00000000    0x49d24 ./drivers/fsl_ftfx_flexnvm.o
+ .debug_str     0x00000000    0x49e03 ./drivers/fsl_ftfx_flexnvm.o
  .comment       0x00000000       0x4e ./drivers/fsl_ftfx_flexnvm.o
  .ARM.attributes
                 0x00000000       0x39 ./drivers/fsl_ftfx_flexnvm.o
@@ -6103,7 +6103,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_ftm.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_ftm.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_ftm.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_ftm.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_ftm.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_ftm.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_ftm.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_ftm.o
@@ -6145,7 +6145,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_gpio.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_gpio.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_gpio.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_gpio.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_gpio.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_gpio.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_gpio.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_gpio.o
@@ -6230,7 +6230,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_i2c.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_i2c.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_i2c.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_i2c.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_i2c.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_i2c.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_i2c.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_i2c.o
@@ -6282,7 +6282,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_i2c_cmsis.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_i2c_cmsis.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_i2c_cmsis.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_i2c_cmsis.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_i2c_cmsis.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_i2c_cmsis.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_i2c_cmsis.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_i2c_cmsis.o
@@ -6371,7 +6371,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_i2c_edma.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_i2c_edma.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_i2c_edma.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_i2c_edma.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_i2c_edma.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_i2c_edma.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_i2c_edma.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_i2c_edma.o
@@ -6382,7 +6382,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x1c ./drivers/fsl_i2c_edma.o
  .debug_macro   0x00000000       0x16 ./drivers/fsl_i2c_edma.o
  .debug_line    0x00000000      0x7e3 ./drivers/fsl_i2c_edma.o
- .debug_str     0x00000000    0x49ed7 ./drivers/fsl_i2c_edma.o
+ .debug_str     0x00000000    0x49fb6 ./drivers/fsl_i2c_edma.o
  .comment       0x00000000       0x4e ./drivers/fsl_i2c_edma.o
  .debug_frame   0x00000000      0x1b8 ./drivers/fsl_i2c_edma.o
  .ARM.attributes
@@ -6439,7 +6439,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_llwu.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_llwu.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_llwu.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_llwu.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_llwu.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_llwu.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_llwu.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_llwu.o
@@ -6449,7 +6449,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x12e ./drivers/fsl_llwu.o
  .debug_macro   0x00000000       0x17 ./drivers/fsl_llwu.o
  .debug_line    0x00000000      0x482 ./drivers/fsl_llwu.o
- .debug_str     0x00000000    0x48da3 ./drivers/fsl_llwu.o
+ .debug_str     0x00000000    0x48e82 ./drivers/fsl_llwu.o
  .comment       0x00000000       0x4e ./drivers/fsl_llwu.o
  .debug_frame   0x00000000      0x100 ./drivers/fsl_llwu.o
  .ARM.attributes
@@ -6515,7 +6515,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_lptmr.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_lptmr.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_lptmr.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_lptmr.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_lptmr.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_lptmr.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_lptmr.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_lptmr.o
@@ -6524,7 +6524,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_lptmr.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_lptmr.o
  .debug_line    0x00000000      0x41f ./drivers/fsl_lptmr.o
- .debug_str     0x00000000    0x49a4a ./drivers/fsl_lptmr.o
+ .debug_str     0x00000000    0x49b29 ./drivers/fsl_lptmr.o
  .comment       0x00000000       0x4e ./drivers/fsl_lptmr.o
  .debug_frame   0x00000000       0xf0 ./drivers/fsl_lptmr.o
  .ARM.attributes
@@ -6611,7 +6611,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_lpuart.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_lpuart.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_lpuart.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_lpuart.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_lpuart.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_lpuart.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_lpuart.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_lpuart.o
@@ -6713,7 +6713,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_lpuart_edma.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_lpuart_edma.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_lpuart_edma.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_lpuart_edma.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_lpuart_edma.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_lpuart_edma.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_lpuart_edma.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_lpuart_edma.o
@@ -6723,8 +6723,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x12e ./drivers/fsl_lpuart_edma.o
  .debug_macro   0x00000000       0x10 ./drivers/fsl_lpuart_edma.o
  .debug_macro   0x00000000       0x16 ./drivers/fsl_lpuart_edma.o
- .debug_line    0x00000000      0x6c5 ./drivers/fsl_lpuart_edma.o
- .debug_str     0x00000000    0x4a61f ./drivers/fsl_lpuart_edma.o
+ .debug_line    0x00000000      0x6cb ./drivers/fsl_lpuart_edma.o
+ .debug_str     0x00000000    0x4a6fe ./drivers/fsl_lpuart_edma.o
  .comment       0x00000000       0x4e ./drivers/fsl_lpuart_edma.o
  .debug_frame   0x00000000      0x254 ./drivers/fsl_lpuart_edma.o
  .ARM.attributes
@@ -6796,7 +6796,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_pdb.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_pdb.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_pdb.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_pdb.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_pdb.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_pdb.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_pdb.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_pdb.o
@@ -6805,7 +6805,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_pdb.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_pdb.o
  .debug_line    0x00000000      0x475 ./drivers/fsl_pdb.o
- .debug_str     0x00000000    0x49b8b ./drivers/fsl_pdb.o
+ .debug_str     0x00000000    0x49c6a ./drivers/fsl_pdb.o
  .comment       0x00000000       0x4e ./drivers/fsl_pdb.o
  .debug_frame   0x00000000      0x13c ./drivers/fsl_pdb.o
  .ARM.attributes
@@ -6851,7 +6851,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_pit.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_pit.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_pit.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_pit.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_pit.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_pit.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_pit.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_pit.o
@@ -6904,7 +6904,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_pmc.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_pmc.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_pmc.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_pmc.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_pmc.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_pmc.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_pmc.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_pmc.o
@@ -6913,7 +6913,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_pmc.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_pmc.o
  .debug_line    0x00000000      0x357 ./drivers/fsl_pmc.o
- .debug_str     0x00000000    0x48d85 ./drivers/fsl_pmc.o
+ .debug_str     0x00000000    0x48e64 ./drivers/fsl_pmc.o
  .comment       0x00000000       0x4e ./drivers/fsl_pmc.o
  .debug_frame   0x00000000       0x88 ./drivers/fsl_pmc.o
  .ARM.attributes
@@ -6961,7 +6961,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_rcm.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_rcm.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_rcm.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_rcm.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_rcm.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_rcm.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_rcm.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_rcm.o
@@ -6970,7 +6970,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_rcm.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_rcm.o
  .debug_line    0x00000000      0x31e ./drivers/fsl_rcm.o
- .debug_str     0x00000000    0x48c36 ./drivers/fsl_rcm.o
+ .debug_str     0x00000000    0x48d15 ./drivers/fsl_rcm.o
  .comment       0x00000000       0x4e ./drivers/fsl_rcm.o
  .debug_frame   0x00000000       0x34 ./drivers/fsl_rcm.o
  .ARM.attributes
@@ -7032,7 +7032,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_rnga.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_rnga.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_rnga.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_rnga.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_rnga.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_rnga.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_rnga.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_rnga.o
@@ -7041,7 +7041,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_rnga.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_rnga.o
  .debug_line    0x00000000      0x475 ./drivers/fsl_rnga.o
- .debug_str     0x00000000    0x49223 ./drivers/fsl_rnga.o
+ .debug_str     0x00000000    0x49302 ./drivers/fsl_rnga.o
  .comment       0x00000000       0x4e ./drivers/fsl_rnga.o
  .debug_frame   0x00000000      0x168 ./drivers/fsl_rnga.o
  .ARM.attributes
@@ -7087,7 +7087,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_sim.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_sim.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_sim.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_sim.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_sim.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_sim.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_sim.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_sim.o
@@ -7096,7 +7096,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_sim.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_sim.o
  .debug_line    0x00000000      0x30e ./drivers/fsl_sim.o
- .debug_str     0x00000000    0x48bd2 ./drivers/fsl_sim.o
+ .debug_str     0x00000000    0x48cb1 ./drivers/fsl_sim.o
  .comment       0x00000000       0x4e ./drivers/fsl_sim.o
  .debug_frame   0x00000000       0x38 ./drivers/fsl_sim.o
  .ARM.attributes
@@ -7166,7 +7166,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_smc.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_smc.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_smc.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_smc.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_smc.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_smc.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_smc.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_smc.o
@@ -7336,7 +7336,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_uart.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_uart.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_uart.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_uart.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_uart.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_uart.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_uart.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_uart.o
@@ -7391,7 +7391,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_uart_cmsis.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_uart_cmsis.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_uart_cmsis.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_uart_cmsis.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_uart_cmsis.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_uart_cmsis.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_uart_cmsis.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_uart_cmsis.o
@@ -7408,7 +7408,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 ./drivers/fsl_uart_cmsis.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_uart_cmsis.o
  .debug_line    0x00000000      0x3ce ./drivers/fsl_uart_cmsis.o
- .debug_str     0x00000000    0x4b584 ./drivers/fsl_uart_cmsis.o
+ .debug_str     0x00000000    0x4b663 ./drivers/fsl_uart_cmsis.o
  .comment       0x00000000       0x4e ./drivers/fsl_uart_cmsis.o
  .ARM.attributes
                 0x00000000       0x39 ./drivers/fsl_uart_cmsis.o
@@ -7505,7 +7505,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_uart_edma.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_uart_edma.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_uart_edma.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_uart_edma.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_uart_edma.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_uart_edma.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_uart_edma.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_uart_edma.o
@@ -7515,8 +7515,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x12e ./drivers/fsl_uart_edma.o
  .debug_macro   0x00000000       0x10 ./drivers/fsl_uart_edma.o
  .debug_macro   0x00000000       0x16 ./drivers/fsl_uart_edma.o
- .debug_line    0x00000000      0x6b9 ./drivers/fsl_uart_edma.o
- .debug_str     0x00000000    0x4a676 ./drivers/fsl_uart_edma.o
+ .debug_line    0x00000000      0x6bf ./drivers/fsl_uart_edma.o
+ .debug_str     0x00000000    0x4a755 ./drivers/fsl_uart_edma.o
  .comment       0x00000000       0x4e ./drivers/fsl_uart_edma.o
  .debug_frame   0x00000000      0x254 ./drivers/fsl_uart_edma.o
  .ARM.attributes
@@ -7584,7 +7584,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_vref.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_vref.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_vref.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_vref.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_vref.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_vref.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_vref.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_vref.o
@@ -7593,7 +7593,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa1 ./drivers/fsl_vref.o
  .debug_macro   0x00000000      0x12e ./drivers/fsl_vref.o
  .debug_line    0x00000000      0x450 ./drivers/fsl_vref.o
- .debug_str     0x00000000    0x496c0 ./drivers/fsl_vref.o
+ .debug_str     0x00000000    0x4979f ./drivers/fsl_vref.o
  .comment       0x00000000       0x4e ./drivers/fsl_vref.o
  .debug_frame   0x00000000      0x118 ./drivers/fsl_vref.o
  .ARM.attributes
@@ -7668,7 +7668,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./drivers/fsl_wdog.o
  .debug_macro   0x00000000       0x1c ./drivers/fsl_wdog.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_wdog.o
- .debug_macro   0x00000000       0xd2 ./drivers/fsl_wdog.o
+ .debug_macro   0x00000000       0xfb ./drivers/fsl_wdog.o
  .debug_macro   0x00000000      0xeeb ./drivers/fsl_wdog.o
  .debug_macro   0x00000000       0x3a ./drivers/fsl_wdog.o
  .debug_macro   0x00000000     0x797a ./drivers/fsl_wdog.o
@@ -7678,7 +7678,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x12e ./drivers/fsl_wdog.o
  .debug_macro   0x00000000       0x22 ./drivers/fsl_wdog.o
  .debug_line    0x00000000      0x545 ./drivers/fsl_wdog.o
- .debug_str     0x00000000    0x4907c ./drivers/fsl_wdog.o
+ .debug_str     0x00000000    0x4915b ./drivers/fsl_wdog.o
  .comment       0x00000000       0x4e ./drivers/fsl_wdog.o
  .debug_frame   0x00000000      0x1dc ./drivers/fsl_wdog.o
  .ARM.attributes
@@ -7709,7 +7709,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./device/system_MKV31F51212.o
  .debug_macro   0x00000000       0x1c ./device/system_MKV31F51212.o
  .debug_macro   0x00000000       0x22 ./device/system_MKV31F51212.o
- .debug_macro   0x00000000       0xd2 ./device/system_MKV31F51212.o
+ .debug_macro   0x00000000       0xfb ./device/system_MKV31F51212.o
  .debug_macro   0x00000000      0xeeb ./device/system_MKV31F51212.o
  .debug_macro   0x00000000       0x3a ./device/system_MKV31F51212.o
  .debug_macro   0x00000000     0x797a ./device/system_MKV31F51212.o
@@ -7783,7 +7783,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./component/uart/fsl_adapter_uart.o
  .debug_macro   0x00000000       0x1c ./component/uart/fsl_adapter_uart.o
  .debug_macro   0x00000000       0x22 ./component/uart/fsl_adapter_uart.o
- .debug_macro   0x00000000       0xd2 ./component/uart/fsl_adapter_uart.o
+ .debug_macro   0x00000000       0xfb ./component/uart/fsl_adapter_uart.o
  .debug_macro   0x00000000      0xeeb ./component/uart/fsl_adapter_uart.o
  .debug_macro   0x00000000       0x3a ./component/uart/fsl_adapter_uart.o
  .debug_macro   0x00000000     0x797a ./component/uart/fsl_adapter_uart.o
@@ -7794,7 +7794,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 ./component/uart/fsl_adapter_uart.o
  .debug_macro   0x00000000       0x40 ./component/uart/fsl_adapter_uart.o
  .debug_line    0x00000000      0x4d5 ./component/uart/fsl_adapter_uart.o
- .debug_str     0x00000000    0x49b16 ./component/uart/fsl_adapter_uart.o
+ .debug_str     0x00000000    0x49bf5 ./component/uart/fsl_adapter_uart.o
  .comment       0x00000000       0x4e ./component/uart/fsl_adapter_uart.o
  .debug_frame   0x00000000      0x110 ./component/uart/fsl_adapter_uart.o
  .ARM.attributes
@@ -7874,7 +7874,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./component/serial_manager/fsl_component_serial_manager.o
  .debug_macro   0x00000000       0x1c ./component/serial_manager/fsl_component_serial_manager.o
  .debug_macro   0x00000000       0x22 ./component/serial_manager/fsl_component_serial_manager.o
- .debug_macro   0x00000000       0xd2 ./component/serial_manager/fsl_component_serial_manager.o
+ .debug_macro   0x00000000       0xfb ./component/serial_manager/fsl_component_serial_manager.o
  .debug_macro   0x00000000      0xeeb ./component/serial_manager/fsl_component_serial_manager.o
  .debug_macro   0x00000000       0x3a ./component/serial_manager/fsl_component_serial_manager.o
  .debug_macro   0x00000000     0x797a ./component/serial_manager/fsl_component_serial_manager.o
@@ -7887,7 +7887,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./component/serial_manager/fsl_component_serial_manager.o
  .debug_macro   0x00000000       0x66 ./component/serial_manager/fsl_component_serial_manager.o
  .debug_line    0x00000000      0x750 ./component/serial_manager/fsl_component_serial_manager.o
- .debug_str     0x00000000    0x49ad1 ./component/serial_manager/fsl_component_serial_manager.o
+ .debug_str     0x00000000    0x49bb0 ./component/serial_manager/fsl_component_serial_manager.o
  .comment       0x00000000       0x4e ./component/serial_manager/fsl_component_serial_manager.o
  .debug_frame   0x00000000      0x258 ./component/serial_manager/fsl_component_serial_manager.o
  .ARM.attributes
@@ -7934,7 +7934,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./component/serial_manager/fsl_component_serial_port_swo.o
  .debug_macro   0x00000000       0x1c ./component/serial_manager/fsl_component_serial_port_swo.o
  .debug_macro   0x00000000       0x22 ./component/serial_manager/fsl_component_serial_port_swo.o
- .debug_macro   0x00000000       0xd2 ./component/serial_manager/fsl_component_serial_port_swo.o
+ .debug_macro   0x00000000       0xfb ./component/serial_manager/fsl_component_serial_port_swo.o
  .debug_macro   0x00000000      0xeeb ./component/serial_manager/fsl_component_serial_port_swo.o
  .debug_macro   0x00000000       0x3a ./component/serial_manager/fsl_component_serial_port_swo.o
  .debug_macro   0x00000000     0x797a ./component/serial_manager/fsl_component_serial_port_swo.o
@@ -7947,7 +7947,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./component/serial_manager/fsl_component_serial_port_swo.o
  .debug_macro   0x00000000       0x66 ./component/serial_manager/fsl_component_serial_port_swo.o
  .debug_line    0x00000000      0x3e1 ./component/serial_manager/fsl_component_serial_port_swo.o
- .debug_str     0x00000000    0x493b1 ./component/serial_manager/fsl_component_serial_port_swo.o
+ .debug_str     0x00000000    0x49490 ./component/serial_manager/fsl_component_serial_port_swo.o
  .comment       0x00000000       0x4e ./component/serial_manager/fsl_component_serial_port_swo.o
  .ARM.attributes
                 0x00000000       0x39 ./component/serial_manager/fsl_component_serial_port_swo.o
@@ -8006,7 +8006,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./component/serial_manager/fsl_component_serial_port_uart.o
  .debug_macro   0x00000000       0x1c ./component/serial_manager/fsl_component_serial_port_uart.o
  .debug_macro   0x00000000       0x22 ./component/serial_manager/fsl_component_serial_port_uart.o
- .debug_macro   0x00000000       0xd2 ./component/serial_manager/fsl_component_serial_port_uart.o
+ .debug_macro   0x00000000       0xfb ./component/serial_manager/fsl_component_serial_port_uart.o
  .debug_macro   0x00000000      0xeeb ./component/serial_manager/fsl_component_serial_port_uart.o
  .debug_macro   0x00000000       0x3a ./component/serial_manager/fsl_component_serial_port_uart.o
  .debug_macro   0x00000000     0x797a ./component/serial_manager/fsl_component_serial_port_uart.o
@@ -8019,7 +8019,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./component/serial_manager/fsl_component_serial_port_uart.o
  .debug_macro   0x00000000       0x66 ./component/serial_manager/fsl_component_serial_port_uart.o
  .debug_line    0x00000000      0x509 ./component/serial_manager/fsl_component_serial_port_uart.o
- .debug_str     0x00000000    0x49882 ./component/serial_manager/fsl_component_serial_port_uart.o
+ .debug_str     0x00000000    0x49961 ./component/serial_manager/fsl_component_serial_port_uart.o
  .comment       0x00000000       0x4e ./component/serial_manager/fsl_component_serial_port_uart.o
  .debug_frame   0x00000000       0xe8 ./component/serial_manager/fsl_component_serial_port_uart.o
  .ARM.attributes
@@ -8066,7 +8066,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./component/serial_manager/fsl_component_serial_port_virtual.o
  .debug_macro   0x00000000       0x1c ./component/serial_manager/fsl_component_serial_port_virtual.o
  .debug_macro   0x00000000       0x22 ./component/serial_manager/fsl_component_serial_port_virtual.o
- .debug_macro   0x00000000       0xd2 ./component/serial_manager/fsl_component_serial_port_virtual.o
+ .debug_macro   0x00000000       0xfb ./component/serial_manager/fsl_component_serial_port_virtual.o
  .debug_macro   0x00000000      0xeeb ./component/serial_manager/fsl_component_serial_port_virtual.o
  .debug_macro   0x00000000       0x3a ./component/serial_manager/fsl_component_serial_port_virtual.o
  .debug_macro   0x00000000     0x797a ./component/serial_manager/fsl_component_serial_port_virtual.o
@@ -8079,7 +8079,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./component/serial_manager/fsl_component_serial_port_virtual.o
  .debug_macro   0x00000000       0x66 ./component/serial_manager/fsl_component_serial_port_virtual.o
  .debug_line    0x00000000      0x3e5 ./component/serial_manager/fsl_component_serial_port_virtual.o
- .debug_str     0x00000000    0x493b5 ./component/serial_manager/fsl_component_serial_port_virtual.o
+ .debug_str     0x00000000    0x49494 ./component/serial_manager/fsl_component_serial_port_virtual.o
  .comment       0x00000000       0x4e ./component/serial_manager/fsl_component_serial_port_virtual.o
  .ARM.attributes
                 0x00000000       0x39 ./component/serial_manager/fsl_component_serial_port_virtual.o
@@ -8126,7 +8126,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./board/board.o
  .debug_macro   0x00000000       0x1c ./board/board.o
  .debug_macro   0x00000000       0x22 ./board/board.o
- .debug_macro   0x00000000       0xd2 ./board/board.o
+ .debug_macro   0x00000000       0xfb ./board/board.o
  .debug_macro   0x00000000      0xeeb ./board/board.o
  .debug_macro   0x00000000       0x3a ./board/board.o
  .debug_macro   0x00000000     0x797a ./board/board.o
@@ -8186,7 +8186,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./board/clock_config.o
  .debug_macro   0x00000000       0x1c ./board/clock_config.o
  .debug_macro   0x00000000       0x22 ./board/clock_config.o
- .debug_macro   0x00000000       0xd2 ./board/clock_config.o
+ .debug_macro   0x00000000       0xfb ./board/clock_config.o
  .debug_macro   0x00000000      0xeeb ./board/clock_config.o
  .debug_macro   0x00000000       0x3a ./board/clock_config.o
  .debug_macro   0x00000000     0x797a ./board/clock_config.o
@@ -8280,7 +8280,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./board/frdm_kv31f.o
  .debug_macro   0x00000000       0x1c ./board/frdm_kv31f.o
  .debug_macro   0x00000000       0x22 ./board/frdm_kv31f.o
- .debug_macro   0x00000000       0xd2 ./board/frdm_kv31f.o
+ .debug_macro   0x00000000       0xfb ./board/frdm_kv31f.o
  .debug_macro   0x00000000      0xeeb ./board/frdm_kv31f.o
  .debug_macro   0x00000000       0x3a ./board/frdm_kv31f.o
  .debug_macro   0x00000000     0x797a ./board/frdm_kv31f.o
@@ -8342,7 +8342,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x56 ./board/pin_mux.o
  .debug_macro   0x00000000       0x1c ./board/pin_mux.o
  .debug_macro   0x00000000       0x22 ./board/pin_mux.o
- .debug_macro   0x00000000       0xd2 ./board/pin_mux.o
+ .debug_macro   0x00000000       0xfb ./board/pin_mux.o
  .debug_macro   0x00000000      0xeeb ./board/pin_mux.o
  .debug_macro   0x00000000       0x3a ./board/pin_mux.o
  .debug_macro   0x00000000     0x797a ./board/pin_mux.o
@@ -8868,8 +8868,7 @@ LOAD ./board/clock_config.o
 LOAD ./board/frdm_kv31f.o
 LOAD ./board/peripherals.o
 LOAD ./board/pin_mux.o
-LOAD D:\THIERRY\workspace\ROBOT_FRDM_KV31F\libs\libarm_cortexM7l_math.a
-LOAD D:\THIERRY\workspace\ROBOT_FRDM_KV31F\libs\libarm_cortexM4lf_math.a
+LOAD D:\THIERRY\workspace\ROBOT_FRDM_KV31F\CMSIS\DSP\libarm_cortexM4lf_math.a
 START GROUP
 LOAD c:/tools/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_semihost_nf.a
 LOAD c:/tools/mcuxpressoide_11.4.1_6260/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.4.0.202103011116/tools/bin/../lib/gcc/arm-none-eabi/10.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a
@@ -11455,7 +11454,7 @@ LOAD linker stubs
  .debug_ranges  0x00001c40       0x18 ./board/peripherals.o
  .debug_ranges  0x00001c58       0x98 ./board/pin_mux.o
 
-.debug_macro    0x00000000    0x1389e
+.debug_macro    0x00000000    0x138c7
  .debug_macro   0x00000000      0x159 ./utilities/fsl_assert.o
  .debug_macro   0x00000159      0xad8 ./utilities/fsl_assert.o
  .debug_macro   0x00000c31       0x10 ./utilities/fsl_assert.o
@@ -11468,119 +11467,119 @@ LOAD linker stubs
  .debug_macro   0x00001392       0x56 ./utilities/fsl_assert.o
  .debug_macro   0x000013e8       0x1c ./utilities/fsl_assert.o
  .debug_macro   0x00001404       0x22 ./utilities/fsl_assert.o
- .debug_macro   0x00001426       0xd2 ./utilities/fsl_assert.o
- .debug_macro   0x000014f8      0xeeb ./utilities/fsl_assert.o
- .debug_macro   0x000023e3       0x3a ./utilities/fsl_assert.o
- .debug_macro   0x0000241d     0x797a ./utilities/fsl_assert.o
- .debug_macro   0x00009d97     0x112a ./utilities/fsl_assert.o
- .debug_macro   0x0000aec1       0x7a ./utilities/fsl_assert.o
- .debug_macro   0x0000af3b       0xa1 ./utilities/fsl_assert.o
- .debug_macro   0x0000afdc      0x12e ./utilities/fsl_assert.o
- .debug_macro   0x0000b10a       0x58 ./utilities/fsl_assert.o
- .debug_macro   0x0000b162       0x40 ./utilities/fsl_assert.o
- .debug_macro   0x0000b1a2       0x10 ./utilities/fsl_assert.o
- .debug_macro   0x0000b1b2       0x66 ./utilities/fsl_assert.o
- .debug_macro   0x0000b218       0x16 ./utilities/fsl_assert.o
- .debug_macro   0x0000b22e       0xd2 ./utilities/fsl_assert.o
- .debug_macro   0x0000b300       0x1c ./utilities/fsl_assert.o
- .debug_macro   0x0000b31c       0x29 ./startup/startup_mkv31f51212.o
- .debug_macro   0x0000b345      0x331 ./source/com.o
- .debug_macro   0x0000b676       0x16 ./source/com.o
- .debug_macro   0x0000b68c      0x1bf ./source/com.o
- .debug_macro   0x0000b84b      0x15a ./source/com.o
- .debug_macro   0x0000b9a5       0xe4 ./source/com.o
- .debug_macro   0x0000ba89       0x1c ./source/com.o
- .debug_macro   0x0000baa5       0x26 ./source/com.o
- .debug_macro   0x0000bacb      0x45d ./source/com.o
- .debug_macro   0x0000bf28       0xb5 ./source/com.o
- .debug_macro   0x0000bfdd      0x120 ./source/com.o
- .debug_macro   0x0000c0fd       0x80 ./source/com.o
- .debug_macro   0x0000c17d       0x97 ./source/com.o
- .debug_macro   0x0000c214       0x16 ./source/com.o
- .debug_macro   0x0000c22a       0x10 ./source/com.o
- .debug_macro   0x0000c23a       0xc4 ./source/com.o
- .debug_macro   0x0000c2fe       0x1c ./source/com.o
- .debug_macro   0x0000c31a       0xb2 ./source/com.o
- .debug_macro   0x0000c3cc       0x52 ./source/com.o
- .debug_macro   0x0000c41e       0x16 ./source/com.o
- .debug_macro   0x0000c434      0x12d ./source/com.o
- .debug_macro   0x0000c561       0x22 ./source/com.o
- .debug_macro   0x0000c583       0x1c ./source/com.o
- .debug_macro   0x0000c59f       0x9b ./source/com.o
- .debug_macro   0x0000c63a       0x59 ./source/hdlc.o
- .debug_macro   0x0000c693      0x225 ./source/lpuart.o
- .debug_macro   0x0000c8b8       0x16 ./source/lpuart.o
- .debug_macro   0x0000c8ce      0x1bf ./source/lpuart.o
- .debug_macro   0x0000ca8d       0x91 ./source/lpuart.o
- .debug_macro   0x0000cb1e       0x86 ./source/lpuart.o
- .debug_macro   0x0000cba4       0x7e ./source/lpuart.o
- .debug_macro   0x0000cc22       0x1c ./source/lpuart.o
- .debug_macro   0x0000cc3e       0x1c ./source/lpuart.o
- .debug_macro   0x0000cc5a      0x3bb ./source/main_freertos_two_tasks.o
- .debug_macro   0x0000d015       0x40 ./source/main_freertos_two_tasks.o
- .debug_macro   0x0000d055      0x12a ./source/main_freertos_two_tasks.o
- .debug_macro   0x0000d17f      0x565 ./source/main_freertos_two_tasks.o
- .debug_macro   0x0000d6e4      0x5a1 ./source/main_freertos_two_tasks.o
- .debug_macro   0x0000dc85     0x1255 ./source/main_freertos_two_tasks.o
- .debug_macro   0x0000eeda       0x10 ./source/main_freertos_two_tasks.o
- .debug_macro   0x0000eeea       0x10 ./source/main_freertos_two_tasks.o
- .debug_macro   0x0000eefa      0x169 ./source/motors.o
- .debug_macro   0x0000f063       0x16 ./source/motors.o
- .debug_macro   0x0000f079       0x11 ./source/semihost_hardfault.o
- .debug_macro   0x0000f08a       0x83 ./sensor_fusion/approximations.o
- .debug_macro   0x0000f10d      0x264 ./sensor_fusion/debug.o
- .debug_macro   0x0000f371      0x2e0 ./sensor_fusion/driver_FXAS21002.o
- .debug_macro   0x0000f651       0x16 ./sensor_fusion/driver_FXAS21002.o
- .debug_macro   0x0000f667      0x2e1 ./sensor_fusion/driver_FXOS8700.o
- .debug_macro   0x0000f948      0x2bf ./sensor_fusion/driver_MPL3115.o
- .debug_macro   0x0000fc07      0x219 ./sensor_fusion/driver_pit.o
- .debug_macro   0x0000fe20      0x10c ./sensor_fusion/driver_pit.o
- .debug_macro   0x0000ff2c       0x10 ./sensor_fusion/driver_pit.o
- .debug_macro   0x0000ff3c      0x276 ./sensor_fusion/driver_systick.o
- .debug_macro   0x000101b2      0x281 ./sensor_fusion/fusion.o
- .debug_macro   0x00010433      0x25a ./sensor_fusion/hal_frdm_fxs_mult2_b.o
- .debug_macro   0x0001068d      0x27b ./sensor_fusion/magnetic.o
- .debug_macro   0x00010908       0x10 ./sensor_fusion/magnetic.o
- .debug_macro   0x00010918      0x281 ./sensor_fusion/matrix.o
- .debug_macro   0x00010b99      0x292 ./sensor_fusion/orientation.o
- .debug_macro   0x00010e2b      0x263 ./sensor_fusion/precisionAccelerometer.o
- .debug_macro   0x0001108e      0x285 ./sensor_fusion/sensor_fusion.o
- .debug_macro   0x00011313      0x2b4 ./sensor_fusion/status.o
- .debug_macro   0x000115c7      0x202 ./interfaces/register_io_i2c.o
- .debug_macro   0x000117c9       0x9d ./interfaces/sensor_io_i2c.o
- .debug_macro   0x00011866      0x150 ./gpio_driver/gpio_driver.o
- .debug_macro   0x000119b6      0x149 ./gpio_driver/gpio_driver_irq.o
- .debug_macro   0x00011aff       0x10 ./gpio_driver/gpio_driver_irq.o
- .debug_macro   0x00011b0f       0xdf ./freertos/freertos_kernel/portable/MemMang/heap_4.o
- .debug_macro   0x00011bee      0x179 ./freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o
- .debug_macro   0x00011d67      0x113 ./freertos/freertos_kernel/event_groups.o
- .debug_macro   0x00011e7a       0xc4 ./freertos/freertos_kernel/list.o
- .debug_macro   0x00011f3e      0x12b ./freertos/freertos_kernel/queue.o
- .debug_macro   0x00012069      0x188 ./freertos/freertos_kernel/tasks.o
- .debug_macro   0x000121f1       0x10 ./freertos/freertos_kernel/tasks.o
- .debug_macro   0x00012201      0x10d ./freertos/freertos_kernel/timers.o
- .debug_macro   0x0001230e      0x1cc ./drivers/freertos/fsl_lpuart_freertos.o
- .debug_macro   0x000124da       0x10 ./drivers/freertos/fsl_lpuart_freertos.o
- .debug_macro   0x000124ea      0x1d8 ./drivers/fsl_clock.o
- .debug_macro   0x000126c2      0x121 ./drivers/fsl_dspi.o
- .debug_macro   0x000127e3      0x127 ./drivers/fsl_edma.o
- .debug_macro   0x0001290a       0x10 ./drivers/fsl_edma.o
- .debug_macro   0x0001291a      0x122 ./drivers/fsl_ftm.o
- .debug_macro   0x00012a3c      0x121 ./drivers/fsl_gpio.o
- .debug_macro   0x00012b5d      0x121 ./drivers/fsl_i2c.o
- .debug_macro   0x00012c7e      0x182 ./drivers/fsl_i2c_cmsis.o
- .debug_macro   0x00012e00      0x121 ./drivers/fsl_lpuart.o
- .debug_macro   0x00012f21      0x122 ./drivers/fsl_pit.o
- .debug_macro   0x00013043      0x122 ./drivers/fsl_smc.o
- .debug_macro   0x00013165      0x127 ./drivers/fsl_uart.o
- .debug_macro   0x0001328c       0x98 ./device/system_MKV31F51212.o
- .debug_macro   0x00013324      0x180 ./board/board.o
- .debug_macro   0x000134a4      0x15f ./board/clock_config.o
- .debug_macro   0x00013603      0x159 ./board/frdm_kv31f.o
- .debug_macro   0x0001375c       0x1b ./board/peripherals.o
- .debug_macro   0x00013777      0x127 ./board/pin_mux.o
+ .debug_macro   0x00001426       0xfb ./utilities/fsl_assert.o
+ .debug_macro   0x00001521      0xeeb ./utilities/fsl_assert.o
+ .debug_macro   0x0000240c       0x3a ./utilities/fsl_assert.o
+ .debug_macro   0x00002446     0x797a ./utilities/fsl_assert.o
+ .debug_macro   0x00009dc0     0x112a ./utilities/fsl_assert.o
+ .debug_macro   0x0000aeea       0x7a ./utilities/fsl_assert.o
+ .debug_macro   0x0000af64       0xa1 ./utilities/fsl_assert.o
+ .debug_macro   0x0000b005      0x12e ./utilities/fsl_assert.o
+ .debug_macro   0x0000b133       0x58 ./utilities/fsl_assert.o
+ .debug_macro   0x0000b18b       0x40 ./utilities/fsl_assert.o
+ .debug_macro   0x0000b1cb       0x10 ./utilities/fsl_assert.o
+ .debug_macro   0x0000b1db       0x66 ./utilities/fsl_assert.o
+ .debug_macro   0x0000b241       0x16 ./utilities/fsl_assert.o
+ .debug_macro   0x0000b257       0xd2 ./utilities/fsl_assert.o
+ .debug_macro   0x0000b329       0x1c ./utilities/fsl_assert.o
+ .debug_macro   0x0000b345       0x29 ./startup/startup_mkv31f51212.o
+ .debug_macro   0x0000b36e      0x331 ./source/com.o
+ .debug_macro   0x0000b69f       0x16 ./source/com.o
+ .debug_macro   0x0000b6b5      0x1bf ./source/com.o
+ .debug_macro   0x0000b874      0x15a ./source/com.o
+ .debug_macro   0x0000b9ce       0xe4 ./source/com.o
+ .debug_macro   0x0000bab2       0x1c ./source/com.o
+ .debug_macro   0x0000bace       0x26 ./source/com.o
+ .debug_macro   0x0000baf4      0x45d ./source/com.o
+ .debug_macro   0x0000bf51       0xb5 ./source/com.o
+ .debug_macro   0x0000c006      0x120 ./source/com.o
+ .debug_macro   0x0000c126       0x80 ./source/com.o
+ .debug_macro   0x0000c1a6       0x97 ./source/com.o
+ .debug_macro   0x0000c23d       0x16 ./source/com.o
+ .debug_macro   0x0000c253       0x10 ./source/com.o
+ .debug_macro   0x0000c263       0xc4 ./source/com.o
+ .debug_macro   0x0000c327       0x1c ./source/com.o
+ .debug_macro   0x0000c343       0xb2 ./source/com.o
+ .debug_macro   0x0000c3f5       0x52 ./source/com.o
+ .debug_macro   0x0000c447       0x16 ./source/com.o
+ .debug_macro   0x0000c45d      0x12d ./source/com.o
+ .debug_macro   0x0000c58a       0x22 ./source/com.o
+ .debug_macro   0x0000c5ac       0x1c ./source/com.o
+ .debug_macro   0x0000c5c8       0x9b ./source/com.o
+ .debug_macro   0x0000c663       0x59 ./source/hdlc.o
+ .debug_macro   0x0000c6bc      0x225 ./source/lpuart.o
+ .debug_macro   0x0000c8e1       0x16 ./source/lpuart.o
+ .debug_macro   0x0000c8f7      0x1bf ./source/lpuart.o
+ .debug_macro   0x0000cab6       0x91 ./source/lpuart.o
+ .debug_macro   0x0000cb47       0x86 ./source/lpuart.o
+ .debug_macro   0x0000cbcd       0x7e ./source/lpuart.o
+ .debug_macro   0x0000cc4b       0x1c ./source/lpuart.o
+ .debug_macro   0x0000cc67       0x1c ./source/lpuart.o
+ .debug_macro   0x0000cc83      0x3bb ./source/main_freertos_two_tasks.o
+ .debug_macro   0x0000d03e       0x40 ./source/main_freertos_two_tasks.o
+ .debug_macro   0x0000d07e      0x12a ./source/main_freertos_two_tasks.o
+ .debug_macro   0x0000d1a8      0x565 ./source/main_freertos_two_tasks.o
+ .debug_macro   0x0000d70d      0x5a1 ./source/main_freertos_two_tasks.o
+ .debug_macro   0x0000dcae     0x1255 ./source/main_freertos_two_tasks.o
+ .debug_macro   0x0000ef03       0x10 ./source/main_freertos_two_tasks.o
+ .debug_macro   0x0000ef13       0x10 ./source/main_freertos_two_tasks.o
+ .debug_macro   0x0000ef23      0x169 ./source/motors.o
+ .debug_macro   0x0000f08c       0x16 ./source/motors.o
+ .debug_macro   0x0000f0a2       0x11 ./source/semihost_hardfault.o
+ .debug_macro   0x0000f0b3       0x83 ./sensor_fusion/approximations.o
+ .debug_macro   0x0000f136      0x264 ./sensor_fusion/debug.o
+ .debug_macro   0x0000f39a      0x2e0 ./sensor_fusion/driver_FXAS21002.o
+ .debug_macro   0x0000f67a       0x16 ./sensor_fusion/driver_FXAS21002.o
+ .debug_macro   0x0000f690      0x2e1 ./sensor_fusion/driver_FXOS8700.o
+ .debug_macro   0x0000f971      0x2bf ./sensor_fusion/driver_MPL3115.o
+ .debug_macro   0x0000fc30      0x219 ./sensor_fusion/driver_pit.o
+ .debug_macro   0x0000fe49      0x10c ./sensor_fusion/driver_pit.o
+ .debug_macro   0x0000ff55       0x10 ./sensor_fusion/driver_pit.o
+ .debug_macro   0x0000ff65      0x276 ./sensor_fusion/driver_systick.o
+ .debug_macro   0x000101db      0x281 ./sensor_fusion/fusion.o
+ .debug_macro   0x0001045c      0x25a ./sensor_fusion/hal_frdm_fxs_mult2_b.o
+ .debug_macro   0x000106b6      0x27b ./sensor_fusion/magnetic.o
+ .debug_macro   0x00010931       0x10 ./sensor_fusion/magnetic.o
+ .debug_macro   0x00010941      0x281 ./sensor_fusion/matrix.o
+ .debug_macro   0x00010bc2      0x292 ./sensor_fusion/orientation.o
+ .debug_macro   0x00010e54      0x263 ./sensor_fusion/precisionAccelerometer.o
+ .debug_macro   0x000110b7      0x285 ./sensor_fusion/sensor_fusion.o
+ .debug_macro   0x0001133c      0x2b4 ./sensor_fusion/status.o
+ .debug_macro   0x000115f0      0x202 ./interfaces/register_io_i2c.o
+ .debug_macro   0x000117f2       0x9d ./interfaces/sensor_io_i2c.o
+ .debug_macro   0x0001188f      0x150 ./gpio_driver/gpio_driver.o
+ .debug_macro   0x000119df      0x149 ./gpio_driver/gpio_driver_irq.o
+ .debug_macro   0x00011b28       0x10 ./gpio_driver/gpio_driver_irq.o
+ .debug_macro   0x00011b38       0xdf ./freertos/freertos_kernel/portable/MemMang/heap_4.o
+ .debug_macro   0x00011c17      0x179 ./freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o
+ .debug_macro   0x00011d90      0x113 ./freertos/freertos_kernel/event_groups.o
+ .debug_macro   0x00011ea3       0xc4 ./freertos/freertos_kernel/list.o
+ .debug_macro   0x00011f67      0x12b ./freertos/freertos_kernel/queue.o
+ .debug_macro   0x00012092      0x188 ./freertos/freertos_kernel/tasks.o
+ .debug_macro   0x0001221a       0x10 ./freertos/freertos_kernel/tasks.o
+ .debug_macro   0x0001222a      0x10d ./freertos/freertos_kernel/timers.o
+ .debug_macro   0x00012337      0x1cc ./drivers/freertos/fsl_lpuart_freertos.o
+ .debug_macro   0x00012503       0x10 ./drivers/freertos/fsl_lpuart_freertos.o
+ .debug_macro   0x00012513      0x1d8 ./drivers/fsl_clock.o
+ .debug_macro   0x000126eb      0x121 ./drivers/fsl_dspi.o
+ .debug_macro   0x0001280c      0x127 ./drivers/fsl_edma.o
+ .debug_macro   0x00012933       0x10 ./drivers/fsl_edma.o
+ .debug_macro   0x00012943      0x122 ./drivers/fsl_ftm.o
+ .debug_macro   0x00012a65      0x121 ./drivers/fsl_gpio.o
+ .debug_macro   0x00012b86      0x121 ./drivers/fsl_i2c.o
+ .debug_macro   0x00012ca7      0x182 ./drivers/fsl_i2c_cmsis.o
+ .debug_macro   0x00012e29      0x121 ./drivers/fsl_lpuart.o
+ .debug_macro   0x00012f4a      0x122 ./drivers/fsl_pit.o
+ .debug_macro   0x0001306c      0x122 ./drivers/fsl_smc.o
+ .debug_macro   0x0001318e      0x127 ./drivers/fsl_uart.o
+ .debug_macro   0x000132b5       0x98 ./device/system_MKV31F51212.o
+ .debug_macro   0x0001334d      0x180 ./board/board.o
+ .debug_macro   0x000134cd      0x15f ./board/clock_config.o
+ .debug_macro   0x0001362c      0x159 ./board/frdm_kv31f.o
+ .debug_macro   0x00013785       0x1b ./board/peripherals.o
+ .debug_macro   0x000137a0      0x127 ./board/pin_mux.o
 
-.debug_line     0x00000000    0x22575
+.debug_line     0x00000000    0x2259f
  .debug_line    0x00000000      0x413 ./utilities/fsl_assert.o
  .debug_line    0x00000413      0x7f5 ./startup/startup_mkv31f51212.o
  .debug_line    0x00000c08      0xa1d ./source/com.o
@@ -11594,151 +11593,151 @@ LOAD linker stubs
  .debug_line    0x000039e7      0x897 ./sensor_fusion/driver_FXAS21002.o
  .debug_line    0x0000427e      0x8e4 ./sensor_fusion/driver_FXOS8700.o
  .debug_line    0x00004b62      0x742 ./sensor_fusion/driver_MPL3115.o
- .debug_line    0x000052a4      0x656 ./sensor_fusion/driver_pit.o
- .debug_line    0x000058fa      0x68f ./sensor_fusion/driver_systick.o
- .debug_line    0x00005f89     0x1bdd ./sensor_fusion/fusion.o
- .debug_line    0x00007b66      0x757 ./sensor_fusion/hal_frdm_fxs_mult2_b.o
- .debug_line    0x000082bd     0x2e33 ./sensor_fusion/magnetic.o
- .debug_line    0x0000b0f0     0x1a72 ./sensor_fusion/matrix.o
- .debug_line    0x0000cb62     0x12e4 ./sensor_fusion/orientation.o
- .debug_line    0x0000de46     0x11d3 ./sensor_fusion/precisionAccelerometer.o
- .debug_line    0x0000f019      0xde1 ./sensor_fusion/sensor_fusion.o
- .debug_line    0x0000fdfa      0x7fe ./sensor_fusion/status.o
- .debug_line    0x000105f8      0x755 ./interfaces/register_io_i2c.o
- .debug_line    0x00010d4d      0x37a ./interfaces/sensor_io_i2c.o
- .debug_line    0x000110c7      0x64f ./gpio_driver/gpio_driver.o
- .debug_line    0x00011716      0x404 ./gpio_driver/gpio_driver_irq.o
- .debug_line    0x00011b1a      0x643 ./freertos/freertos_kernel/portable/MemMang/heap_4.o
- .debug_line    0x0001215d      0x621 ./freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o
- .debug_line    0x0001277e      0x791 ./freertos/freertos_kernel/event_groups.o
- .debug_line    0x00012f0f      0x3f8 ./freertos/freertos_kernel/list.o
- .debug_line    0x00013307     0x127e ./freertos/freertos_kernel/queue.o
- .debug_line    0x00014585     0x19a8 ./freertos/freertos_kernel/tasks.o
- .debug_line    0x00015f2d      0x9df ./freertos/freertos_kernel/timers.o
- .debug_line    0x0001690c      0x776 ./drivers/freertos/fsl_lpuart_freertos.o
- .debug_line    0x00017082     0x13fb ./drivers/fsl_clock.o
- .debug_line    0x0001847d     0x177c ./drivers/fsl_dspi.o
- .debug_line    0x00019bf9     0x135f ./drivers/fsl_edma.o
- .debug_line    0x0001af58      0xf3b ./drivers/fsl_ftm.o
- .debug_line    0x0001be93      0x3d8 ./drivers/fsl_gpio.o
- .debug_line    0x0001c26b     0x1379 ./drivers/fsl_i2c.o
- .debug_line    0x0001d5e4      0xad1 ./drivers/fsl_i2c_cmsis.o
- .debug_line    0x0001e0b5      0xfa5 ./drivers/fsl_lpuart.o
- .debug_line    0x0001f05a      0x3e5 ./drivers/fsl_pit.o
- .debug_line    0x0001f43f      0x5fb ./drivers/fsl_smc.o
- .debug_line    0x0001fa3a     0x1342 ./drivers/fsl_uart.o
- .debug_line    0x00020d7c      0x3d2 ./device/system_MKV31F51212.o
- .debug_line    0x0002114e      0x47e ./board/board.o
- .debug_line    0x000215cc      0x488 ./board/clock_config.o
- .debug_line    0x00021a54      0x440 ./board/frdm_kv31f.o
- .debug_line    0x00021e94       0x71 ./board/peripherals.o
- .debug_line    0x00021f05      0x670 ./board/pin_mux.o
+ .debug_line    0x000052a4      0x65c ./sensor_fusion/driver_pit.o
+ .debug_line    0x00005900      0x68f ./sensor_fusion/driver_systick.o
+ .debug_line    0x00005f8f     0x1bdd ./sensor_fusion/fusion.o
+ .debug_line    0x00007b6c      0x757 ./sensor_fusion/hal_frdm_fxs_mult2_b.o
+ .debug_line    0x000082c3     0x2e33 ./sensor_fusion/magnetic.o
+ .debug_line    0x0000b0f6     0x1a72 ./sensor_fusion/matrix.o
+ .debug_line    0x0000cb68     0x12e4 ./sensor_fusion/orientation.o
+ .debug_line    0x0000de4c     0x11d3 ./sensor_fusion/precisionAccelerometer.o
+ .debug_line    0x0000f01f      0xde1 ./sensor_fusion/sensor_fusion.o
+ .debug_line    0x0000fe00      0x7fe ./sensor_fusion/status.o
+ .debug_line    0x000105fe      0x755 ./interfaces/register_io_i2c.o
+ .debug_line    0x00010d53      0x37a ./interfaces/sensor_io_i2c.o
+ .debug_line    0x000110cd      0x655 ./gpio_driver/gpio_driver.o
+ .debug_line    0x00011722      0x404 ./gpio_driver/gpio_driver_irq.o
+ .debug_line    0x00011b26      0x643 ./freertos/freertos_kernel/portable/MemMang/heap_4.o
+ .debug_line    0x00012169      0x621 ./freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o
+ .debug_line    0x0001278a      0x791 ./freertos/freertos_kernel/event_groups.o
+ .debug_line    0x00012f1b      0x3f8 ./freertos/freertos_kernel/list.o
+ .debug_line    0x00013313     0x127e ./freertos/freertos_kernel/queue.o
+ .debug_line    0x00014591     0x19a8 ./freertos/freertos_kernel/tasks.o
+ .debug_line    0x00015f39      0x9df ./freertos/freertos_kernel/timers.o
+ .debug_line    0x00016918      0x776 ./drivers/freertos/fsl_lpuart_freertos.o
+ .debug_line    0x0001708e     0x13fb ./drivers/fsl_clock.o
+ .debug_line    0x00018489     0x1782 ./drivers/fsl_dspi.o
+ .debug_line    0x00019c0b     0x1365 ./drivers/fsl_edma.o
+ .debug_line    0x0001af70      0xf3b ./drivers/fsl_ftm.o
+ .debug_line    0x0001beab      0x3d8 ./drivers/fsl_gpio.o
+ .debug_line    0x0001c283     0x137f ./drivers/fsl_i2c.o
+ .debug_line    0x0001d602      0xad1 ./drivers/fsl_i2c_cmsis.o
+ .debug_line    0x0001e0d3      0xfab ./drivers/fsl_lpuart.o
+ .debug_line    0x0001f07e      0x3e5 ./drivers/fsl_pit.o
+ .debug_line    0x0001f463      0x5fb ./drivers/fsl_smc.o
+ .debug_line    0x0001fa5e     0x1348 ./drivers/fsl_uart.o
+ .debug_line    0x00020da6      0x3d2 ./device/system_MKV31F51212.o
+ .debug_line    0x00021178      0x47e ./board/board.o
+ .debug_line    0x000215f6      0x488 ./board/clock_config.o
+ .debug_line    0x00021a7e      0x440 ./board/frdm_kv31f.o
+ .debug_line    0x00021ebe       0x71 ./board/peripherals.o
+ .debug_line    0x00021f2f      0x670 ./board/pin_mux.o
 
-.debug_str      0x00000000    0x72a98
- .debug_str     0x00000000    0x4966a ./utilities/fsl_assert.o
-                              0x4970b (size before relaxing)
- .debug_str     0x0004966a      0x6d1 ./startup/startup_mkv31f51212.o
+.debug_str      0x00000000    0x72b6d
+ .debug_str     0x00000000    0x49749 ./utilities/fsl_assert.o
+                              0x497ea (size before relaxing)
+ .debug_str     0x00049749      0x6c7 ./startup/startup_mkv31f51212.o
                                0x35a8 (size before relaxing)
- .debug_str     0x00049d3b     0xb0ed ./source/com.o
-                              0x53fcf (size before relaxing)
- .debug_str     0x00054e28      0x2df ./source/hdlc.o
+ .debug_str     0x00049e10     0xb0ed ./source/com.o
+                              0x540ae (size before relaxing)
+ .debug_str     0x00054efd      0x2df ./source/hdlc.o
                                0x31df (size before relaxing)
- .debug_str     0x00055107     0x1528 ./source/lpuart.o
-                              0x51137 (size before relaxing)
- .debug_str     0x0005662f     0xdc61 ./source/main_freertos_two_tasks.o
-                              0x62406 (size before relaxing)
- .debug_str     0x00064290      0x745 ./source/motors.o
-                              0x494f1 (size before relaxing)
- .debug_str     0x000649d5       0x1f ./source/semihost_hardfault.o
+ .debug_str     0x000551dc     0x1528 ./source/lpuart.o
+                              0x51216 (size before relaxing)
+ .debug_str     0x00056704     0xdc61 ./source/main_freertos_two_tasks.o
+                              0x624e5 (size before relaxing)
+ .debug_str     0x00064365      0x745 ./source/motors.o
+                              0x495d0 (size before relaxing)
+ .debug_str     0x00064aaa       0x1f ./source/semihost_hardfault.o
                                0x2e45 (size before relaxing)
- .debug_str     0x000649f4      0x103 ./sensor_fusion/approximations.o
+ .debug_str     0x00064ac9      0x103 ./sensor_fusion/approximations.o
                                0x4b83 (size before relaxing)
- .debug_str     0x00064af7       0x82 ./sensor_fusion/debug.o
-                              0x4d838 (size before relaxing)
- .debug_str     0x00064b79      0x4b6 ./sensor_fusion/driver_FXAS21002.o
-                              0x51389 (size before relaxing)
- .debug_str     0x0006502f      0xb37 ./sensor_fusion/driver_FXOS8700.o
-                              0x57b15 (size before relaxing)
- .debug_str     0x00065b66      0x4c3 ./sensor_fusion/driver_MPL3115.o
-                              0x51631 (size before relaxing)
- .debug_str     0x00066029      0x24d ./sensor_fusion/driver_pit.o
-                              0x4d30e (size before relaxing)
- .debug_str     0x00066276      0x114 ./sensor_fusion/driver_systick.o
-                              0x4cf50 (size before relaxing)
- .debug_str     0x0006638a      0x4b0 ./sensor_fusion/fusion.o
-                              0x4dca5 (size before relaxing)
- .debug_str     0x0006683a       0x56 ./sensor_fusion/hal_frdm_fxs_mult2_b.o
-                              0x4cf45 (size before relaxing)
- .debug_str     0x00066890      0x1e8 ./sensor_fusion/magnetic.o
-                              0x4d20f (size before relaxing)
- .debug_str     0x00066a78      0x1d2 ./sensor_fusion/matrix.o
-                              0x4d057 (size before relaxing)
- .debug_str     0x00066c4a      0x2c9 ./sensor_fusion/orientation.o
-                              0x4d2d1 (size before relaxing)
- .debug_str     0x00066f13       0xff ./sensor_fusion/precisionAccelerometer.o
-                              0x4d1da (size before relaxing)
- .debug_str     0x00067012      0x19f ./sensor_fusion/sensor_fusion.o
-                              0x4dc04 (size before relaxing)
- .debug_str     0x000671b1      0x4c2 ./sensor_fusion/status.o
-                              0x4e1ef (size before relaxing)
- .debug_str     0x00067673      0x11e ./interfaces/register_io_i2c.o
-                              0x4c48e (size before relaxing)
- .debug_str     0x00067791       0xdd ./interfaces/sensor_io_i2c.o
+ .debug_str     0x00064bcc       0x82 ./sensor_fusion/debug.o
+                              0x4d917 (size before relaxing)
+ .debug_str     0x00064c4e      0x4b6 ./sensor_fusion/driver_FXAS21002.o
+                              0x51468 (size before relaxing)
+ .debug_str     0x00065104      0xb37 ./sensor_fusion/driver_FXOS8700.o
+                              0x57bf4 (size before relaxing)
+ .debug_str     0x00065c3b      0x4c3 ./sensor_fusion/driver_MPL3115.o
+                              0x51710 (size before relaxing)
+ .debug_str     0x000660fe      0x24d ./sensor_fusion/driver_pit.o
+                              0x4d3ed (size before relaxing)
+ .debug_str     0x0006634b      0x114 ./sensor_fusion/driver_systick.o
+                              0x4d02f (size before relaxing)
+ .debug_str     0x0006645f      0x4b0 ./sensor_fusion/fusion.o
+                              0x4dd84 (size before relaxing)
+ .debug_str     0x0006690f       0x56 ./sensor_fusion/hal_frdm_fxs_mult2_b.o
+                              0x4d024 (size before relaxing)
+ .debug_str     0x00066965      0x1e8 ./sensor_fusion/magnetic.o
+                              0x4d2ee (size before relaxing)
+ .debug_str     0x00066b4d      0x1d2 ./sensor_fusion/matrix.o
+                              0x4d136 (size before relaxing)
+ .debug_str     0x00066d1f      0x2c9 ./sensor_fusion/orientation.o
+                              0x4d3b0 (size before relaxing)
+ .debug_str     0x00066fe8       0xff ./sensor_fusion/precisionAccelerometer.o
+                              0x4d2b9 (size before relaxing)
+ .debug_str     0x000670e7      0x19f ./sensor_fusion/sensor_fusion.o
+                              0x4dce3 (size before relaxing)
+ .debug_str     0x00067286      0x4c2 ./sensor_fusion/status.o
+                              0x4e2ce (size before relaxing)
+ .debug_str     0x00067748      0x11e ./interfaces/register_io_i2c.o
+                              0x4c56d (size before relaxing)
+ .debug_str     0x00067866       0xdd ./interfaces/sensor_io_i2c.o
                                0x4ece (size before relaxing)
- .debug_str     0x0006786e      0x501 ./gpio_driver/gpio_driver.o
-                              0x4a69a (size before relaxing)
- .debug_str     0x00067d6f       0x21 ./gpio_driver/gpio_driver_irq.o
-                              0x48ece (size before relaxing)
- .debug_str     0x00067d90      0x3a8 ./freertos/freertos_kernel/portable/MemMang/heap_4.o
+ .debug_str     0x00067943      0x501 ./gpio_driver/gpio_driver.o
+                              0x4a779 (size before relaxing)
+ .debug_str     0x00067e44       0x21 ./gpio_driver/gpio_driver_irq.o
+                              0x48fad (size before relaxing)
+ .debug_str     0x00067e65      0x3a8 ./freertos/freertos_kernel/portable/MemMang/heap_4.o
                                0x9597 (size before relaxing)
- .debug_str     0x00068138      0x824 ./freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o
+ .debug_str     0x0006820d      0x824 ./freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o
                                0x9a31 (size before relaxing)
- .debug_str     0x0006895c      0x436 ./freertos/freertos_kernel/event_groups.o
+ .debug_str     0x00068a31      0x436 ./freertos/freertos_kernel/event_groups.o
                                0x9f32 (size before relaxing)
- .debug_str     0x00068d92       0xa5 ./freertos/freertos_kernel/list.o
+ .debug_str     0x00068e67       0xa5 ./freertos/freertos_kernel/list.o
                                0x8122 (size before relaxing)
- .debug_str     0x00068e37      0x82d ./freertos/freertos_kernel/queue.o
+ .debug_str     0x00068f0c      0x82d ./freertos/freertos_kernel/queue.o
                                0xa378 (size before relaxing)
- .debug_str     0x00069664     0x144f ./freertos/freertos_kernel/tasks.o
+ .debug_str     0x00069739     0x144f ./freertos/freertos_kernel/tasks.o
                                0xb112 (size before relaxing)
- .debug_str     0x0006aab3      0x5d3 ./freertos/freertos_kernel/timers.o
+ .debug_str     0x0006ab88      0x5d3 ./freertos/freertos_kernel/timers.o
                                0xa87f (size before relaxing)
- .debug_str     0x0006b086      0x637 ./drivers/freertos/fsl_lpuart_freertos.o
-                              0x4f93d (size before relaxing)
- .debug_str     0x0006b6bd     0x16e9 ./drivers/fsl_clock.o
-                              0x4ad37 (size before relaxing)
- .debug_str     0x0006cda6     0x13cc ./drivers/fsl_dspi.o
-                              0x4b015 (size before relaxing)
- .debug_str     0x0006e172     0x1076 ./drivers/fsl_edma.o
-                              0x4ad0a (size before relaxing)
- .debug_str     0x0006f1e8      0xa08 ./drivers/fsl_ftm.o
-                              0x4a5ce (size before relaxing)
- .debug_str     0x0006fbf0       0xad ./drivers/fsl_gpio.o
-                              0x49543 (size before relaxing)
- .debug_str     0x0006fc9d      0xa72 ./drivers/fsl_i2c.o
-                              0x4a894 (size before relaxing)
- .debug_str     0x0007070f      0x567 ./drivers/fsl_i2c_cmsis.o
-                              0x4c1b9 (size before relaxing)
- .debug_str     0x00070c76      0x6de ./drivers/fsl_lpuart.o
-                              0x4abb4 (size before relaxing)
- .debug_str     0x00071354       0x78 ./drivers/fsl_pit.o
-                              0x4964b (size before relaxing)
- .debug_str     0x000713cc      0x3ab ./drivers/fsl_smc.o
-                              0x498b4 (size before relaxing)
- .debug_str     0x00071777      0x930 ./drivers/fsl_uart.o
-                              0x4aa63 (size before relaxing)
- .debug_str     0x000720a7       0xc7 ./device/system_MKV31F51212.o
-                              0x474a9 (size before relaxing)
- .debug_str     0x0007216e       0xc7 ./board/board.o
-                              0x4a23d (size before relaxing)
- .debug_str     0x00072235      0x43b ./board/clock_config.o
-                              0x49cbf (size before relaxing)
- .debug_str     0x00072670       0xa3 ./board/frdm_kv31f.o
-                              0x4a0d2 (size before relaxing)
- .debug_str     0x00072713       0x47 ./board/peripherals.o
+ .debug_str     0x0006b15b      0x637 ./drivers/freertos/fsl_lpuart_freertos.o
+                              0x4fa1c (size before relaxing)
+ .debug_str     0x0006b792     0x16e9 ./drivers/fsl_clock.o
+                              0x4ae16 (size before relaxing)
+ .debug_str     0x0006ce7b     0x13cc ./drivers/fsl_dspi.o
+                              0x4b0f4 (size before relaxing)
+ .debug_str     0x0006e247     0x1076 ./drivers/fsl_edma.o
+                              0x4ade9 (size before relaxing)
+ .debug_str     0x0006f2bd      0xa08 ./drivers/fsl_ftm.o
+                              0x4a6ad (size before relaxing)
+ .debug_str     0x0006fcc5       0xad ./drivers/fsl_gpio.o
+                              0x49622 (size before relaxing)
+ .debug_str     0x0006fd72      0xa72 ./drivers/fsl_i2c.o
+                              0x4a973 (size before relaxing)
+ .debug_str     0x000707e4      0x567 ./drivers/fsl_i2c_cmsis.o
+                              0x4c298 (size before relaxing)
+ .debug_str     0x00070d4b      0x6de ./drivers/fsl_lpuart.o
+                              0x4ac93 (size before relaxing)
+ .debug_str     0x00071429       0x78 ./drivers/fsl_pit.o
+                              0x4972a (size before relaxing)
+ .debug_str     0x000714a1      0x3ab ./drivers/fsl_smc.o
+                              0x49993 (size before relaxing)
+ .debug_str     0x0007184c      0x930 ./drivers/fsl_uart.o
+                              0x4ab42 (size before relaxing)
+ .debug_str     0x0007217c       0xc7 ./device/system_MKV31F51212.o
+                              0x47588 (size before relaxing)
+ .debug_str     0x00072243       0xc7 ./board/board.o
+                              0x4a31c (size before relaxing)
+ .debug_str     0x0007230a      0x43b ./board/clock_config.o
+                              0x49d9e (size before relaxing)
+ .debug_str     0x00072745       0xa3 ./board/frdm_kv31f.o
+                              0x4a1b1 (size before relaxing)
+ .debug_str     0x000727e8       0x47 ./board/peripherals.o
                                0x2e6c (size before relaxing)
- .debug_str     0x0007275a      0x33e ./board/pin_mux.o
-                              0x4a061 (size before relaxing)
+ .debug_str     0x0007282f      0x33e ./board/pin_mux.o
+                              0x4a140 (size before relaxing)
 
 .comment        0x00000000       0x4d
  .comment       0x00000000       0x4d ./utilities/fsl_assert.o
