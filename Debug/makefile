@@ -23,7 +23,6 @@ RM := rm -rf
 -include device/subdir.mk
 -include component/uart/subdir.mk
 -include component/serial_manager/subdir.mk
--include component/lists/subdir.mk
 -include board/subdir.mk
 -include subdir.mk
 -include objects.mk

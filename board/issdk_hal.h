@@ -18,8 +18,6 @@
 #define __ISSDK_HAL_H__
 
 #include "fsl_i2c_cmsis.h"
-#include "fsl_dspi_cmsis.h"
-#include "fsl_uart_cmsis.h"
 
 #include "frdm_kv31f.h"              //Include appropriate MCU board header file
 #include "frdm_fxs_mult2b_shield.h" //Include appropriate sensor shield board header file
